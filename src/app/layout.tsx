@@ -1,21 +1,13 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Epilogue } from "next/font/google";
 import "./globals.css";
-import Header from "./components/Header";
-// import { motion } from "framer-motion";
+import Navbar from "./components/Navbar";
 
-// import * as motion from "framer-motion/client";
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
+const epilogue = Epilogue({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -29,8 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
-        <Header />
+      <body className={`${epilogue.className}`}>
+        <Navbar />
         <>{children}</>
       </body>
     </html>

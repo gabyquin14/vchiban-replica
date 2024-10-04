@@ -5,19 +5,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --body-bg: rgb(249, 249, 237)
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #d6e1c9;
     --foreground: #ededed;
   }
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--body-bg);
+  font-family: 'Epilogue', sans-serif;
 }
 
 @layer utilities {
