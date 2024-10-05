@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/header/Navbar";
 
 const epilogue = Epilogue({
   weight: ["400", "500", "600", "700", "800", "900"],
