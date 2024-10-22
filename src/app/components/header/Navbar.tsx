@@ -3,7 +3,7 @@ import { FC } from "react";
 import { motion } from "framer-motion";
 import "./Navbar.scss";
 import VchibanLogo from "@/assets/svg/vchiban-logo";
-import NavbarItem from "./Navbaritem";
+import NavbarItem from "./NavbarItem";
 import GameCornerBtn from "./GameCornerBtn";
 
 const Navbar: FC = () => {
@@ -15,7 +15,7 @@ const Navbar: FC = () => {
         <NavbarItem content="events" />
       </ul>
 
-      <div className="svgContainer">
+      <div className="vchiban-logo-container">
         <motion.div whileHover={{ scale: 1.1 }} transition={{ duration: 0.4 }}>
           <VchibanLogo />
         </motion.div>

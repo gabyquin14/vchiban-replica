@@ -8,20 +8,30 @@ interface NavItem {
   link?: string;
 }
 
-const NavbarItem: FC<NavItem> = ({ content }) => {
+const NavbarItem: FC<NavItem> = ({ content, link }) => {
   const [isHover, setisHover] = useState(false);
   return (
     <li
-      className="link"
       onMouseEnter={() => setisHover(true)}
       onMouseLeave={() => setisHover(false)}
     >
-      <motion.div
-        animate={{ opacity: isHover ? 1 : 0, scale: isHover ? 1 : 0 }}
-        className="sip"
-      />
+      <a href={link} className="nav-link">
+        <motion.div
+          whileHover={{ scale: isHover ? [1, 1.05, 0.97, 1] : 1 }}
+          animate={{
+            opacity: isHover ? 1 : 0,
+          }}
+          transition={{ duration: 0.3 }}
+          className="hover-motion"
+        />
 
-      <a href="">{content}</a>
+        <div className="content-wrapper">
+          <span className="content">{content}</span>
+          {content.includes("family") && (
+            <div className="family-notification">4</div>
+          )}
+        </div>
+      </a>
     </li>
   );
 };

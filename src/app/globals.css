@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --white: #ffffff;
   --foreground: #171717;
   --body-bg: #f9f9ed;
   --shia-light-pink: #ff78bc;
+  --candi-purple: #af67f7;
   --header-link-hover: #66b5f3;
 }
 
