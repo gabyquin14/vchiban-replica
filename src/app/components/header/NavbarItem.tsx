@@ -2,6 +2,7 @@
 import { FC, useState } from "react";
 import "./Navbar.scss";
 import { motion } from "framer-motion";
+import { springTransition } from "@/helpers/const-animations";
 
 interface NavItem {
   content: string;
@@ -10,6 +11,7 @@ interface NavItem {
 
 const NavbarItem: FC<NavItem> = ({ content, link }) => {
   const [isHover, setisHover] = useState(false);
+
   return (
     <li
       onMouseEnter={() => setisHover(true)}
@@ -17,18 +19,24 @@ const NavbarItem: FC<NavItem> = ({ content, link }) => {
     >
       <a href={link} className="nav-link">
         <motion.div
-          whileHover={{ scale: isHover ? [1, 1.05, 0.97, 1] : 1 }}
-          animate={{
-            opacity: isHover ? 1 : 0,
-          }}
-          transition={{ duration: 0.3 }}
-          className="hover-motion"
+          whileHover={{ scale: 1.1 }}
+          transition={springTransition}
+          className="hover-motion blue"
         />
 
         <div className="content-wrapper">
           <span className="content">{content}</span>
           {content.includes("family") && (
-            <div className="family-notification">4</div>
+            <motion.div
+              animate={{
+                top: isHover ? "0" : "0.5rem",
+                right: isHover ? "0" : "1.4rem",
+              }}
+              transition={springTransition}
+              className="family-notification"
+            >
+              4
+            </motion.div>
           )}
         </div>
       </a>
