@@ -14,11 +14,11 @@ export default function Home() {
           <Sparkles className="sparkles" />
         </div>
         <div className="stars">
-          <Image
+          {/* <Image
             src="https://framerusercontent.com/images/egsCxJ8bBLJnBeLd3zJ2zHu3K8.png?scale-down-to=1024"
             alt="Picture of the author"
-            placeholder="blur"
-          />
+            fill={true}
+          /> */}
         </div>
       </div>
     </section>
