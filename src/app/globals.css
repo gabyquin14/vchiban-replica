@@ -21,6 +21,7 @@ body {
   color: var(--foreground);
   background: var(--body-bg);
   font-family: 'Epilogue', sans-serif;
+  height: 100%;
 }
 
 .section-title {

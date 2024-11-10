@@ -15,96 +15,95 @@
     font-size: 1.8rem;
     font-weight: 800;
   }
-}
-
-.nav-link {
-  padding: 0.8rem 3.2rem;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-
-  .content-wrapper {
-    z-index: 3;
-    text-wrap: nowrap;
-    pointer-events: none;
-    white-space: nowrap;
-    text-wrap: nowrap;
+  .nav-link {
+    padding: 0.8rem 3.2rem;
+    position: relative;
     display: flex;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .content-wrapper {
+      z-index: 3;
+      text-wrap: nowrap;
+      pointer-events: none;
+      white-space: nowrap;
+      text-wrap: nowrap;
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hover-motion {
+      width: 100%;
+      height: 100%;
+      border-radius: 1.4rem;
+      opacity: 0;
+      transition: opacity 0.1s ease-in;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      &:hover {
+        opacity: 1;
+      }
+      &:hover ~ .content-wrapper .family-notification {
+        background-color: var(--navy-blue-main);
+      }
+
+      &.blue {
+        background-color: var(--header-link-hover);
+      }
+      &.pink {
+        opacity: 1 !important;
+        background-color: var(--shia-light-pink);
+      }
+    }
+    .family-notification {
+      z-index: 4;
+      position: absolute;
+      top: 0.5rem;
+      right: 1.4rem;
+      border-radius: 0.6rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 1.2rem;
+      background-color: var(--candi-purple);
+      color: var(--white);
+      line-height: 1.2rem;
+      text-align: center;
+    }
+  }
+  .vchiban-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .hover-motion {
-    width: 100%;
-    height: 100%;
+  .gamer-btn {
     border-radius: 1.4rem;
-    opacity: 0;
-    transition: opacity 0.1s ease-in;
+    color: var(--body-bg);
+  }
+
+  .excl-mark {
+    opacity: 1;
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    &:hover {
-      opacity: 1;
-    }
-    &:hover ~ .content-wrapper .family-notification {
-      background-color: var(--navy-blue-main);
-    }
+    z-index: 3;
+    pointer-events: none;
 
-    &.blue {
-      background-color: var(--header-link-hover);
+    &.mark-1 {
+      top: 2rem;
+      left: -2.3rem;
     }
-    &.pink {
-      opacity: 1 !important;
-      background-color: var(--shia-light-pink);
+    &.mark-2 {
+      left: -0.5rem;
+      top: 0.6rem;
     }
-  }
-  .family-notification {
-    z-index: 4;
-    position: absolute;
-    top: 0.5rem;
-    right: 1.4rem;
-    border-radius: 0.6rem;
-    padding: 0.4rem 0.8rem;
-    font-size: 1.2rem;
-    background-color: var(--candi-purple);
-    color: var(--white);
-    line-height: 1.2rem;
-    text-align: center;
-  }
-}
-.vchiban-logo-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.gamer-btn {
-  border-radius: 1.4rem;
-  color: var(--body-bg);
-}
-
-.excl-mark {
-  opacity: 1;
-  position: absolute;
-  z-index: 3;
-  pointer-events: none;
-
-  &.mark-1 {
-    top: 2rem;
-    left: -2.3rem;
-  }
-  &.mark-2 {
-    left: -0.5rem;
-    top: 0.6rem;
-  }
-  &.mark-3 {
-    top: -0.3rem;
-    right: 0;
+    &.mark-3 {
+      top: -0.3rem;
+      right: 0;
+    }
   }
 }
