@@ -3,17 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --white: #ffffff;
   --foreground: #171717;
-  --body-bg: rgb(249, 249, 237)
+  --body-bg: #f9f9ed;
+  --shia-light-pink: #ff78bc;
+  --candi-purple: #af67f7;
+  --header-link-hover: #66b5f3;
+  --navy-blue-main: #0a0549;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #d6e1c9;
-    --foreground: #ededed;
-  }
-}
 
 html {
   font-size: 10px;
@@ -23,6 +21,14 @@ body {
   color: var(--foreground);
   background: var(--body-bg);
   font-family: 'Epilogue', sans-serif;
+}
+
+.section-title {
+  font-family: var(--gilboys);
+  font-size: 12.7rem;
+  line-height: 90%;
+  color: var(--navy-blue-main);
+  text-align: center;
 }
 
 @layer utilities {
