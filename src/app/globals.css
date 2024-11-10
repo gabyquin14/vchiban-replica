@@ -5,7 +5,7 @@
 :root {
   --white: #ffffff;
   --foreground: #171717;
-  --body-bg: #121204;
+  --body-bg: #f9f9ed;
   --shia-light-pink: #ff78bc;
   --candi-purple: #af67f7;
   --header-link-hover: #66b5f3;
@@ -21,6 +21,14 @@ body {
   color: var(--foreground);
   background: var(--body-bg);
   font-family: 'Epilogue', sans-serif;
+}
+
+.section-title {
+  font-family: var(--gilboys);
+  font-size: 12.7rem;
+  line-height: 90%;
+  color: var(--navy-blue-main);
+  text-align: center;
 }
 
 @layer utilities {

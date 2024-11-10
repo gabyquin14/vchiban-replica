@@ -15,7 +15,7 @@ interface NavItem {
 const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
   const [isHover, setisHover] = useState(false);
 
-  // Variantes con diferentes delays para cada signo de exclamación
+  // Each exclamation mark has a different delay
   const item1 = {
     visible: {
       opacity: 1,

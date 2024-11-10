@@ -1,0 +1,17 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .banner {
+    .section-title {
+      position: relative;
+      margin-top: 10rem;
+    }
+    .sparkles {
+      position: absolute;
+      top: -4rem;
+      left: 1.5rem;
+    }
+  }
+}

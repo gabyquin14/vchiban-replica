@@ -4,7 +4,7 @@
   align-items: center;
   position: relative;
   height: 9.6rem;
-  width: 93.5%;
+  width: 88%;
   margin: 4.5rem auto 0;
 
   &-header {
@@ -86,6 +86,7 @@
 
 .gamer-btn {
   border-radius: 1.4rem;
+  color: var(--body-bg);
 }
 
 .excl-mark {
