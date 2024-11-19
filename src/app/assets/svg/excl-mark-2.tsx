@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 const ExclamationMark2: React.FC = (props: Record<string, unknown>) => (

@@ -3,6 +3,7 @@ import { Epilogue } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/header/Navbar";
+import Footer from "./components/footer/Footer";
 
 const gilboys = localFont({
   src: "./fonts/jt_gilboys/Jt Gilboys.otf",
@@ -36,6 +37,7 @@ export default function RootLayout({
         />
         <Navbar />
         <>{children}</>
+        <Footer />
       </body>
     </html>
   );

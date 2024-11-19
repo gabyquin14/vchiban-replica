@@ -1,0 +1,99 @@
+.footer {
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex: none;
+  gap: 96px;
+  max-width: 1512px;
+  padding: 64px;
+  position: relative;
+  width: 100%;
+
+  &__nav {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 6.4rem;
+  }
+
+  &__brand {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 150%;
+    color: #908e9b;
+    height: 36.4rem;
+    width: 68.8rem;
+    min-height: 36.4rem;
+    min-width: 68.8rem;
+    position: relative;
+
+    .copyright {
+      position: absolute;
+      bottom: 3rem;
+      right: 13.5rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+  &__nav-list {
+    display: flex;
+    gap: 6.4rem;
+  }
+
+  &__sitemap,
+  &__more {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    .nav-title {
+      font-size: 2.4rem;
+      font-weight: 900;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      gap: 0.8rem;
+    }
+
+    .link svg {
+      width: 3.3rem;
+    }
+  }
+
+  .socials-list {
+    display: flex;
+    flex: 1;
+    gap: 2.4rem;
+    margin-top: auto;
+
+    .social {
+      flex: 1;
+      background-color: var(--navy-blue-main);
+      border-radius: 1.2rem;
+
+      a {
+        padding: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
