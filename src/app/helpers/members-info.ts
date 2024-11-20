@@ -8,6 +8,8 @@ export const vchibanStars = [
     youtube: "https://www.youtube.com/c/buffpup",
     vchibanIcon:
       "https://framerusercontent.com/images/Gb7M4AqcQWZRDDh2l5BlYmd5iNQ.svg",
+    backgroundCard:
+      "https://framerusercontent.com/images/iEx4ClXPdFLFMqQ7hUR4iuhpQ0.svg",
   },
   {
     image: "https://framerusercontent.com/images/i98KG1in26kTjUBTE3AGJQInI.png",
@@ -17,6 +19,8 @@ export const vchibanStars = [
     youtube: "https://www.youtube.com/c/rosedoodle",
     vchibanIcon:
       "https://framerusercontent.com/images/8HR1brtaB3PFmcM4etpx3bPscK8.svg",
+    backgroundCard:
+      "https://framerusercontent.com/images/mU9z5bHnIYxq5yxEHrxvWGA.svg",
   },
   {
     image:
@@ -27,6 +31,8 @@ export const vchibanStars = [
     youtube: "https://www.youtube.com/c/aicandii",
     vchibanIcon:
       "https://framerusercontent.com/images/CJwb3hPIQJLZotR4xXD9AhZY.svg",
+    backgroundCard:
+      "https://framerusercontent.com/images/0WiSnjFA8zB8me0qfUyUrykvOzs.svg",
   },
   {
     image:
@@ -38,5 +44,7 @@ export const vchibanStars = [
     youtube: "https://www.youtube.com/c/shiabun",
     vchibanIcon:
       "https://framerusercontent.com/images/D2eskKKL7ZV7NNnmcgISfwFaRk.svg",
+    backgroundCard:
+      "https://framerusercontent.com/images/1uYlDLso1XU1Kx4zR8dxX7GM5WM.svg",
   },
 ];
