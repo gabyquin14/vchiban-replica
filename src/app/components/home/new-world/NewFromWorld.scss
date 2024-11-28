@@ -1,0 +1,16 @@
+.new-world {
+  .section-title {
+    position: relative;
+    .title {
+      font-size: 9.8rem !important;
+      span {
+        font-size: 12.8rem;
+      }
+    }
+    .sparkles {
+      position: absolute;
+      top: -3.1rem;
+      left: 56%;
+    }
+  }
+}

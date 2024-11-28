@@ -9,6 +9,7 @@ import DarkVchiBanLogo from "#/app/assets/svg/dark-vchiban-logo";
 import Twitch from "#/app/assets/svg/twitch";
 import Twitter from "#/app/assets/svg/twitter";
 import Youtube from "#/app/assets/svg/youtube";
+import Link from "next/link";
 
 const Footer: FC = () => {
   return (
@@ -60,28 +61,28 @@ const Footer: FC = () => {
             <h3 className="nav-title">More VchiBan</h3>
             <ul className="list">
               <li className="item">
-                <a href="" className="link">
+                <Link href="" className="link">
                   <DoubleChevronRight />
                   <span>merch Store</span>
-                </a>
+                </Link>
               </li>
               <li className="item">
-                <a href="" className="link">
+                <Link href="/brand" className="link">
                   <ChevronRight />
                   <span>brand</span>
-                </a>
+                </Link>
               </li>
               <li className="item">
-                <a href="" className="link">
+                <Link href="mailto:talent@vchiban.com" className="link">
                   <ChevronRight />
                   <span>email us</span>
-                </a>
+                </Link>
               </li>
               <li className="item">
-                <a href="" className="link">
+                <Link href="/legal-information" className="link">
                   <ChevronRight />
                   <span>legal</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
