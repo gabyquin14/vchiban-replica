@@ -2,28 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 :root {
   --white: #ffffff;
   --foreground: #171717;
   --body-bg: #f9f9ed;
+  --footer-bg: #e9e9d2;
   --shia-light-pink: #ff78bc;
   --candi-purple: #af67f7;
   --header-link-hover: #66b5f3;
   --navy-blue-main: #0a0549;
 }
 
-
 html {
   font-size: 10px;
 }
 
 body {
-  color: var(--foreground);
+  color: var(--navy-blue-main);
   background: var(--body-bg);
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
+  height: 100%;
+  overflow-x: hidden;
 }
 
-.section-title {
+.section-title .title {
   font-family: var(--gilboys);
   font-size: 12.7rem;
   line-height: 90%;

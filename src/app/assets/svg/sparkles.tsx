@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 const SvgComponent = (props: Record<string, unknown>) => (
   <svg width={721} height={229} fill="none" {...props}>

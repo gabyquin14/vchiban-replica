@@ -3,11 +3,17 @@ import { Epilogue } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/header/Navbar";
+import Footer from "./components/footer/Footer";
 
 const gilboys = localFont({
   src: "./fonts/jt_gilboys/Jt Gilboys.otf",
   display: "swap",
   variable: "--gilboys",
+});
+const tommy = localFont({
+  src: "./fonts/made_tommy/MADE Tommy Soft ExtraBold PERSONAL USE.otf",
+  display: "swap",
+  variable: "--tommy",
 });
 const epilogue = Epilogue({
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -28,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${epilogue.className} ${gilboys.variable}`}>
+      <body
+        className={`${epilogue.className} ${gilboys.variable} ${tommy.variable}`}
+      >
         <link
           rel="icon"
           href="https://framerusercontent.com/images/QypSA7Jg3SzOQBdCsrB1t4ZF6NU.svg"
@@ -36,6 +44,7 @@ export default function RootLayout({
         />
         <Navbar />
         <>{children}</>
+        <Footer />
       </body>
     </html>
   );

@@ -10,9 +10,9 @@ const Navbar: FC = () => {
   return (
     <motion.nav className="navbar">
       <ul className="navbar-header">
-        <NavbarItem content="home" />
-        <NavbarItem content="our family" />
-        <NavbarItem content="events" />
+        <NavbarItem content="home" link="/" />
+        <NavbarItem content="our family" link="/our-family" />
+        <NavbarItem content="events" link="/events" />
       </ul>
 
       <div className="vchiban-logo-container">
@@ -22,12 +22,10 @@ const Navbar: FC = () => {
       </div>
 
       <ul className="navbar-header">
-        <NavbarItem content="merch" />
-        <NavbarItem content="animations" />
+        <NavbarItem content="merch" link="https://shop.vchiban.com/" />
+        <NavbarItem content="animations" link="/animations" />
 
         <GameCornerBtn />
-
-        {/* <NavbarItem content="game corner" /> */}
       </ul>
     </motion.nav>
   );
