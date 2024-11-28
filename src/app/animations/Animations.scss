@@ -27,26 +27,34 @@
   .videos-list {
     display: flex;
     flex-direction: column;
-    gap: 9.6rem;
+    gap: 15rem;
     padding: 0 6.4rem 12.8rem;
     width: 100%;
 
     .video-card {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 3.2rem;
+      width: 100%;
+      min-height: 100vh;
     }
 
     .video-title {
-      font-size: 2.4rem;
+      font-family: var(--tommy);
+      font-size: 3.2rem;
       font-weight: 800;
       text-align: center;
     }
 
     .video {
-      width: 100%; /* Ocupa todo el ancho disponible */
-      aspect-ratio: 16 / 9; /* Relación de aspecto estándar para videos */
-      border: none; /* Elimina el borde predeterminado del iframe */
+      width: 90% !important;
+      height: 95vh !important;
+      box-shadow: rgba(10, 5, 73, 0.24) 0px 4.8rem 6.4rem 0rem;
+    }
+    .video iframe {
+      border-radius: 1.2rem;
     }
   }
 }

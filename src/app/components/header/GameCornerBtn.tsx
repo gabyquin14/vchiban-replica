@@ -6,6 +6,7 @@ import { springTransition } from "@/helpers/const-animations";
 import ExclamationMark1 from "#/app/assets/svg/excl-mark-1";
 import ExclamationMark2 from "#/app/assets/svg/excl-mark-2";
 import ExclamationMark3 from "#/app/assets/svg/excl-mark-3";
+import Link from "next/link";
 
 interface NavItem {
   content?: string;
@@ -70,7 +71,7 @@ const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
       onMouseEnter={() => setisHover(true)}
       onMouseLeave={() => setisHover(false)}
     >
-      <a href="/" className="nav-link gamer-btn">
+      <Link href="/game-corner" className="nav-link gamer-btn">
         <motion.div
           className="excl-mark mark-1"
           initial="hidden"
@@ -101,7 +102,7 @@ const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
           transition={springTransition}
         />
         <span className="content-wrapper">{content}</span>
-      </a>
+      </Link>
     </li>
   );
 };

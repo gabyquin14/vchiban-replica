@@ -10,6 +10,11 @@ const gilboys = localFont({
   display: "swap",
   variable: "--gilboys",
 });
+const tommy = localFont({
+  src: "./fonts/made_tommy/MADE Tommy Soft ExtraBold PERSONAL USE.otf",
+  display: "swap",
+  variable: "--tommy",
+});
 const epilogue = Epilogue({
   weight: ["400", "500", "600", "700", "800", "900"],
   style: ["normal", "italic"],
@@ -29,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${epilogue.className} ${gilboys.variable}`}>
+      <body
+        className={`${epilogue.className} ${gilboys.variable} ${tommy.variable}`}
+      >
         <link
           rel="icon"
           href="https://framerusercontent.com/images/QypSA7Jg3SzOQBdCsrB1t4ZF6NU.svg"
