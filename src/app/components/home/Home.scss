@@ -82,24 +82,24 @@
     }
 
     .buffpup {
-      top: -15rem;
+      top: 0;
       left: -30%;
-      transform: rotate(-6deg);
+      transform: rotate(0deg);
     }
     .aicandii {
-      top: -2rem;
+      top: -1rem;
       left: -4%;
-      transform: rotate(0deg);
+      transform: rotate(1deg);
     }
     .shiabun {
       top: 2rem;
-      right: -2%;
-      transform: rotate(2deg) scale(1.07);
+      right: -3%;
+      transform: rotate(0deg) scale(1.07);
     }
     .rosedoodle {
-      top: -18rem;
+      top: 0;
       right: -32%;
-      transform: rotate(8deg) scale(1.05);
+      transform: rotate(0deg) scale(1.05);
       z-index: 3;
     }
   }

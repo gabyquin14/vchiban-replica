@@ -15,8 +15,14 @@
   --foreground: #171717;
   --body-bg: #f9f9ed;
   --footer-bg: #e9e9d2;
+  --buffpup-orange: #ff9c45;
+  --buffpup-dark-orange: #f0520e;
   --shia-light-pink: #ff78bc;
+  --shia-dark-pink: #e30575;
+  --candi-dark-purple: #7116cc;
   --candi-purple: #af67f7;
+  --rosedoodle-dark-cyan: #1c8c84;
+  --rosedoodle-cyan: #49d3af;
   --header-link-hover: #66b5f3;
   --navy-blue-main: #0a0549;
 }

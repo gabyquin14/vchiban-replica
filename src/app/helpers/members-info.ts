@@ -1,7 +1,7 @@
 export const vchibanStars = [
   {
     image:
-      "https://framerusercontent.com/images/egsCxJ8bBLJnBeLd3zJ2zHu3K8.png",
+      "https://framerusercontent.com/images/fXUPKtgiqAzS3GGvzha4kSWLOg.png",
     name: "Buffpup",
     twitch: "https://www.twitch.tv/buffpup",
     twitter: "https://x.com/buffpup_",
@@ -11,20 +11,10 @@ export const vchibanStars = [
     backgroundCard:
       "https://framerusercontent.com/images/iEx4ClXPdFLFMqQ7hUR4iuhpQ0.svg",
   },
-  {
-    image: "https://framerusercontent.com/images/i98KG1in26kTjUBTE3AGJQInI.png",
-    name: "rosedoodle",
-    twitch: "https://www.twitch.tv/rosedoodle",
-    twitter: "https://x.com/rosedoodles",
-    youtube: "https://www.youtube.com/c/rosedoodle",
-    vchibanIcon:
-      "https://framerusercontent.com/images/8HR1brtaB3PFmcM4etpx3bPscK8.svg",
-    backgroundCard:
-      "https://framerusercontent.com/images/mU9z5bHnIYxq5yxEHrxvWGA.svg",
-  },
+
   {
     image:
-      "https://framerusercontent.com/images/OmJKahKPWXzK7LY8ynI7s8Kdono.png",
+      "https://framerusercontent.com/images/09oY2c7lYVgoVIQj4Fksy5yWmQ.png",
     name: "AiCandii",
     twitch: "https://www.twitch.tv/aicandii",
     twitter: "https://x.com/aicandii",
@@ -36,8 +26,19 @@ export const vchibanStars = [
   },
   {
     image:
+      "https://framerusercontent.com/images/55Qn1oBCqHF6Ru0Fl8j5TolRYYE.png",
+    name: "rosedoodle",
+    twitch: "https://www.twitch.tv/rosedoodle",
+    twitter: "https://x.com/rosedoodles",
+    youtube: "https://www.youtube.com/c/rosedoodle",
+    vchibanIcon:
+      "https://framerusercontent.com/images/8HR1brtaB3PFmcM4etpx3bPscK8.svg",
+    backgroundCard:
+      "https://framerusercontent.com/images/mU9z5bHnIYxq5yxEHrxvWGA.svg",
+  },
+  {
+    image:
       "https://framerusercontent.com/images/KdbRYrY97UvrNOAQ9m5UczABWM.png",
-
     name: "ShiaBun",
     twitch: "https://www.twitch.tv/shiabun",
     twitter: "https://x.com/shiabun",

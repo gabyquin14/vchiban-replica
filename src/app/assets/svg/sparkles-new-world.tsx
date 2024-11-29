@@ -1,5 +1,5 @@
 import React from "react";
-const SparklesNewWorld: React.FC = (props: Record<string, unknown>) => (
+const SparklesNewWorld = (props: Record<string, unknown>) => (
   <svg width={805} height={189} fill="none" {...props}>
     <path
       fill="#FF9C45"
