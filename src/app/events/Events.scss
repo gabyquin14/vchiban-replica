@@ -1,14 +1,31 @@
 .events {
   height: min-content;
-  padding: 13rem 6.4rem 9.6rem;
 
   .section-title {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    position: relative;
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto 9.6rem;
+    padding: 13rem 6.4rem 0;
+
+    &.premier {
+      padding: 0;
+      margin: 0 auto 5.5rem;
+    }
+
+    &.premier .title {
+      font-size: 9.6rem;
+    }
+    &.premier .sparkles {
+      position: absolute;
+      top: -2rem;
+      left: -2.5rem;
+    }
+
+    .title {
+      position: relative;
+    }
 
     .sparkles {
       position: absolute;
@@ -26,26 +43,118 @@
     display: flex;
     place-content: flex-start;
     align-items: flex-start;
-    gap: 4.8rem;
-    padding: 0px 128px 128px;
+    gap: 7rem;
+    padding: 0px 13.5rem 22rem;
     position: relative;
     width: 100%;
     height: fit-content;
-    font-family: var(--tommy);
 
     p:first-child {
       font-size: 4.8rem;
       line-height: 100%;
+      font-family: var(--tommy);
     }
     p:last-child {
-      font-size: 3.2rem;
+      font-size: 3.6rem;
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
-      line-height: 100%;
+      font-weight: 900;
     }
     p:last-child span {
       font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 200%;
+    }
+  }
+
+  .experiences {
+    display: flex;
+    padding: 0 128px 96px;
+    gap: 9.6rem;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      font-size: 1.8rem;
+      font-weight: 800;
+      gap: 1.8rem;
+    }
+    .video-wrapper {
+      margin-right: 4.8rem;
+      min-height: 482px;
+      min-width: 27.2rem;
+      object-position: 50% 50%;
+      text-align: center;
+      position: relative;
+    }
+    .video-wrapper span {
+      position: absolute;
+      left: 50%;
+      bottom: -3rem;
+      font-weight: 900;
+      letter-spacing: -0.07px;
+      transform: rotate(0deg) translateX(-63%);
+      font-size: 1.4rem;
+      white-space: nowrap;
+    }
+    video {
+      cursor: auto;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 1.2rem;
+      transform: rotate(4deg);
+      box-shadow: 0 48px 64px #0a05493d;
+    }
+  }
+  .image-stack {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+
+    .image-1 {
+      position: absolute;
+      left: -5rem;
+      width: 520px !important;
+      height: 468px !important;
+      object-fit: cover;
+      z-index: 0;
+      transform: rotate(-3deg);
+      border-radius: 1.6rem;
+    }
+    .image-2 {
+      position: absolute;
+      top: 4.8rem;
+      left: 20%;
+      width: 630px !important;
+      height: 443px !important;
+      object-fit: cover;
+      z-index: 1;
+      border-radius: 1.6rem;
+    }
+    .image-3 {
+      position: absolute;
+      top: -5rem;
+      left: 48%;
+      width: 513px !important;
+      height: 460px !important;
+      object-fit: cover;
+      z-index: 0;
+      transform: rotate(2deg);
+      border-radius: 1.6rem;
+      object-position: 50% 15.8%;
+    }
+    .image-4 {
+      position: absolute;
+      left: 80%;
+      width: 350px !important;
+      height: 464px !important;
+      object-fit: cover;
+      z-index: 1;
+      transform: rotate(-4deg);
+      border-radius: 1.6rem;
     }
   }
 }
