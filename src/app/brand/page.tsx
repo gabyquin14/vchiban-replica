@@ -1,13 +1,13 @@
-import LegalExclMark1 from "../assets/svg/legal-excl-mark1";
-import LegalExclMark2 from "../assets/svg/legal-excl-mark2";
+import HeaderSection from "#/components/ui/headerSection/HeaderSection";
+import LegalExclMark1 from "../../assets/svg/legal-excl-mark1";
+import LegalExclMark2 from "../../assets/svg/legal-excl-mark2";
 import "./Brand.scss";
 
 const Brand = () => {
   return (
     <div className="brand">
-      <section className="section-title">
-        <h1 className="title">BRAND</h1>
-      </section>
+      <HeaderSection as="header" title="BRAND" customStyles="brand" />
+
       <section className="brand-description">
         <p>
           Welcome to VchiBan’s website! This site is intended to provide an

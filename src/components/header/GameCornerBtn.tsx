@@ -2,10 +2,10 @@
 import { FC, useState } from "react";
 import "./Navbar.scss";
 import { motion } from "framer-motion";
-import { springTransition } from "@/helpers/const-animations";
-import ExclamationMark1 from "#/app/assets/svg/excl-mark-1";
-import ExclamationMark2 from "#/app/assets/svg/excl-mark-2";
-import ExclamationMark3 from "#/app/assets/svg/excl-mark-3";
+import { springTransition } from "#/helpers/const-animations";
+import ExclamationMark1 from "#/assets/svg/excl-mark-1";
+import ExclamationMark2 from "#/assets/svg/excl-mark-2";
+import ExclamationMark3 from "#/assets/svg/excl-mark-3";
 import Link from "next/link";
 
 interface NavItem {

@@ -39,14 +39,6 @@ body {
   overflow-x: hidden;
 }
 
-.section-title .title {
-  font-family: var(--gilboys);
-  font-size: 12.7rem;
-  line-height: 90%;
-  color: var(--navy-blue-main);
-  text-align: center;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;

@@ -1,17 +1,19 @@
 import "./NewInGameCorner.scss";
-import SparklesNewInGameCorner from "#/app/assets/svg/sparkles-new-game-corner";
+import SparklesNewInGameCorner from "#/assets/svg/sparkles-new-game-corner";
 import Image from "next/image";
+import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 
 const NewInGamerCorner = () => {
   return (
     <section className="gamer-news">
-      <div className="section-title">
-        <h1 className="title">
-          WHAT&apos;S NEW IN THE <br />
-          GAME CORNER.
-        </h1>
-        <SparklesNewInGameCorner className="sparkles" />
-      </div>
+      <HeaderSection
+        as="div"
+        title="WHAT'S NEW IN THE <br />GAME CORNER."
+        SparklesComponent={SparklesNewInGameCorner}
+        customStyles="new-game-corner"
+        headingLevel="h2"
+      />
+
       <div className="game-wrapper">
         <div className="gooba-ball-main-img">
           <Image

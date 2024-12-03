@@ -1,26 +1,23 @@
 import { FC } from "react";
 import "./NewFromWorld.scss";
-import Sparkles from "#/app/assets/svg/sparkles";
-import SparklesNewWorld from "#/app/assets/svg/sparkles-new-world";
+import SparklesNewWorld from "#/assets/svg/sparkles-new-world";
 import Image from "next/image";
-import ChevronRight from "#/app/assets/svg/chevron-right";
+import ChevronRight from "#/assets/svg/chevron-right";
+import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 
 const NewFromWorldVchiban: FC = () => {
   return (
     <div className="new-world">
-      <div className="section-title">
-        <h2 className="title">
-          NEW FROM THE WORLD <br />
-          <span>OF VCHIBAN.</span>
-        </h2>
-        <SparklesNewWorld className="sparkles" />
-        <p className="desc">
-          See what’s been happening in our world, new events, new merch or
-          sometimes new games!
-          <br />
-          Stay tuned!
-        </p>
-      </div>
+      <HeaderSection
+        as="div"
+        title="NEW FROM THE WORLD <br /><span>OF VCHIBAN.</span>"
+        SparklesComponent={SparklesNewWorld}
+        description="See what’s been happening in our world, new events, new merch or
+          sometimes new games!<br />Stay tuned!"
+        customStyles="new-projects"
+        headingLevel="h2"
+      />
+
       <div className="event-list">
         <article className="event-card">
           <Image

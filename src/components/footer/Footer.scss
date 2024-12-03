@@ -2,22 +2,14 @@
   display: flex;
   align-content: flex-start;
   align-items: flex-start;
-  flex: none;
+  flex-wrap: wrap;
   gap: 96px;
   max-width: 1512px;
   padding: 64px;
-  position: relative;
   width: 100%;
   background-color: var(--footer-bg);
 
-  &__nav {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    gap: 6.4rem;
-  }
-
-  &__brand {
+  &__info {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -32,69 +24,75 @@
     min-width: 68.8rem;
     position: relative;
 
-    .copyright {
+    &-copyright {
       position: absolute;
       bottom: 3rem;
       right: 13.5rem;
     }
   }
 
-  &__nav {
+  &__navigation {
     display: flex;
     flex-direction: column;
-  }
-  &__nav-list {
-    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
     gap: 6.4rem;
-  }
 
-  &__sitemap,
-  &__more {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-
-    .nav-title {
-      font-size: 2.4rem;
-      font-weight: 900;
+    &-groups {
+      display: flex;
+      gap: 6.4rem;
     }
 
-    .list {
+    &-primary,
+    &-secondary {
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
-    }
+      gap: 1.6rem;
 
-    .link {
-      display: flex;
-      align-items: center;
-      font-size: 1.8rem;
-      font-weight: 800;
-      gap: 0.8rem;
-    }
+      .footer__title {
+        font-size: 2.4rem;
+        font-weight: 900;
+      }
 
-    .link svg {
-      width: 3.3rem;
+      .footer__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .footer__link {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 800;
+        gap: 0.8rem;
+
+        svg {
+          width: 3.3rem;
+        }
+      }
     }
   }
 
-  .socials-list {
+  &__socials {
     display: flex;
     flex: 1;
     gap: 2.4rem;
     margin-top: auto;
 
     .social {
+      padding: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       flex: 1;
       background-color: var(--navy-blue-main);
       border-radius: 1.2rem;
+    }
 
-      a {
-        padding: 1.2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+    .link svg {
+      width: 3.3rem;
+      height: 3.3rem;
     }
   }
 }

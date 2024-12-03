@@ -1,13 +1,17 @@
 import "./Legal.scss";
-import LegalExclMark1 from "../assets/svg/legal-excl-mark1";
-import LegalExclMark2 from "../assets/svg/legal-excl-mark2";
+import LegalExclMark1 from "../../assets/svg/legal-excl-mark1";
+import LegalExclMark2 from "../../assets/svg/legal-excl-mark2";
+import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 
 const LegalInformation = () => {
   return (
     <div className="legal">
-      <section className="section-title">
-        <h1 className="title">LEGAL INFORMATION</h1>
-      </section>
+      <HeaderSection
+        as="header"
+        title="LEGAL INFORMATION"
+        customStyles="legal"
+      />
+
       <section className="legal-info">
         <article className="legal-disclaimer">
           <h2>Legal Information</h2>

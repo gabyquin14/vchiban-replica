@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/assets/svg/vchiban-logo.tsx"
+    "src/assets/svg/vchiban-logo.tsx"
   ],
   "exclude": ["node_modules"]
 }

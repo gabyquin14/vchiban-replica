@@ -1,6 +1,7 @@
 import "./Animations.scss";
-import SparklesAnimation from "@/assets/svg/sparkles-animation";
-import VideoCard from "../components/animations/VideoCard";
+import SparklesAnimation from "#/assets/svg/sparkles-animation";
+import VideoCard from "../../components/animations/VideoCard";
+import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 
 const Animations = () => {
   const animationsLinks = [
@@ -47,16 +48,15 @@ const Animations = () => {
   ];
   return (
     <div className="animations">
-      <section className="section-title">
-        <h1 className="title">ANIMATIONS.</h1>
-        <SparklesAnimation className="sparkles" />
-        <p className="desc">
-          VchiBan makes their own animations too!
-          <br />
-          Here’s a showreel of all the beautiful works they were able to conjure
-          up so far!
-        </p>
-      </section>
+      <HeaderSection
+        as="header"
+        title="ANIMATIONS."
+        SparklesComponent={SparklesAnimation}
+        description=" VchiBan makes their own animations too! <br />
+          Here’s a showreel of all the beautiful works they were able to conjure up so far!"
+        customStyles="animation"
+      />
+
       <section className="videos-list">
         {animationsLinks.map((link) => (
           <article className="video-card" key={link.title}>

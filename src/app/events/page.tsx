@@ -1,19 +1,19 @@
 import Image from "next/image";
-import SparklesEvents from "../assets/svg/sparkles-events";
-import SparklesPremierExperience from "../assets/svg/sparkles-premier-experience";
+import SparklesEvents from "../../assets/svg/sparkles-events";
+import SparklesPremierExperience from "../../assets/svg/sparkles-premier-experience";
 import "./Events.scss";
+import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 const Events = () => {
   return (
     <div className="events">
-      <section className="section-title">
-        <h1 className="title">
-          EVENTS.
-          <SparklesEvents className="sparkles" />
-        </h1>
-        <p className="desc">
-          See the upcoming events we’ll be attending around the world!
-        </p>
-      </section>
+      <HeaderSection
+        as="header"
+        title="EVENTS."
+        SparklesComponent={SparklesEvents}
+        description="See the upcoming events we’ll be attending around the world!"
+        customStyles="events"
+      />
+
       <section className="nothing-to-see">
         <p>
           More Info <br /> Soon 👀
@@ -23,14 +23,14 @@ const Events = () => {
         </p>
       </section>
       <section>
-        <div className="section-title premier">
-          <h1 className="title">
-            WE MAKE
-            <br />
-            PREMIER EXPERIENCES.
-            <SparklesPremierExperience className="sparkles" />
-          </h1>
-        </div>
+        <HeaderSection
+          as="div"
+          title="WE MAKE <br />PREMIER EXPERIENCES."
+          SparklesComponent={SparklesPremierExperience}
+          customStyles="premier"
+          headingLevel="h2"
+        />
+
         <div className="experiences">
           <div className="info">
             <p>
@@ -71,39 +71,70 @@ const Events = () => {
           </div>
         </div>
       </section>
-      <section className="image-stack">
-        <Image
-          src="https://framerusercontent.com/images/BfyxP4XFuXRdI0QtCWJnEKZVNM.png"
-          alt="image 1"
-          layout="responsive"
-          width={791}
-          height={1274}
-          className="image-1"
-        />
-        <Image
-          src="https://framerusercontent.com/images/MkvH4T0NBgnRAdpEDe1H3Yhzg10.png"
-          alt="image 1"
-          layout="responsive"
-          width={791}
-          height={1274}
-          className="image-2"
-        />
-        <Image
-          src="https://framerusercontent.com/images/ytgjSDtqPpKOUU27lbjMUkItFpU.jpg"
-          alt="image 1"
-          layout="responsive"
-          width={791}
-          height={1274}
-          className="image-3"
-        />
-        <Image
-          src="https://framerusercontent.com/images/aBco0HxVVv03dg43G13LkVBkw.png"
-          alt="image 1"
-          layout="responsive"
-          width={791}
-          height={1274}
-          className="image-4"
-        />
+      <section className="container">
+        <div className="image-stack">
+          <div className="image-1">
+            <Image
+              src="https://framerusercontent.com/images/BfyxP4XFuXRdI0QtCWJnEKZVNM.png"
+              alt="image 1"
+              layout="responsive"
+              width={791}
+              height={1274}
+            />
+          </div>
+          <div className="image-2">
+            <Image
+              src="https://framerusercontent.com/images/MkvH4T0NBgnRAdpEDe1H3Yhzg10.png"
+              alt="image 1"
+              layout="responsive"
+              width={791}
+              height={1274}
+            />
+          </div>
+          <div className="image-3">
+            <Image
+              src="https://framerusercontent.com/images/ytgjSDtqPpKOUU27lbjMUkItFpU.jpg"
+              alt="image 1"
+              layout="responsive"
+              width={791}
+              height={1274}
+            />
+          </div>
+          <div className="image-4">
+            <Image
+              src="https://framerusercontent.com/images/aBco0HxVVv03dg43G13LkVBkw.png"
+              alt="image 1"
+              layout="responsive"
+              width={791}
+              height={1274}
+            />
+          </div>
+        </div>
+
+        <div className="description">
+          <div>
+            <p>
+              Not only can we provide live entertainment and engaging
+              discussions, but we also love to play games! Whether showcasing
+              our gaming skills, hosting game tournaments, or even offering live
+              commentary, we are here to make your event even more exciting. We
+              can provide anything from thrilling half-time shows to
+              entertaining multi-hour panels.
+            </p>
+            <br />
+            <p>
+              To ensure the highest quality experience, we have invested in
+              state-of-the-art streaming and facial capture technology. These
+              tools allow us to deliver top-notch visuals and seamless
+              interactions during our performances.
+            </p>
+          </div>
+
+          <div>
+            <p>Would you like to discuss bookings or have an inquiry for us?</p>
+            <button>send us an email</button>
+          </div>
+        </div>
       </section>
     </div>
   );

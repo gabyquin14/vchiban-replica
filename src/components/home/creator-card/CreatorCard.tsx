@@ -1,10 +1,10 @@
 import { FC } from "react";
 import "./CreatorCard.scss";
 import { motion } from "framer-motion";
-import Twitch from "#/app/assets/svg/twitch";
-import Twitter from "#/app/assets/svg/twitter";
-import Youtube from "#/app/assets/svg/youtube";
-import { vchibanStars } from "@/helpers/members-info";
+import Twitch from "#/assets/svg/twitch";
+import Twitter from "#/assets/svg/twitter";
+import Youtube from "#/assets/svg/youtube";
+import { vchibanStars } from "#/helpers/members-info";
 import Image from "next/image";
 import Link from "next/link";
 
