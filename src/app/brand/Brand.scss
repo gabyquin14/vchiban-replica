@@ -1,0 +1,30 @@
+.brand {
+  padding: 13rem 18.5rem 9.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 9.6rem;
+  align-items: center;
+  justify-content: center;
+
+  &-description {
+    font-size: 1.8rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .exclamation-marks {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    top: 6.5rem;
+    left: 50%;
+    z-index: -1;
+
+    svg:last-child {
+      margin-left: -3rem;
+      margin-top: -1rem;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.new-world {
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+  padding: 0rem 6.4rem 18rem;
+
+  .event-list {
+    display: flex;
+    gap: 3.2rem;
+
+    .event-card {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+    .event-card img {
+      border-radius: 2.4rem;
+    }
+
+    .gooba-ball {
+      position: relative;
+    }
+
+    .see-more-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 20rem;
+      position: absolute;
+      font-size: 1.8rem;
+      font-weight: 800;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    h3 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+}

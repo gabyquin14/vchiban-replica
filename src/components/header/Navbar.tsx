@@ -2,7 +2,7 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import "./Navbar.scss";
-import VchibanLogo from "@/assets/svg/vchiban-logo";
+import VchibanLogo from "#/assets/svg/vchiban-logo";
 import NavbarItem from "./NavbarItem";
 import GameCornerBtn from "./GameCornerBtn";
 

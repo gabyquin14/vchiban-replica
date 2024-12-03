@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import ChevronDown from "@/assets/svg/chevron-down";
-import Sparkles from "@/assets/svg/sparkles";
-import { springTransition } from "@/helpers/const-animations";
+import ChevronDown from "#/assets/svg/chevron-down";
+import Sparkles from "#/assets/svg/sparkles";
+import { springTransition } from "#/helpers/const-animations";
 import "./Home.scss";
 import Image from "next/image";
 import { useState } from "react";
-import { vchibanStars } from "@/helpers/members-info";
+import { vchibanStars } from "#/helpers/members-info";
+import HeaderSection from "../ui/headerSection/HeaderSection";
 
 export default function Banner() {
   const [isHover, setisHover] = useState(false);
@@ -14,15 +15,13 @@ export default function Banner() {
   return (
     <section className="home-section">
       <div className="banner-wrapper">
-        <div className="banner-header">
-          <div className="section-title">
-            <h1 className="title">
-              FOUND FAMILY <br />
-              INDIE GROUP.
-            </h1>
-            <Sparkles className="sparkles" />
-          </div>
-        </div>
+        <HeaderSection
+          as="header"
+          title="FOUND FAMILY <br />INDIE GROUP."
+          SparklesComponent={Sparkles}
+          customStyles="banner"
+        />
+
         <div className="members-wrapper">
           <ul className="stars-list">
             {vchibanStars.map((member) => (

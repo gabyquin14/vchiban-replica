@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { Epilogue } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./components/header/Navbar";
-import Footer from "./components/footer/Footer";
+import Navbar from "../components/header/Navbar";
+import Footer from "../components/footer/Footer";
 
 const gilboys = localFont({
-  src: "./fonts/jt_gilboys/Jt Gilboys.otf",
+  src: "../fonts/jt_gilboys/Jt Gilboys.otf",
   display: "swap",
   variable: "--gilboys",
 });
 const tommy = localFont({
-  src: "./fonts/made_tommy/MADE Tommy Soft ExtraBold PERSONAL USE.otf",
+  src: "../fonts/made_tommy/MADE Tommy Soft ExtraBold PERSONAL USE.otf",
   display: "swap",
   variable: "--tommy",
 });

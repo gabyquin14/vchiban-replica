@@ -3,7 +3,7 @@ import { FC, useState } from "react";
 import Link from "next/link";
 import "./Navbar.scss";
 import { motion } from "framer-motion";
-import { springTransition } from "@/helpers/const-animations";
+import { springTransition } from "#/helpers/const-animations";
 
 interface NavItem {
   content: string;

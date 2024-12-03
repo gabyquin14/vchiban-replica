@@ -1,29 +1,6 @@
 .animations {
   min-height: 100vh;
 
-  .section-title {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-    letter-spacing: -0.04rem;
-    padding: 13rem 6.4rem 15rem;
-
-    .sparkles {
-      position: absolute;
-      top: 10rem;
-      left: 50%;
-      transform: translateX(-52%);
-    }
-
-    .desc {
-      font-size: 1.8rem;
-      font-weight: 800;
-      line-height: 150%;
-      text-align: center;
-    }
-  }
   .videos-list {
     display: flex;
     flex-direction: column;

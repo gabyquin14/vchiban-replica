@@ -1,0 +1,142 @@
+.events {
+  height: min-content;
+
+  .nothing-to-see {
+    display: flex;
+    place-content: flex-start;
+    align-items: flex-start;
+    gap: 7rem;
+    padding: 0px 13.5rem 22rem;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+
+    p:first-child {
+      font-size: 4.8rem;
+      line-height: 100%;
+      font-family: var(--tommy);
+    }
+    p:last-child {
+      font-size: 3.6rem;
+      display: flex;
+      flex-direction: column;
+      font-weight: 900;
+    }
+    p:last-child span {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 200%;
+    }
+  }
+
+  .experiences {
+    display: flex;
+    padding: 0 128px 96px;
+    gap: 9.6rem;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      font-size: 1.8rem;
+      font-weight: 800;
+      gap: 1.8rem;
+    }
+    .video-wrapper {
+      margin-right: 4.8rem;
+      min-height: 482px;
+      min-width: 27.2rem;
+      object-position: 50% 50%;
+      text-align: center;
+      position: relative;
+    }
+    .video-wrapper span {
+      position: absolute;
+      left: 50%;
+      bottom: -3rem;
+      font-weight: 900;
+      letter-spacing: -0.07px;
+      transform: rotate(0deg) translateX(-63%);
+      font-size: 1.4rem;
+      white-space: nowrap;
+    }
+    video {
+      cursor: auto;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 1.2rem;
+      transform: rotate(4deg);
+      box-shadow: 0 48px 64px #0a05493d;
+    }
+  }
+  .image-stack {
+    position: relative;
+    min-height: 64.8rem;
+    padding-top: 9.6rem;
+
+    img {
+      border-radius: 1.6rem;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+      box-shadow: rgba(10, 5, 73, 0.24) 0px 48px 64px 0px;
+    }
+
+    .image-1 {
+      position: absolute;
+      top: 2rem;
+      left: -13rem;
+      width: 520px !important;
+      height: 468px !important;
+      z-index: 0;
+      transform: rotate(-3deg);
+      border-radius: 1.6rem;
+    }
+    .image-2 {
+      position: absolute;
+      top: 7rem;
+      left: 20%;
+      width: 630px !important;
+      height: 443px !important;
+      z-index: 1;
+      border-radius: 1.6rem;
+    }
+    .image-3 {
+      position: absolute;
+      top: 0;
+      left: 55%;
+      width: 513px !important;
+      height: 460px !important;
+      z-index: 0;
+      transform: rotate(2deg);
+      border-radius: 1.6rem;
+
+      img {
+        object-position: 50% 15%;
+      }
+    }
+    .image-4 {
+      position: absolute;
+      top: 7rem;
+      left: 87%;
+      width: 350px !important;
+      height: 464px !important;
+      z-index: 1;
+      transform: rotate(-4deg);
+      border-radius: 1.6rem;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    gap: 9.6rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 150%;
+    text-align: center;
+    padding: 0 12.8rem;
+  }
+}
