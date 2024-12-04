@@ -9,6 +9,11 @@ import ArrowIcon from "#/assets/svg/chevron-right";
 import TwitchIcon from "#/assets/svg/twitch";
 import TwitterIcon from "#/assets/svg/twitter";
 import YoutubeIcon from "#/assets/svg/youtube";
+import Exclamation1 from "#/assets/svg/footer/excl-1";
+import Exclamation2 from "#/assets/svg/footer/excl-2";
+import Exclamation3 from "#/assets/svg/footer/excl-3";
+import Exclamation4 from "#/assets/svg/footer/excl-4";
+import Exclamation5 from "#/assets/svg/footer/excl-5";
 
 const currentYear = new Date().getFullYear();
 
@@ -36,10 +41,11 @@ const socialLinks = [
 const Footer: FC = () => {
   return (
     <footer className="footer">
-      {/* Logo and Copyright */}
       <section className="footer__info">
         <Logo />
-        <p className="footer__info-copyright">©️ {currentYear} VchiBan.</p>
+        <p className="footer__info-copyright">
+          copyright ©️ {currentYear} VchiBan.
+        </p>
       </section>
 
       {/* Navigation */}
@@ -47,7 +53,7 @@ const Footer: FC = () => {
         <div className="footer__navigation-groups">
           {/* Primary Links */}
           <div className="footer__navigation-primary">
-            <h3 className="footer__title">Site Map</h3>
+            <h3 className="footer__title">Site map</h3>
             <ul className="footer__list">
               {primaryLinks.map((link, index) => (
                 <li key={link.label} className="footer__item">
@@ -87,6 +93,13 @@ const Footer: FC = () => {
           ))}
         </ul>
       </nav>
+
+      {/* Background exclamation marks */}
+      <Exclamation1 className="excl-mark excl1" />
+      <Exclamation2 className="excl-mark excl2" />
+      <Exclamation3 className="excl-mark excl3" />
+      <Exclamation4 className="excl-mark excl4" />
+      <Exclamation5 className="excl-mark excl5" />
     </footer>
   );
 };

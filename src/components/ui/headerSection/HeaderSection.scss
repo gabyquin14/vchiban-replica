@@ -17,10 +17,19 @@
     position: absolute;
   }
 
+  .preDescription {
+    display: flex;
+    flex-direction: column;
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 150%;
+    text-align: center;
+    padding-bottom: 6.4rem;
+  }
+
   .description {
     display: flex;
     flex-direction: column;
-    gap: 9.6rem;
     font-size: 1.8rem;
     font-weight: 800;
     line-height: 150%;
@@ -109,10 +118,58 @@
       line-height: 90%;
     }
   }
+
   &.legal {
     padding: 0rem;
     .title {
       line-height: 90%;
+    }
+  }
+
+  &.our-family {
+    padding: 12rem 6.4rem 10rem;
+
+    .title {
+      line-height: 110%;
+    }
+
+    .description {
+      padding: 0 6.4rem;
+      gap: 2rem;
+
+      div span:first-child {
+        color: var(--buffpup-dark-orange);
+      }
+      div span:nth-child(2) {
+        color: var(--candi-dark-purple);
+      }
+      div span:nth-child(3) {
+        color: var(--rosedoodle-dark-cyan);
+      }
+      div span:last-child {
+        color: var(--shia-dark-pink);
+      }
+    }
+
+    .sparkles {
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      transform: translateX(-51%);
+    }
+  }
+
+  &.stardust-valley {
+    padding: 0rem 6.4rem 10rem;
+    .title {
+      line-height: 110%;
+      font-size: 9.6rem;
+    }
+    .sparkles {
+      position: absolute;
+      top: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

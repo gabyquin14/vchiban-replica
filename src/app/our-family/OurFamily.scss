@@ -1,0 +1,18 @@
+.family {
+  min-height: 100vh;
+  &__banner {
+    display: flex;
+    flex-direction: column;
+    min-height: 118vh;
+    height: 100%;
+
+    .more-lore {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: auto;
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ChevronRight: React.FC = (props: Record<string, unknown>) => (
+const ChevronRight = (props: Record<string, unknown>) => (
   <svg width={24} height={24} fill="none" {...props}>
     <path
       stroke="#0A0549"
