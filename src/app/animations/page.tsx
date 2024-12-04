@@ -52,8 +52,13 @@ const Animations = () => {
         as="header"
         title="ANIMATIONS."
         SparklesComponent={SparklesAnimation}
-        description=" VchiBan makes their own animations too! <br />
-          Here’s a showreel of all the beautiful works they were able to conjure up so far!"
+        description={
+          <>
+            VchiBan makes their own animations too! <br />
+            Here’s a showreel of all the beautiful works they were able to
+            conjure up so far!
+          </>
+        }
         customStyles="animation"
       />
 

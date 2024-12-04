@@ -137,16 +137,16 @@
       padding: 0 6.4rem;
       gap: 2rem;
 
-      div span:first-child {
+      .stars span:first-child {
         color: var(--buffpup-dark-orange);
       }
-      div span:nth-child(2) {
+      .stars span:nth-child(2) {
         color: var(--candi-dark-purple);
       }
-      div span:nth-child(3) {
+      .stars span:nth-child(3) {
         color: var(--rosedoodle-dark-cyan);
       }
-      div span:last-child {
+      .stars span:last-child {
         color: var(--shia-dark-pink);
       }
     }
@@ -160,7 +160,7 @@
   }
 
   &.stardust-valley {
-    padding: 0rem 6.4rem 10rem;
+    padding: 0rem 6.4rem 0rem;
     .title {
       line-height: 110%;
       font-size: 9.6rem;

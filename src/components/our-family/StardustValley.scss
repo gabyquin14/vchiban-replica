@@ -1,0 +1,30 @@
+.stardust-valley {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .map-wrapper {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+
+    .map {
+      transform: rotate(-1deg);
+      box-shadow: 0 48px 64px #0a05493d;
+      border-radius: 0.5rem;
+    }
+
+    .big-stamp {
+      position: absolute;
+      top: -4.5rem;
+      right: 4.5rem;
+      filter: drop-shadow(0px 8px 24px rgba(10, 5, 73, 0.24));
+    }
+    .small-stamp {
+      position: absolute;
+      bottom: -3rem;
+      left: 7rem;
+      filter: drop-shadow(0px 8px 24px rgba(10, 5, 73, 0.24));
+    }
+  }
+}

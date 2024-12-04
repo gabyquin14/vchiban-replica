@@ -11,7 +11,7 @@ const NewInGamerCorner = () => {
     <section className="gamer-news">
       <HeaderSection
         as="div"
-        title="WHAT'S NEW IN THE <br />GAME CORNER."
+        title="WHAT'S NEW IN THE GAME CORNER."
         SparklesComponent={SparklesNewInGameCorner}
         customStyles="new-game-corner"
         headingLevel="h2"
