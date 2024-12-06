@@ -1,14 +1,17 @@
+"use client";
 import "./NewInGameCorner.scss";
 import SparklesNewInGameCorner from "#/assets/svg/sparkles-new-game-corner";
 import Image from "next/image";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
+import SpringButton from "#/components/ui/springBtn/SpringButton";
+import ChevronRight from "#/assets/svg/chevron-right";
 
 const NewInGamerCorner = () => {
   return (
     <section className="gamer-news">
       <HeaderSection
         as="div"
-        title="WHAT'S NEW IN THE <br />GAME CORNER."
+        title="WHAT'S NEW IN THE GAME CORNER."
         SparklesComponent={SparklesNewInGameCorner}
         customStyles="new-game-corner"
         headingLevel="h2"
@@ -23,8 +26,16 @@ const NewInGamerCorner = () => {
             height={504}
           />
         </div>
-        <h3>GOOBA BALL</h3>
-        <button>play now</button>
+        <div className="bottom-info">
+          <h3>GOOBA BALL</h3>
+          <SpringButton
+            text="play now"
+            firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
+            SecondIcon={ChevronRight}
+            customStyles="play-now"
+          ></SpringButton>
+        </div>
+
         <Image
           alt="Gooba ball title"
           src="https://framerusercontent.com/images/gLprry6EAPiHKeFkXIqzgCZLTM.png"

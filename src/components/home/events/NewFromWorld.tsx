@@ -12,8 +12,14 @@ const NewFromWorldVchiban: FC = () => {
         as="div"
         title="NEW FROM THE WORLD <br /><span>OF VCHIBAN.</span>"
         SparklesComponent={SparklesNewWorld}
-        description="See what’s been happening in our world, new events, new merch or
-          sometimes new games!<br />Stay tuned!"
+        description={
+          <>
+            See what’s been happening in our world, new events, new merch or
+            sometimes new games!
+            <br />
+            Stay tuned!
+          </>
+        }
         customStyles="new-projects"
         headingLevel="h2"
       />

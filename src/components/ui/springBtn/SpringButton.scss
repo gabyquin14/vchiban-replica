@@ -1,0 +1,52 @@
+.spring-btn {
+  padding: 1.6rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 1.4rem;
+  color: var(--navy-blue-main);
+  font-size: 1.8rem;
+  font-weight: 800;
+  height: fit-content;
+
+  .bouncy-bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 1.4rem;
+    background-color: var(--rosedoodle-cyan);
+    position: absolute;
+    // pointer-events: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .content-wrapper {
+    pointer-events: none;
+    white-space: nowrap;
+    text-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.8rem;
+    width: 100%;
+    height: 100%;
+
+    .content,
+    .second-icon,
+    .first-icon {
+      z-index: 2;
+    }
+    .first-icon {
+      width: 2.4rem !important;
+      height: 2.4rem !important;
+    }
+  }
+
+  &.play-now {
+  }
+
+  &__extras {
+  }
+}

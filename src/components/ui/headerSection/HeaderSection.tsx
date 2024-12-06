@@ -5,7 +5,7 @@ interface HeaderSectionProps {
   as?: keyof JSX.IntrinsicElements; // Allows to select the type of thml tag
   title: string;
   preDescription?: string;
-  description?: string;
+  description?: React.ReactNode;
   headingLevel?: keyof JSX.IntrinsicElements;
   SparklesComponent?: React.ElementType;
   customStyles?: string;
@@ -27,12 +27,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
     </div>
 
     {preDescription && <p className="preDescription">{preDescription}</p>}
-    {description && (
-      <p
-        className="description"
-        dangerouslySetInnerHTML={{ __html: description }}
-      />
-    )}
+    {description && <p className="description">{description}</p>}
   </Component>
 );
 

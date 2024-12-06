@@ -1,12 +1,13 @@
 "use client";
 import { FC, useState } from "react";
 import "./Navbar.scss";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { springTransition } from "#/helpers/const-animations";
 import ExclamationMark1 from "#/assets/svg/excl-mark-1";
 import ExclamationMark2 from "#/assets/svg/excl-mark-2";
 import ExclamationMark3 from "#/assets/svg/excl-mark-3";
-import Link from "next/link";
+import { excl1, excl2, excl3 } from "#/helpers/const-animations";
 
 interface NavItem {
   content?: string;
@@ -15,56 +16,6 @@ interface NavItem {
 
 const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
   const [isHover, setisHover] = useState(false);
-
-  // Each exclamation mark has a different delay
-  const item1 = {
-    visible: {
-      opacity: 1,
-      y: -15,
-      x: 0,
-      scale: 1,
-      transition: { duration: 0.3, delay: 0.2 },
-    },
-    hidden: {
-      opacity: 0,
-      y: -10,
-      x: 5,
-      scale: 0.9,
-      transition: { duration: 0.3 },
-    },
-  };
-  const item2 = {
-    visible: {
-      opacity: 1,
-      y: -15,
-      x: 0,
-      scale: 1,
-      transition: { duration: 0.3, delay: 0.1 },
-    },
-    hidden: {
-      opacity: 0,
-      y: -10,
-      x: 5,
-      scale: 0.9,
-      transition: { duration: 0.3 },
-    },
-  };
-  const item3 = {
-    visible: {
-      opacity: 1,
-      y: -15,
-      x: 0,
-      scale: 1,
-      transition: { duration: 0.3, delay: 0.2 },
-    },
-    hidden: {
-      opacity: 0,
-      y: -10,
-      x: -5,
-      scale: 0.9,
-      transition: { duration: 0.3 },
-    },
-  };
 
   return (
     <li
@@ -76,7 +27,7 @@ const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
           className="excl-mark mark-1"
           initial="hidden"
           animate={isHover ? "visible" : "hidden"}
-          variants={item1}
+          variants={excl1}
         >
           <ExclamationMark1 />
         </motion.div>
@@ -84,7 +35,7 @@ const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
           className="excl-mark mark-2"
           initial="hidden"
           animate={isHover ? "visible" : "hidden"}
-          variants={item2}
+          variants={excl2}
         >
           <ExclamationMark2 />
         </motion.div>
@@ -92,7 +43,7 @@ const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
           className="excl-mark mark-3"
           initial="hidden"
           animate={isHover ? "visible" : "hidden"}
-          variants={item3}
+          variants={excl3}
         >
           <ExclamationMark3 />
         </motion.div>

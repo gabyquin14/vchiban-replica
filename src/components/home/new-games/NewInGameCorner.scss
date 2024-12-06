@@ -38,25 +38,22 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
+    .bottom-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: 0rem;
+      width: 100%;
+      padding: 0 5rem 2rem;
+    }
     h3 {
-      position: absolute;
-      bottom: 2rem;
-      left: 5rem;
       font-size: 6.4rem;
       font-weight: 800;
       color: var(--white);
       font-family: var(--tommy);
     }
-    button {
-      position: absolute;
-      bottom: 2rem;
-      right: 5rem;
-      font-size: 6.4rem;
-      font-weight: 800;
-      color: var(--white);
-      font-family: var(--tommy);
-    }
+
     .img-1 {
       position: absolute;
       top: 5rem;
