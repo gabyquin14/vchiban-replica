@@ -1,9 +1,9 @@
 export const springTransition = { type: "spring", stiffness: 300, damping: 14 };
 export const bouncyTransition = {
   type: "spring",
-  stiffness: 800,
-  damping: 5,
-  mass: 0.1,
+  stiffness: 500,
+  damping: 8,
+  mass: 0.8,
 };
 
 // gamer corner button exclamation marks delay

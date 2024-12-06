@@ -14,6 +14,7 @@
     border-radius: 1.4rem;
     background-color: var(--rosedoodle-cyan);
     position: absolute;
+    // pointer-events: none;
     top: 0;
     left: 0;
     right: 0;
@@ -36,6 +37,10 @@
     .second-icon,
     .first-icon {
       z-index: 2;
+    }
+    .first-icon {
+      width: 2.4rem !important;
+      height: 2.4rem !important;
     }
   }
 

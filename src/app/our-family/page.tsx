@@ -6,6 +6,10 @@ import SparklesOurFamily from "#/assets/svg/sparkles-our-family";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import SparklesStardustValley from "#/assets/svg/sparkles-stardust-valley";
 import StardustValley from "#/components/our-family/StardustValley";
+import SparklesBetterTogether from "#/assets/svg/sparkles-better-together";
+import Image from "next/image";
+import SpringButton from "#/components/ui/springBtn/SpringButton";
+import ChevronRight from "#/assets/svg/chevron-right";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const OurFamily = () => {
@@ -92,6 +96,85 @@ const OurFamily = () => {
         <h2 className="became-family-title">
           They became a family; they became <span>VchiBan.</span>
         </h2>
+      </div>
+      <div className="endeavors">
+        <HeaderSection
+          as="div"
+          title="BETTER TOGETHER, <br/> NOW AND FOREVER."
+          description={
+            <>
+              VchiBan is more than just a VTuber Friend group - they&apos;re a
+              found family with <br /> a wide array of creative & innovative
+              endeavors up their sleeve!
+            </>
+          }
+          SparklesComponent={SparklesBetterTogether}
+          customStyles="better-together"
+        />
+        <div className="endeavors__list">
+          <div className="container ">
+            <div className="image-wrapper">
+              <Image
+                alt="games"
+                src="https://framerusercontent.com/images/tZn0Ml3CD1UtGfNJgC5xXrk01pE.jpg"
+                width={676}
+                height={136}
+                className="bg-img"
+              />
+            </div>
+            <div className="type-of-endeavor">
+              <h3>Games</h3>
+              <SpringButton
+                firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
+                SecondIcon={ChevronRight}
+                isTransitionBouncy={true}
+                text="play now"
+              />
+            </div>
+          </div>
+          <div className="container">
+            <div className="image-wrapper">
+              <Image
+                alt="games"
+                src="https://framerusercontent.com/images/nyHiTFwhvV1BwUOwDuBUrOZTA.png"
+                width={676}
+                height={136}
+                className="bg-img"
+              />
+            </div>
+            <div className="type-of-endeavor">
+              <h3>Merch</h3>
+
+              <SpringButton
+                firstIcon="https://framerusercontent.com/images/cx8wHmlKBcVwCZSMFNRz7ZE.svg"
+                SecondIcon={ChevronRight}
+                isTransitionBouncy={true}
+                text="view merch"
+              />
+            </div>
+          </div>
+          <div className="container">
+            <div className="image-wrapper">
+              <Image
+                alt="games"
+                src="https://framerusercontent.com/images/Oniq6Ilkfg3uldP14tnYY1KWso.png"
+                width={676}
+                height={136}
+                className="bg-img"
+              />
+            </div>
+            <div className="type-of-endeavor">
+              <h3>Events</h3>
+
+              <SpringButton
+                firstIcon="https://framerusercontent.com/images/57YdWeGgVZbcT0ajkrGCZOXFeA.svg"
+                SecondIcon={ChevronRight}
+                isTransitionBouncy={true}
+                text="see events"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
