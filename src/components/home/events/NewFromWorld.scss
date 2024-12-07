@@ -7,18 +7,28 @@
   .event-list {
     display: flex;
     gap: 3.2rem;
+  }
 
-    .event-card {
-      display: flex;
-      flex-direction: column;
-      gap: 3.2rem;
-    }
-    .event-card img {
+  .event-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    .event-image {
       border-radius: 2.4rem;
+      width: 67.6rem;
+      height: 34rem;
+      object-fit: cover;
     }
 
     .gooba-ball {
       position: relative;
+    }
+    .new-world {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .see-more-btn {
@@ -32,13 +42,21 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      svg {
+        margin-left: 0.8rem;
+      }
     }
 
-    h3 {
+    .event-title {
       font-size: 3.2rem;
-      font-weight: 800;
+      font-weight: 900;
       line-height: 150%;
       text-align: center;
+      margin-top: 1.6rem;
     }
   }
 }

@@ -1,28 +1,46 @@
 .creator-card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 6.4rem;
-  padding: 0 6.4rem 18rem;
+  column-gap: 6.4rem;
+  padding: 0 6.4rem 15rem;
 
-  .portrait-wrapper {
+  &__item {
     display: flex;
     flex-direction: column;
-    gap: 2.4rem;
+    gap: 1.2rem;
   }
 
-  .portrait {
-    height: 220%;
-    width: auto;
-    object-fit: cover;
-  }
-
-  .overflow {
+  &__image-wrapper {
     position: relative;
     height: 49.6rem;
     overflow: hidden;
   }
 
-  .background {
+  &__portrait-container {
+    position: relative;
+    height: 49.6rem;
+    width: 66rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .portrait-wrapper {
+    width: 76.8rem;
+    height: 135rem;
+    position: relative;
+  }
+
+  &__portrait {
+    position: absolute;
+    top: 7.5rem;
+    left: 50%;
+    transform: translateX(-50%) scale(1.15);
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__background {
     position: absolute;
     z-index: -1;
     bottom: 0;
@@ -36,67 +54,69 @@
       width: 100%;
       border-radius: 3.2rem;
     }
-    &.buffpup {
+
+    &.buffpup-background {
       background-color: var(--buffpup-orange);
     }
-    &.shiabun {
+    &.shiabun-background {
       background-color: var(--shia-light-pink);
     }
-    &.aicandii {
+    &.aicandii-background {
       background-color: var(--candi-purple);
     }
-    &.rosedoodle {
+    &.rosedoodle-background {
       background-color: var(--rosedoodle-cyan);
     }
   }
 
-  .star-socials {
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  &__name {
+    font-size: 6.4rem;
+    font-weight: 900;
+    font-family: var(--tommy);
+    display: inline;
+  }
+
+  &__name.buffpup {
+    color: var(--buffpup-dark-orange);
+  }
+  &__name.shiabun {
+    color: var(--shia-dark-pink);
+  }
+  &__name.aicandii {
+    color: var(--candi-dark-purple);
+  }
+  &__name.rosedoodle {
+    color: var(--rosedoodle-dark-cyan);
+  }
+
+  &__socials {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__social {
+    width: 5.2rem;
+    height: 5.2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    border-radius: 1.2rem;
 
-    h2 {
-      font-size: 6.4rem;
-      font-weight: 900;
-      font-family: var(--tommy);
-      display: inline;
+    &.twitch {
+      background-color: var(--candi-purple);
     }
-
-    .buffpup {
-      color: var(--buffpup-dark-orange);
+    &.youtube {
+      background-color: var(--shia-dark-pink);
     }
-    .shiabun {
-      color: var(--shia-dark-pink);
-    }
-    .aicandii {
-      color: var(--candi-dark-purple);
-    }
-    .rosedoodle {
-      color: var(--rosedoodle-dark-cyan);
-    }
-
-    .socials-list {
-      display: flex;
-
-      gap: 1.6rem;
-    }
-    .social {
-      width: 5.2rem;
-      height: 5.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 1.2rem;
-
-      &.twitch {
-        background-color: var(--candi-purple);
-      }
-      &.youtube {
-        background-color: var(--shia-dark-pink);
-      }
-      &.twitter {
-        background-color: var(--header-link-hover);
-      }
+    &.twitter {
+      background-color: var(--header-link-hover);
     }
   }
 }
