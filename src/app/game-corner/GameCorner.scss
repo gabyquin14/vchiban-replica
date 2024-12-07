@@ -1,34 +1,95 @@
 .game-corner {
-  .header {
-    position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-primary);
+
+  header {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 6.4rem;
-    padding: 12rem 12rem 10rem;
+    padding: 12rem;
+    text-align: center;
+    position: relative;
 
     .sanjis-eyebrow {
       position: absolute;
 
-      &:nth-child(3) {
-        top: 30%;
-        right: 30%;
-      }
-      &:first-child {
+      &:nth-of-type(1) {
         top: 30%;
         left: 30%;
+      }
+
+      &:nth-of-type(2) {
+        top: 30%;
+        right: 30%;
       }
     }
 
     .separator {
-      height: 0.8rem;
       width: 100%;
+      height: 0.8rem;
+
       div {
         background-image: url("https://framerusercontent.com/images/JXkOduR5EuNjdbCeVELMOAYAD8.svg");
-        background-size: auto;
-        background-position: left top;
         background-repeat: round;
-        width: 100%;
+        background-size: contain;
         height: 100%;
+      }
+    }
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12.8rem;
+    padding: 0 7rem 16.8rem;
+
+    section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 9.4rem;
+
+      .game-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 6.4rem;
+
+        .bg-img-gooba,
+        .bg-img-oshi {
+          max-width: 54rem;
+          max-height: 29rem;
+          border-radius: 1rem;
+        }
+
+        .oshi-animatronics {
+          max-width: 125.6rem;
+          max-height: 38rem;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        p {
+          font-size: 1.8rem;
+          font-weight: 800;
+          line-height: 1.5;
+        }
+      }
+
+      .banner-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
       }
     }
   }
