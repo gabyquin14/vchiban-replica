@@ -3,17 +3,17 @@ import { motion } from "framer-motion";
 import ChevronDown from "#/assets/svg/chevron-down";
 import Sparkles from "#/assets/svg/sparkles";
 import { springTransition } from "#/helpers/const-animations";
-import "./Home.scss";
 import Image from "next/image";
 import { useState } from "react";
 import { vchibanStars } from "#/helpers/members-info";
 import HeaderSection from "../ui/headerSection/HeaderSection";
+import "./Home.scss";
 
 export default function Banner() {
-  const [isHover, setisHover] = useState(false);
+  const [isHover, setIsHover] = useState(false);
 
   return (
-    <section className="home-section">
+    <section className="home-section" aria-labelledby="banner-title">
       <div className="banner-wrapper">
         <HeaderSection
           as="header"
@@ -23,11 +23,12 @@ export default function Banner() {
         />
 
         <div className="members-wrapper">
-          <ul className="stars-list">
+          <ul className="stars-list" role="list" aria-label="Team members">
             {vchibanStars.map((member) => (
               <li
                 key={member.name}
                 className={`star-portrait ${member.name.toLowerCase()}`}
+                aria-label={`Portrait of ${member.name}`}
               >
                 <Image
                   src={member.image}
@@ -40,21 +41,23 @@ export default function Banner() {
             ))}
           </ul>
         </div>
+
         <div className="see-more-btn-wrapper">
           <button
             className="see-more-btn"
-            onMouseEnter={() => setisHover(true)}
-            onMouseLeave={() => setisHover(false)}
+            onMouseEnter={() => setIsHover(true)}
+            onMouseLeave={() => setIsHover(false)}
+            aria-label="See more of what we can do"
           >
             <motion.div
               whileHover={{ scale: 1.1 }}
               transition={springTransition}
               className="hover-motion blue"
+              aria-hidden="true"
             />
-
             <div className="content-wrapper">
               <span className="content">See more of what we can do</span>
-              <ChevronDown />
+              <ChevronDown aria-hidden="true" />
             </div>
           </button>
         </div>

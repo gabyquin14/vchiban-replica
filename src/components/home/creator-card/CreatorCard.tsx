@@ -10,19 +10,24 @@ import Link from "next/link";
 
 const CreatorCard: FC = () => {
   return (
-    <div className="creator-card">
+    <section className="creator-card">
       {vchibanStars.map((star) => (
-        <article key={star.name}>
-          <div className="portrait-wrapper">
-            <div className="overflow">
-              <Image
-                alt={`${star.name}`}
-                src={star.image}
-                width={768}
-                height={1350}
-                className="portrait"
-              />
-              <div className={`background ${star.name.toLocaleLowerCase()}`}>
+        <article key={star.name} className="creator-card__item">
+          <div className="creator-card__image-wrapper">
+            <figure className="creator-card__portrait-container">
+              <div className="portrait-wrapper">
+                <Image
+                  alt={`${star.name} portrait`}
+                  src={star.image}
+                  width={768}
+                  height={1350}
+                  className={`creator-card__portrait ${star.name.toLocaleLowerCase()}-background`}
+                />
+              </div>
+
+              <div
+                className={`creator-card__background ${star.name.toLocaleLowerCase()}-background`}
+              >
                 <Image
                   alt={`${star.name}-background`}
                   src={star.backgroundCard}
@@ -30,33 +35,35 @@ const CreatorCard: FC = () => {
                   height={368}
                 />
               </div>
-            </div>
-            <div className="star-socials">
-              <h2 className={`${star.name.toLocaleLowerCase()}`}>
-                {star.name}
-              </h2>
-              <ul className="socials-list">
-                <li className="social twitch">
-                  <Link href={star.twitch}>
-                    <Twitch />
-                  </Link>
-                </li>
-                <li className="social twitter">
-                  <Link href={star.twitter}>
-                    <Twitter />
-                  </Link>
-                </li>
-                <li className="social youtube">
-                  <Link href={star.youtube}>
-                    <Youtube />
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            </figure>
+          </div>
+          <div className="creator-card__info">
+            <h2
+              className={`creator-card__name ${star.name.toLocaleLowerCase()}`}
+            >
+              {star.name}
+            </h2>
+            <ul className="creator-card__socials">
+              <li className="creator-card__social twitch">
+                <Link href={star.twitch}>
+                  <Twitch />
+                </Link>
+              </li>
+              <li className="creator-card__social twitter">
+                <Link href={star.twitter}>
+                  <Twitter />
+                </Link>
+              </li>
+              <li className="creator-card__social youtube">
+                <Link href={star.youtube}>
+                  <Youtube />
+                </Link>
+              </li>
+            </ul>
           </div>
         </article>
       ))}
-    </div>
+    </section>
   );
 };
 

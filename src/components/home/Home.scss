@@ -3,8 +3,6 @@
   justify-content: center;
   min-height: 100vh;
 
-  /* ------------BANNER RELATED STYLES---------------*/
-
   .banner-wrapper {
     width: 100%;
     height: 100%;
@@ -19,13 +17,10 @@
 
     .members-wrapper {
       width: 100%;
-      height: fit-content;
       min-height: 65rem;
       max-width: 150rem;
-      width: 100%;
       position: absolute;
-      bottom: 0rem;
-      /*small gradient at the bottom of banner*/
+      bottom: 0;
       mask: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1) 85%,
@@ -37,9 +32,7 @@
 
     .stars-list {
       position: absolute;
-      min-width: 102.4rem;
-      max-width: 102.4rem;
-      width: 100%;
+      width: 102.4rem;
       height: auto;
       min-height: 65rem;
       left: 50%;
@@ -47,40 +40,35 @@
 
       .star-portrait {
         position: absolute;
-        height: fit-content;
-        width: fit-content;
+        width: 79rem;
+        height: 12.7rem;
       }
 
-      // sizes="(max-width: 1024px) 635px, (max-width: 2048px) 1270px, 2541px"
       .star-portrait img {
-        width: revert-layer !important;
-
-        @media screen and (max-width: 1024px) {
-          max-width: 80rem !important;
-          height: auto !important;
-        }
+        width: 100%;
+        height: 100%;
       }
     }
 
+    // Specific members positioning
     .buffpup {
       top: 0;
-      left: -30%;
-      transform: rotate(0deg);
+      left: -33%;
+      transform: rotate(-6deg);
     }
     .aicandii {
-      top: -1rem;
-      left: -4%;
-      transform: rotate(1deg);
+      top: -1.5rem;
+      left: -2%;
     }
     .shiabun {
-      top: 2rem;
-      right: -3%;
-      transform: rotate(0deg) scale(1.07);
+      top: -2rem;
+      right: -5%;
+      transform: scale(1.1) rotate(2deg);
     }
     .rosedoodle {
-      top: 0;
-      right: -32%;
-      transform: rotate(0deg) scale(1.05);
+      top: -2rem;
+      right: -38%;
+      transform: scale(1.05) rotate(8deg);
       z-index: 3;
     }
   }
@@ -101,13 +89,8 @@
 
       .content-wrapper {
         z-index: 3;
-        text-wrap: nowrap;
-        pointer-events: none;
         white-space: nowrap;
-        text-wrap: nowrap;
         display: flex;
-        width: 100%;
-        height: 100%;
         font-size: 1.8rem;
         font-weight: 800;
         gap: 0.8rem;
@@ -117,18 +100,9 @@
         width: 100%;
         height: 100%;
         border-radius: 1.4rem;
-        opacity: 1;
-        transition: opacity 0.1s ease-in;
         position: absolute;
         background-color: var(--white);
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
         z-index: 2;
-        &:hover {
-          opacity: 1;
-        }
       }
     }
   }
