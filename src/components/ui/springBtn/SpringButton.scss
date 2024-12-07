@@ -8,13 +8,28 @@
   font-weight: 800;
   height: fit-content;
 
+  &.game-corner {
+    color: var(--white);
+    font-weight: 600;
+    width: 21.6rem;
+    padding: 0.8rem 1.6rem;
+
+    .bouncy-bg {
+      background-color: var(--navy-blue-main);
+    }
+
+    path {
+      color: var(--white);
+      stroke: var(--white);
+    }
+  }
+
   .bouncy-bg {
     width: 100%;
     height: 100%;
     border-radius: 1.4rem;
     background-color: var(--rosedoodle-cyan);
     position: absolute;
-    // pointer-events: none;
     top: 0;
     left: 0;
     right: 0;
@@ -42,11 +57,5 @@
       width: 2.4rem !important;
       height: 2.4rem !important;
     }
-  }
-
-  &.play-now {
-  }
-
-  &__extras {
   }
 }

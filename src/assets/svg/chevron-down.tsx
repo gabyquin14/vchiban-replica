@@ -1,6 +1,6 @@
 import React from "react";
 
-const ChevronDown: React.FC = (props: Record<string, unknown>) => (
+const ChevronDown = (props: Record<string, unknown>) => (
   <svg width={24} height={25} fill="none" {...props}>
     <path
       stroke="#0A0549"
