@@ -5,6 +5,8 @@ import Image from "next/image";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import SpringButton from "#/components/ui/springBtn/SpringButton";
 import ChevronRight from "#/assets/svg/chevron-right";
+import GameExcl1 from "#/assets/svg/home/game-excl-1";
+import GameExcl2 from "#/assets/svg/home/game-excl-2";
 
 const NewInGamerCorner = () => {
   return (
@@ -65,6 +67,9 @@ const NewInGamerCorner = () => {
           className="img-3"
         />
       </div>
+
+      <GameExcl1 className="excl-1" />
+      <GameExcl2 className="excl-2" />
     </section>
   );
 };

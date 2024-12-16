@@ -9,8 +9,8 @@ import { vchibanStars } from "#/helpers/members-info";
 import HeaderSection from "../ui/headerSection/HeaderSection";
 import "./Home.scss";
 import House from "#/assets/svg/house";
-import Exclamation4 from "#/assets/svg/footer/excl-4";
-import Exclamation3 from "#/assets/svg/footer/excl-3";
+import BlueExclMark1 from "#/assets/svg/home/blue-excl-1";
+import BlueExclMark2 from "#/assets/svg/home/blue-excl-2";
 
 export default function Banner() {
   const [isHover, setIsHover] = useState(false);
@@ -67,10 +67,10 @@ export default function Banner() {
       </div>
       <div className="bg-wrapper">
         <div className="bg-svgs">
-          <House />
+          <House className="house" />
           <div className="excl-marks">
-            <Exclamation4 />
-            <Exclamation3 />
+            <BlueExclMark1 />
+            <BlueExclMark2 />
           </div>
         </div>
       </div>

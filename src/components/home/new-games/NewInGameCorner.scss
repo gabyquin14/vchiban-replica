@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 9.6rem;
   padding: 0 6.4rem 9.6rem;
+  position: relative;
 
   .game-wrapper {
     position: relative;
@@ -78,5 +79,20 @@
       border-radius: 1.2rem;
       box-shadow: rgba(10, 5, 73, 0.32) 0px 16px 28px 0px;
     }
+  }
+
+  .excl-1,
+  .excl-2 {
+    position: absolute;
+    z-index: -1;
+  }
+
+  .excl-1 {
+    top: -1rem;
+    left: 10rem;
+  }
+  .excl-2 {
+    top: -5rem;
+    right: 14rem;
   }
 }

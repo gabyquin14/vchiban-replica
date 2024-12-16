@@ -6,6 +6,10 @@ import Image from "next/image";
 import ChevronRight from "#/assets/svg/chevron-right";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import SpringButton from "#/components/ui/springBtn/SpringButton";
+import Spring1 from "#/assets/svg/home/spring-1";
+import Spring2 from "#/assets/svg/home/spring-2";
+import BigStar from "#/assets/svg/home/big-star";
+import SmallStar from "#/assets/svg/home/small-star";
 
 const NewFromWorldVchiban: FC = () => {
   return (
@@ -56,6 +60,11 @@ const NewFromWorldVchiban: FC = () => {
           <h3 className="event-title">Play Gooba Ball</h3>
         </article>
       </div>
+      <Spring1 className="spring-1" />
+      <Spring2 className="spring-2" />
+      <BigStar className="star-1" />
+      <SmallStar className="star-2" />
+      <SmallStar className="star-3" />
     </section>
   );
 };
