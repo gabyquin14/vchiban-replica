@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 6.4rem;
-  padding: 0rem 6.4rem 18rem;
+  padding: 15rem 6.4rem 18rem;
+  position: relative;
 
   .event-list {
     display: flex;
@@ -58,5 +59,40 @@
       text-align: center;
       margin-top: 1.6rem;
     }
+  }
+
+  .spring-1,
+  .spring-2,
+  .star-1,
+  .star-2,
+  .star-3 {
+    position: absolute;
+    top: 0;
+  }
+
+  .spring-1 {
+    top: 8.5rem;
+    left: 4.5rem;
+  }
+
+  .spring-2 {
+    top: 8rem;
+    right: 10rem;
+  }
+
+  .star-1 {
+    top: 8rem;
+    left: 27rem;
+    z-index: -1;
+  }
+
+  .star-2 {
+    top: 28.5rem;
+    right: 7rem;
+  }
+
+  .star-3 {
+    top: 4rem;
+    left: 34rem;
   }
 }

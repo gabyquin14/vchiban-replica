@@ -2,7 +2,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 6.4rem;
-  padding: 0 6.4rem 15rem;
+  padding: 0 6.4rem 0;
+  position: relative;
 
   &__item {
     display: flex;
@@ -118,5 +119,19 @@
     &.twitter {
       background-color: var(--header-link-hover);
     }
+  }
+
+  .excl-1,
+  .excl-2 {
+    position: absolute;
+    z-index: -2;
+  }
+  .excl-1 {
+    top: 4rem;
+    left: 25rem;
+  }
+  .excl-2 {
+    top: 3rem;
+    right: 13rem;
   }
 }

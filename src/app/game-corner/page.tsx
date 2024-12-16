@@ -1,7 +1,7 @@
 "use client";
 import "./GameCorner.scss";
 import { useState } from "react";
-import SparklesGameCorner from "#/assets/svg/sparkles-game-corner";
+import SparklesGameCorner from "#/assets/svg/sparkles/sparkles-game-corner";
 import SanjisEyebrow from "#/assets/svg/swirly-thingy";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import Image from "next/image";
@@ -9,6 +9,7 @@ import SpringButton from "#/components/ui/springBtn/SpringButton";
 import SmallBanner from "#/components/game-corner/small-banner/small-banner";
 import ImgCarousel from "#/components/game-corner/img-carousel/ImgCarousel";
 import ChevronRight from "#/assets/svg/chevron-right";
+import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
 
 const GameCorner = () => {
   const [showGame, setShowGame] = useState(true);
@@ -129,6 +130,8 @@ const GameCorner = () => {
           )}
         </section>
       </div>
+
+      <FooterSeparator color="var(--game-corner-bg)" />
     </main>
   );
 };

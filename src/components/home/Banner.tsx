@@ -1,13 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 import ChevronDown from "#/assets/svg/chevron-down";
-import Sparkles from "#/assets/svg/sparkles";
+import Sparkles from "#/assets/svg/sparkles/sparkles";
 import { springTransition } from "#/helpers/const-animations";
 import Image from "next/image";
 import { useState } from "react";
 import { vchibanStars } from "#/helpers/members-info";
 import HeaderSection from "../ui/headerSection/HeaderSection";
 import "./Home.scss";
+import House from "#/assets/svg/house";
+import BlueExclMark1 from "#/assets/svg/home/blue-excl-1";
+import BlueExclMark2 from "#/assets/svg/home/blue-excl-2";
 
 export default function Banner() {
   const [isHover, setIsHover] = useState(false);
@@ -60,6 +63,15 @@ export default function Banner() {
               <ChevronDown aria-hidden="true" />
             </div>
           </button>
+        </div>
+      </div>
+      <div className="bg-wrapper">
+        <div className="bg-svgs">
+          <House className="house" />
+          <div className="excl-marks">
+            <BlueExclMark1 />
+            <BlueExclMark2 />
+          </div>
         </div>
       </div>
     </section>
