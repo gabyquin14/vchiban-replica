@@ -1,6 +1,6 @@
 "use client";
 import "./NewInGameCorner.scss";
-import SparklesNewInGameCorner from "#/assets/svg/sparkles-new-game-corner";
+import SparklesNewInGameCorner from "#/assets/svg/sparkles/sparkles-new-game-corner";
 import Image from "next/image";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import SpringButton from "#/components/ui/springBtn/SpringButton";

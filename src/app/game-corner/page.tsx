@@ -1,7 +1,7 @@
 "use client";
 import "./GameCorner.scss";
 import { useState } from "react";
-import SparklesGameCorner from "#/assets/svg/sparkles-game-corner";
+import SparklesGameCorner from "#/assets/svg/sparkles/sparkles-game-corner";
 import SanjisEyebrow from "#/assets/svg/swirly-thingy";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import Image from "next/image";

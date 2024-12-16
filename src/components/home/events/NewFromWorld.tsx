@@ -1,7 +1,7 @@
 "use client";
 import { FC } from "react";
 import "./NewFromWorld.scss";
-import SparklesNewWorld from "#/assets/svg/sparkles-new-world";
+import SparklesNewWorld from "#/assets/svg/sparkles/sparkles-new-world";
 import Image from "next/image";
 import ChevronRight from "#/assets/svg/chevron-right";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import SparklesEvents from "../../assets/svg/sparkles-events";
-import SparklesPremierExperience from "../../assets/svg/sparkles-premier-experience";
+import SparklesEvents from "../../assets/svg/sparkles/sparkles-events";
+import SparklesPremierExperience from "../../assets/svg/sparkles/sparkles-premier-experience";
 import "./Events.scss";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";

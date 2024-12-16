@@ -2,11 +2,11 @@
 import "./OurFamily.scss";
 import dynamic from "next/dynamic";
 import ChevronDown from "#/assets/svg/chevron-down";
-import SparklesOurFamily from "#/assets/svg/sparkles-our-family";
+import SparklesOurFamily from "#/assets/svg/sparkles/sparkles-our-family";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
-import SparklesStardustValley from "#/assets/svg/sparkles-stardust-valley";
+import SparklesStardustValley from "#/assets/svg/sparkles/sparkles-stardust-valley";
 import StardustValley from "#/components/our-family/stardus-valley/StardustValley";
-import SparklesBetterTogether from "#/assets/svg/sparkles-better-together";
+import SparklesBetterTogether from "#/assets/svg/sparkles/sparkles-better-together";
 import Image from "next/image";
 import SpringButton from "#/components/ui/springBtn/SpringButton";
 import ChevronRight from "#/assets/svg/chevron-right";

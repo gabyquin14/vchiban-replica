@@ -1,5 +1,5 @@
 import "./Animations.scss";
-import SparklesAnimation from "#/assets/svg/sparkles-animation";
+import SparklesAnimation from "#/assets/svg/sparkles/sparkles-animation";
 import VideoCard from "../../components/animations/VideoCard";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 

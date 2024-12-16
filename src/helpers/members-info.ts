@@ -1,7 +1,6 @@
 export const vchibanStars = [
   {
-    image:
-      "https://framerusercontent.com/images/fXUPKtgiqAzS3GGvzha4kSWLOg.png",
+    image: "https://framerusercontent.com/images/eKx6n3pwV9ZxQfu350mQtIE14.png",
     name: "Buffpup",
     twitch: "https://www.twitch.tv/buffpup",
     twitter: "https://x.com/buffpup_",
