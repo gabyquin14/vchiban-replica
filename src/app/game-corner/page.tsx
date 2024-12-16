@@ -9,6 +9,7 @@ import SpringButton from "#/components/ui/springBtn/SpringButton";
 import SmallBanner from "#/components/game-corner/small-banner/small-banner";
 import ImgCarousel from "#/components/game-corner/img-carousel/ImgCarousel";
 import ChevronRight from "#/assets/svg/chevron-right";
+import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
 
 const GameCorner = () => {
   const [showGame, setShowGame] = useState(true);
@@ -129,6 +130,8 @@ const GameCorner = () => {
           )}
         </section>
       </div>
+
+      <FooterSeparator color="var(--game-corner-bg)" />
     </main>
   );
 };

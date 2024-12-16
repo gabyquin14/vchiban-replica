@@ -5,11 +5,13 @@ import ChevronDown from "#/assets/svg/chevron-down";
 import SparklesOurFamily from "#/assets/svg/sparkles-our-family";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import SparklesStardustValley from "#/assets/svg/sparkles-stardust-valley";
-import StardustValley from "#/components/our-family/StardustValley";
+import StardustValley from "#/components/our-family/stardus-valley/StardustValley";
 import SparklesBetterTogether from "#/assets/svg/sparkles-better-together";
 import Image from "next/image";
 import SpringButton from "#/components/ui/springBtn/SpringButton";
 import ChevronRight from "#/assets/svg/chevron-right";
+import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
+import MembersRaibow from "#/components/our-family/members-rainbow/MembersRainbow";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const OurFamily = () => {
@@ -92,10 +94,14 @@ const OurFamily = () => {
             And then it became exactly what they always knew it was.
           </p>
         </div>
-
+      </div>
+      <div className="rainbow-content-wrapper">
         <h2 className="became-family-title">
           They became a family; they became <span>VchiBan.</span>
         </h2>
+        <div className="rainbow-showcase">
+          <MembersRaibow />
+        </div>
       </div>
       <div className="endeavors">
         <HeaderSection
@@ -112,7 +118,7 @@ const OurFamily = () => {
           customStyles="better-together"
         />
         <div className="endeavors__list">
-          <div className="container ">
+          <div className="container">
             <div className="image-wrapper">
               <Image
                 alt="games"
@@ -176,6 +182,7 @@ const OurFamily = () => {
           </div>
         </div>
       </div>
+      <FooterSeparator />
     </div>
   );
 };

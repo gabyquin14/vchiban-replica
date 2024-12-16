@@ -3,6 +3,7 @@ import SparklesEvents from "../../assets/svg/sparkles-events";
 import SparklesPremierExperience from "../../assets/svg/sparkles-premier-experience";
 import "./Events.scss";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
+import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
 const Events = () => {
   return (
     <div className="events">
@@ -136,6 +137,8 @@ const Events = () => {
           </div>
         </div>
       </section>
+
+      <FooterSeparator />
     </div>
   );
 };

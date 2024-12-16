@@ -1,0 +1,113 @@
+.members-card {
+  display: flex;
+  gap: 3rem;
+
+  &__item {
+    position: absolute;
+
+    &.buffpup {
+      left: 4%;
+      top: 5rem;
+      transform: rotate(-6deg);
+    }
+    &.aicandii {
+      left: 28%;
+      top: 0rem;
+      transform: rotate(-2deg);
+    }
+    &.rosedoodle {
+      left: 52%;
+      top: 0rem;
+      transform: rotate(2deg);
+    }
+    &.shiabun {
+      right: 4%;
+      top: 5rem;
+      transform: rotate(8deg);
+    }
+  }
+
+  &__image-wrapper {
+    position: relative;
+    height: 49.6rem;
+    width: 31rem;
+    overflow: hidden;
+    border-radius: 6.4rem;
+  }
+
+  &__portrait-container {
+    position: absolute;
+    bottom: 0;
+    height: 30rem;
+    width: 31rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .portrait-wrapper {
+    width: 76.8rem;
+    height: 135rem;
+    position: relative;
+  }
+
+  &__portrait {
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translateX(-50%) scale(2);
+    width: 100%;
+    object-fit: contain;
+
+    &.aicandii {
+      left: 46%;
+      top: 18rem;
+      transform: translateX(-50%) scale(2) rotate(1deg);
+    }
+    &.buffpup {
+      left: 54%;
+      top: 13rem;
+      transform: translateX(-53%) scale(2) rotate(5deg);
+    }
+    &.rosedoodle {
+      left: 48%;
+      top: 8rem;
+      transform: translateX(-50%) scale(2) rotate(-1deg);
+    }
+    &.shiabun {
+      top: 14rem;
+      transform: translateX(-40%) scale(2) rotate(-7deg);
+    }
+  }
+
+  &__background {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    height: 30rem;
+    width: 100%;
+    border-radius: 6.4rem;
+    overflow: hidden;
+
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+      border-radius: 6.4rem;
+      transform: scale(2.2) translateX(27%);
+    }
+
+    &.buffpup-background {
+      background-color: var(--buffpup-orange);
+    }
+    &.shiabun-background {
+      background-color: var(--shia-light-pink);
+    }
+    &.aicandii-background {
+      background-color: var(--candi-purple);
+    }
+    &.rosedoodle-background {
+      background-color: var(--rosedoodle-cyan);
+    }
+  }
+}
