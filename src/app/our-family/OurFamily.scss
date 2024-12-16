@@ -81,6 +81,30 @@
       position: relative;
       height: 65rem;
     }
+
+    .buff,
+    .shia,
+    .candii,
+    .rose {
+      position: absolute;
+      z-index: -1;
+    }
+    .buff {
+      top: 26rem;
+      left: -25rem;
+    }
+    .candii {
+      top: 10rem;
+      left: 34.5rem;
+    }
+    .shia {
+      top: 5rem;
+      right: -15rem;
+    }
+    .rose {
+      top: 18rem;
+      right: 30rem;
+    }
   }
   .endeavors {
     display: flex;
@@ -88,6 +112,8 @@
     gap: 6.4rem;
     padding: 0 6.4rem 9.6rem;
     max-width: 151.2rem;
+    width: 100%;
+    position: relative;
 
     &__list {
       display: grid;
@@ -149,6 +175,26 @@
           padding: 0 3rem;
         }
       }
+    }
+
+    .excl-1,
+    .excl-2,
+    .excl-3 {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .excl-1 {
+      top: 17.5rem;
+      left: 2rem;
+    }
+    .excl-2 {
+      top: 7rem;
+      left: 15rem;
+    }
+    .excl-3 {
+      top: -6rem;
+      right: 6rem;
     }
   }
 }
