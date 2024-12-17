@@ -14,7 +14,7 @@ import SpringButton from "#/components/ui/springBtn/SpringButton";
 import ChevronRight from "#/assets/svg/chevron-right";
 import BigStar from "#/assets/svg/home/big-star";
 import SmallStar from "#/assets/svg/home/small-star";
-import MediumStar from "#/assets/svg/events/medium-star";
+
 const Events = () => {
   return (
     <div className="events">

@@ -1,12 +1,45 @@
 .animations {
   min-height: 100vh;
 
+  .header-wrapper {
+    position: relative;
+    width: 100%;
+
+    .strip1,
+    .strip2,
+    .strip3 {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .strip1 {
+      top: -8rem;
+      left: -42.5rem;
+    }
+    .strip2 {
+      top: -22rem;
+      left: 15rem;
+    }
+    .strip3 {
+      top: 24rem;
+      right: -5.5rem;
+    }
+  }
+
   .videos-list {
     display: flex;
     flex-direction: column;
     gap: 15rem;
     padding: 0 6.4rem 12.8rem;
     width: 100%;
+    position: relative;
+
+    .strip4 {
+      position: absolute;
+      z-index: -1;
+      top: 47rem;
+      left: -38rem;
+    }
 
     .video-card {
       display: flex;
@@ -29,6 +62,7 @@
       width: 90% !important;
       height: 95vh !important;
       box-shadow: rgba(10, 5, 73, 0.24) 0px 4.8rem 6.4rem 0rem;
+      border-radius: 1.2rem;
     }
     .video iframe {
       border-radius: 1.2rem;
