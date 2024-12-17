@@ -21,6 +21,11 @@ import TogetherExcl2 from "#/assets/svg/our-family/together-excl-2";
 import TogetherExcl3 from "#/assets/svg/our-family/together-excl-3";
 import BannerExcl1 from "#/assets/svg/our-family/banner-excl-1";
 import BannerExcl2 from "#/assets/svg/our-family/banner-excl-2";
+import ShiabunSilhouette from "#/assets/svg/our-family/shiabun-silhouette";
+import RoseSilhouette from "#/assets/svg/our-family/rose-silhouette";
+import AicandiiSilhouette from "#/assets/svg/our-family/aicandii-silhouette";
+import BuffpupSilhouette from "#/assets/svg/our-family/buffpup-silhouette";
+import House from "#/assets/svg/house";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const OurFamily = () => {
@@ -49,8 +54,19 @@ const OurFamily = () => {
           SparklesComponent={SparklesOurFamily}
           customStyles="our-family"
         />
-        <BannerExcl1 className="excl-1" />
-        <BannerExcl2 className="excl-2" />
+        <div className="excl-marks">
+          <BannerExcl1 className="excl-1" />
+          <BannerExcl2 className="excl-2" />
+        </div>
+        <div className="members">
+          <ShiabunSilhouette className="shia" />
+          <RoseSilhouette className="rose" />
+          <AicandiiSilhouette className="candii" />
+          <BuffpupSilhouette className="buff" />
+        </div>
+
+        <House className="house" />
+
         <button className="more-lore">
           <ChevronDown />
           See more lore

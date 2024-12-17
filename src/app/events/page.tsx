@@ -1,19 +1,35 @@
+"use client";
 import Image from "next/image";
 import SparklesEvents from "../../assets/svg/sparkles/sparkles-events";
 import SparklesPremierExperience from "../../assets/svg/sparkles/sparkles-premier-experience";
 import "./Events.scss";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
+import Excl1 from "#/assets/svg/events/excl-1";
+import Excl3 from "#/assets/svg/events/excl-3";
+import Excl2 from "#/assets/svg/events/excl-2";
+import Excl4 from "#/assets/svg/events/excl-4";
+import Excl5 from "#/assets/svg/events/excl-5";
+import SpringButton from "#/components/ui/springBtn/SpringButton";
+import ChevronRight from "#/assets/svg/chevron-right";
+import BigStar from "#/assets/svg/home/big-star";
+import SmallStar from "#/assets/svg/home/small-star";
+import MediumStar from "#/assets/svg/events/medium-star";
 const Events = () => {
   return (
     <div className="events">
-      <HeaderSection
-        as="header"
-        title="EVENTS."
-        SparklesComponent={SparklesEvents}
-        description="See the upcoming events we’ll be attending around the world!"
-        customStyles="events"
-      />
+      <div className="header-wrapper">
+        <HeaderSection
+          as="header"
+          title="EVENTS."
+          SparklesComponent={SparklesEvents}
+          description="See the upcoming events we’ll be attending around the world!"
+          customStyles="events"
+        />
+        <Excl1 className="excl-1" />
+        <Excl2 className="excl-2" />
+        <Excl3 className="excl-3" />
+      </div>
 
       <section className="nothing-to-see">
         <p>
@@ -23,7 +39,7 @@ const Events = () => {
           Coming soon! <br /> <span>Stay tuned for more info!</span>
         </p>
       </section>
-      <section>
+      <section className="premier-experiences">
         <HeaderSection
           as="div"
           title="WE MAKE <br />PREMIER EXPERIENCES."
@@ -31,6 +47,8 @@ const Events = () => {
           customStyles="premier"
           headingLevel="h2"
         />
+        <Excl4 className="excl-4" />
+        <Excl5 className="excl-5" />
 
         <div className="experiences">
           <div className="info">
@@ -130,11 +148,18 @@ const Events = () => {
               interactions during our performances.
             </p>
           </div>
-
-          <div>
+          <div className="call-to-action">
             <p>Would you like to discuss bookings or have an inquiry for us?</p>
-            <button>send us an email</button>
+
+            <SpringButton
+              text="send us an email"
+              firstIcon="https://framerusercontent.com/images/0ZmqhaWed7cnNFP632ytqTVVDo.svg"
+              SecondIcon={ChevronRight}
+            />
           </div>
+          <BigStar className="big" />
+          <SmallStar className="small" />
+          <SmallStar className="medium" />
         </div>
       </section>
 
