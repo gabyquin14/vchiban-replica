@@ -10,6 +10,10 @@ import SmallBanner from "#/components/game-corner/small-banner/small-banner";
 import ImgCarousel from "#/components/game-corner/img-carousel/ImgCarousel";
 import ChevronRight from "#/assets/svg/chevron-right";
 import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
+import SearchLight from "#/assets/svg/game-corner/searchlight";
+import Excl1 from "#/assets/svg/game-corner/excl-1";
+import Excl2 from "#/assets/svg/game-corner/excl-2";
+import Excl3 from "#/assets/svg/game-corner/excl-3";
 
 const GameCorner = () => {
   const [showGame, setShowGame] = useState(true);
@@ -17,6 +21,10 @@ const GameCorner = () => {
 
   return (
     <main className="game-corner">
+      <SearchLight className="searchlight-1" />
+      <SearchLight className="searchlight-2" />
+      <SearchLight className="searchlight-3" />
+      <SearchLight className="searchlight-4" />
       <header>
         <SanjisEyebrow className="sanjis-eyebrow" />
         <HeaderSection
@@ -64,12 +72,17 @@ const GameCorner = () => {
                 achieve the ultimate form -- Goober! Combine two of a kind
                 until, like I said, Goober… What more to do you freakin’ want?
               </p>
+              <div className="img-carousel-wrapper">
+                <Excl1 className="excl-1" />
+                <Excl2 className="excl-2" />
+                <Excl3 className="excl-3" />
+                <ImgCarousel
+                  firstImg="https://framerusercontent.com/images/xDKeuwOvLdeWiZc4tJkVqxXc.png"
+                  secondImg="https://framerusercontent.com/images/Smq7EPDHiDtMLBRSesAFXp32vw.png"
+                  thirdImg="https://framerusercontent.com/images/hapuFFerT9LbwuSCXDjWdGQq8Vg.png"
+                />
+              </div>
 
-              <ImgCarousel
-                firstImg="https://framerusercontent.com/images/xDKeuwOvLdeWiZc4tJkVqxXc.png"
-                secondImg="https://framerusercontent.com/images/Smq7EPDHiDtMLBRSesAFXp32vw.png"
-                thirdImg="https://framerusercontent.com/images/hapuFFerT9LbwuSCXDjWdGQq8Vg.png"
-              />
               <SpringButton
                 text="download and play"
                 firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
@@ -116,11 +129,17 @@ const GameCorner = () => {
               </p>
               <p>And you will meet your oshis, at any cost.</p>
 
-              <ImgCarousel
-                firstImg="https://framerusercontent.com/images/1Ltw5XgiOCMWiknhDENV53V1XjQ.png"
-                secondImg="https://framerusercontent.com/images/ZktcXqBQQobyCy8BvcsH5oNVM.png"
-                thirdImg="https://framerusercontent.com/images/8dxIOb4LGrRzzQjsIo5ho083KPM.png"
-              />
+              <div className="img-carousel-wrapper">
+                <Excl1 className="excl-1" />
+                <Excl2 className="excl-2" />
+                <Excl3 className="excl-3" />
+                <ImgCarousel
+                  firstImg="https://framerusercontent.com/images/1Ltw5XgiOCMWiknhDENV53V1XjQ.png"
+                  secondImg="https://framerusercontent.com/images/ZktcXqBQQobyCy8BvcsH5oNVM.png"
+                  thirdImg="https://framerusercontent.com/images/8dxIOb4LGrRzzQjsIo5ho083KPM.png"
+                />
+              </div>
+
               <SpringButton
                 text="download and play"
                 firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
