@@ -1,5 +1,4 @@
 .spring-btn {
-  padding: 1.6rem;
   position: relative;
   cursor: pointer;
   border-radius: 1.4rem;
@@ -31,20 +30,21 @@
   }
 
   .bouncy-bg {
-    width: 100%;
-    height: 100%;
     border-radius: 1.4rem;
     background-color: var(--rosedoodle-cyan);
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     z-index: 1;
+    overflow: hidden;
+
+    .inside-excl-1,
+    .inside-excl-2,
+    .inside-excl-3 {
+      position: absolute;
+    }
   }
 
   .content-wrapper {
-    pointer-events: none;
     white-space: nowrap;
     text-wrap: nowrap;
     display: flex;
@@ -53,15 +53,37 @@
     gap: 4.8rem;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    padding: 1.6rem;
 
     .content,
     .second-icon,
     .first-icon {
       z-index: 2;
+      pointer-events: none;
     }
     .first-icon {
       width: 2.4rem !important;
       height: 2.4rem !important;
     }
   }
+}
+.btn-excl1,
+.btn-excl2,
+.btn-excl3 {
+  position: absolute;
+  z-index: 1;
+}
+.btn-excl1 {
+  top: -1.25rem;
+  left: -1.25rem;
+}
+.btn-excl2 {
+  top: -2.5rem;
+  right: 2rem;
+}
+.btn-excl3 {
+  top: -2.25rem;
+  right: -1.25rem;
+  transform: rotate(3deg) scale(0.8);
 }
