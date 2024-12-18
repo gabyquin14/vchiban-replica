@@ -2,6 +2,10 @@ import "./Animations.scss";
 import SparklesAnimation from "#/assets/svg/sparkles/sparkles-animation";
 import VideoCard from "../../components/animations/VideoCard";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
+import CineStrip1 from "#/assets/svg/animations/cine-strip-1";
+import CineStrip2 from "#/assets/svg/animations/cine-strip-2";
+import CineStrip3 from "#/assets/svg/animations/cine-strip-3";
+import CineStrip4 from "#/assets/svg/animations/cine-strip-4";
 
 const Animations = () => {
   const animationsLinks = [
@@ -48,19 +52,24 @@ const Animations = () => {
   ];
   return (
     <div className="animations">
-      <HeaderSection
-        as="header"
-        title="ANIMATIONS."
-        SparklesComponent={SparklesAnimation}
-        description={
-          <>
-            VchiBan makes their own animations too! <br />
-            Here’s a showreel of all the beautiful works they were able to
-            conjure up so far!
-          </>
-        }
-        customStyles="animation"
-      />
+      <div className="header-wrapper">
+        <HeaderSection
+          as="header"
+          title="ANIMATIONS."
+          SparklesComponent={SparklesAnimation}
+          description={
+            <>
+              VchiBan makes their own animations too! <br />
+              Here’s a showreel of all the beautiful works they were able to
+              conjure up so far!
+            </>
+          }
+          customStyles="animation"
+        />
+        <CineStrip1 className="strip1" />
+        <CineStrip2 className="strip2" />
+        <CineStrip3 className="strip3" />
+      </div>
 
       <section className="videos-list">
         {animationsLinks.map((link) => (
@@ -68,6 +77,7 @@ const Animations = () => {
             <VideoCard key={link.videoId} link={link} />
           </article>
         ))}
+        <CineStrip4 className="strip4" />
       </section>
     </div>
   );

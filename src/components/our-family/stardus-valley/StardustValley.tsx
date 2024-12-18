@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./StardustValley.scss";
-import BigStamp from "#/assets/svg/big-stamp";
-import SmallStamp from "#/assets/svg/small-stamp";
+import BigStamp from "#/assets/svg/our-family/big-stamp";
+import SmallStamp from "#/assets/svg/our-family/small-stamp";
 import StardustBg from "#/assets/svg/stardust-bg";
 
 const StardustValley = () => {

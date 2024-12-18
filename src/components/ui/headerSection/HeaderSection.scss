@@ -1,5 +1,7 @@
 .header-section {
   padding: 24rem 6.4rem 9.6rem;
+  z-index: 1;
+  background-color: transparent;
 
   .title-wrapper {
     position: relative;
@@ -162,7 +164,7 @@
   }
 
   &.stardust-valley {
-    padding: 0rem 6.4rem 0rem;
+    padding: 12.8rem 6.4rem 0rem;
     .title {
       line-height: 110%;
       font-size: 9.6rem;

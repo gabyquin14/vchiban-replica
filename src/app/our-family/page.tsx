@@ -12,6 +12,20 @@ import SpringButton from "#/components/ui/springBtn/SpringButton";
 import ChevronRight from "#/assets/svg/chevron-right";
 import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
 import MembersRaibow from "#/components/our-family/members-rainbow/MembersRainbow";
+import BuffpupIcon from "#/assets/svg/our-family/buffpup-icon";
+import AicandiiIcon from "#/assets/svg/our-family/aicandii-icon";
+import RoseIcon from "#/assets/svg/our-family/rose-icon";
+import ShiabunIcon from "#/assets/svg/our-family/shiabun-icon";
+import TogetherExcl1 from "#/assets/svg/our-family/together-excl-1";
+import TogetherExcl2 from "#/assets/svg/our-family/together-excl-2";
+import TogetherExcl3 from "#/assets/svg/our-family/together-excl-3";
+import BannerExcl1 from "#/assets/svg/our-family/banner-excl-1";
+import BannerExcl2 from "#/assets/svg/our-family/banner-excl-2";
+import ShiabunSilhouette from "#/assets/svg/our-family/shiabun-silhouette";
+import RoseSilhouette from "#/assets/svg/our-family/rose-silhouette";
+import AicandiiSilhouette from "#/assets/svg/our-family/aicandii-silhouette";
+import BuffpupSilhouette from "#/assets/svg/our-family/buffpup-silhouette";
+import House from "#/assets/svg/house";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const OurFamily = () => {
@@ -40,6 +54,19 @@ const OurFamily = () => {
           SparklesComponent={SparklesOurFamily}
           customStyles="our-family"
         />
+        <div className="excl-marks">
+          <BannerExcl1 className="excl-1" />
+          <BannerExcl2 className="excl-2" />
+        </div>
+        <div className="members">
+          <ShiabunSilhouette className="shia" />
+          <RoseSilhouette className="rose" />
+          <AicandiiSilhouette className="candii" />
+          <BuffpupSilhouette className="buff" />
+        </div>
+
+        <House className="house" />
+
         <button className="more-lore">
           <ChevronDown />
           See more lore
@@ -101,6 +128,10 @@ const OurFamily = () => {
         </h2>
         <div className="rainbow-showcase">
           <MembersRaibow />
+          <BuffpupIcon className="buff" />
+          <AicandiiIcon className="candii" />
+          <RoseIcon className="rose" />
+          <ShiabunIcon className="shia" />
         </div>
       </div>
       <div className="endeavors">
@@ -181,6 +212,9 @@ const OurFamily = () => {
             </div>
           </div>
         </div>
+        <TogetherExcl1 className="excl-1" />
+        <TogetherExcl2 className="excl-2" />
+        <TogetherExcl3 className="excl-3" />
       </div>
       <FooterSeparator />
     </div>

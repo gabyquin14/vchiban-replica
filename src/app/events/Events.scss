@@ -1,6 +1,30 @@
 .events {
   height: min-content;
 
+  .header-wrapper {
+    position: relative;
+
+    .excl-1,
+    .excl-2,
+    .excl-3 {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .excl-1 {
+      top: 5rem;
+      left: 41rem;
+    }
+    .excl-2 {
+      top: 17.5rem;
+      right: 49rem;
+    }
+    .excl-3 {
+      top: 30.5rem;
+      right: 39rem;
+    }
+  }
+
   .nothing-to-see {
     display: flex;
     place-content: flex-start;
@@ -28,7 +52,25 @@
       line-height: 200%;
     }
   }
+  .premier-experiences {
+    position: relative;
 
+    .excl-4,
+    .excl-5 {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .excl-4 {
+      top: -9rem;
+      left: 21rem;
+    }
+
+    .excl-5 {
+      top: -5rem;
+      left: 40rem;
+    }
+  }
   .experiences {
     display: flex;
     padding: 0 128px 96px;
@@ -132,11 +174,47 @@
   .description {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 9.6rem;
     font-size: 1.8rem;
     font-weight: 800;
     line-height: 150%;
     text-align: center;
     padding: 0 12.8rem;
+    position: relative;
+    padding-bottom: 12.8rem;
+
+    .call-to-action {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      align-items: center;
+      justify-content: center;
+      gap: 2.4rem;
+      position: relative;
+    }
+
+    .big,
+    .small,
+    .medium {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .big {
+      bottom: 3rem;
+      left: 48rem;
+      transform: scale(0.85);
+    }
+
+    .small {
+      bottom: 14rem;
+      right: 45rem;
+    }
+    .medium {
+      bottom: 10rem;
+      right: 41rem;
+      transform: scale(0.7);
+    }
   }
 }

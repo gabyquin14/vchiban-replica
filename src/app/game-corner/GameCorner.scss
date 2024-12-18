@@ -4,6 +4,33 @@
   font-family: var(--font-primary);
   background-color: var(--game-corner-bg);
 
+  .searchlight-1,
+  .searchlight-2,
+  .searchlight-3,
+  .searchlight-4 {
+    position: absolute;
+  }
+
+  .searchlight-1 {
+    top: 8rem;
+    left: -22rem;
+  }
+  .searchlight-2 {
+    top: -3.5rem;
+    left: 6.5rem;
+    transform: rotate(18deg);
+  }
+  .searchlight-3 {
+    top: -4.5rem;
+    right: 7rem;
+    transform: rotate(55deg);
+  }
+  .searchlight-4 {
+    top: 7rem;
+    right: -21rem;
+    transform: rotate(73deg);
+  }
+
   header {
     display: flex;
     flex-direction: column;
@@ -11,7 +38,6 @@
     gap: 6.4rem;
     padding: 12rem;
     text-align: center;
-    position: relative;
 
     .sanjis-eyebrow {
       position: absolute;
@@ -19,11 +45,13 @@
       &:nth-of-type(1) {
         top: 39%;
         left: 30%;
+        z-index: 1;
       }
 
       &:nth-of-type(2) {
         top: 39%;
         right: 30%;
+        z-index: 1;
       }
     }
 
@@ -83,6 +111,7 @@
           font-size: 1.8rem;
           font-weight: 800;
           line-height: 1.5;
+          z-index: 1;
         }
       }
 
@@ -91,6 +120,32 @@
         flex-direction: column;
         align-items: center;
         gap: 2.4rem;
+      }
+
+      .img-carousel-wrapper {
+        height: 50rem;
+        width: 100%;
+        position: relative;
+      }
+
+      .excl-1,
+      .excl-2,
+      .excl-3 {
+        position: absolute;
+        z-index: 0;
+      }
+
+      .excl-1 {
+        top: -27.5rem;
+        left: 1.5rem;
+      }
+      .excl-2 {
+        top: -23rem;
+        left: 22.5rem;
+      }
+      .excl-3 {
+        top: -24rem;
+        right: 6rem;
       }
     }
   }
