@@ -17,7 +17,6 @@ export const vchibanStars = [
     loreImg3:
       "https://framerusercontent.com/images/ABJAhutrSBWhxY09rP2undzw.png",
   },
-
   {
     image:
       "https://framerusercontent.com/images/09oY2c7lYVgoVIQj4Fksy5yWmQ.png",

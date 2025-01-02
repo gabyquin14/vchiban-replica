@@ -1,0 +1,27 @@
+.outer-circle {
+  background-color: var(--white);
+  min-width: 3rem;
+  min-height: 3rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.club {
+    top: 50%;
+    left: 10%;
+  }
+
+  &.skyline {
+    top: 40%;
+    left: 18%;
+  }
+
+  &.silver {
+    top: 50%;
+    left: 10%;
+  }
+}
