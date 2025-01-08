@@ -1,9 +1,17 @@
-export const loreModalInfo = [
+export interface ModalInfoInterface {
+  title: string;
+  desc: string;
+  img?: string;
+  styles?: string;
+  link?: string;
+}
+
+export const loreModalInfo: ModalInfoInterface[] = [
   {
     title: "Club Bun",
     desc: `As you approach the most exclusive spot in town, Club Bun, the air hums with anticipation. While you must make a reservation months ahead to get in, the wait is worth it. It’s easy to hear the excitement beyond the club’s front doors—distant laughter perks your mood, glasses click, and people shout for more shots. Neon signs bathe the street below, illuminating a path to this nocturnal sanctuary.
-      <br/> The entrance to the bar opens up to a brilliant display of light and sound. A space for live music is tucked into the back corner of the wall, ready for the next performance by the resident musician—a bunny man who lives above the club. A long bar sits along the wall, as do cushy booths around the illuminated dance floor. Intoxicating melodies intertwine with the murmur of conversation, blending seamlessly to form a symphony of nightlife.
-      <br/> Ascending a discreet staircase, one would find the most exclusive part of the club — the penthouse, where the illustrious bunny man resides. The penthouse’s windows offer a panoramic view of the city’s sparkling skyline, a tapestry of skyscrapers and low-rise buildings, and the best view of Stardust City.`,
+      <br/><br/> The entrance to the bar opens up to a brilliant display of light and sound. A space for live music is tucked into the back corner of the wall, ready for the next performance by the resident musician—a bunny man who lives above the club. A long bar sits along the wall, as do cushy booths around the illuminated dance floor. Intoxicating melodies intertwine with the murmur of conversation, blending seamlessly to form a symphony of nightlife.
+      <br/><br/> Ascending a discreet staircase, one would find the most exclusive part of the club — the penthouse, where the illustrious bunny man resides. The penthouse’s windows offer a panoramic view of the city’s sparkling skyline, a tapestry of skyscrapers and low-rise buildings, and the best view of Stardust City.`,
     img: "https://framerusercontent.com/images/TDjeRytksgB6fhsWhR1UoFRm5C4.png",
     styles: "club",
   },

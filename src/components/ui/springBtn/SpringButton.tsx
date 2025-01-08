@@ -28,11 +28,21 @@ const SpringButton: FC<SpringButtonProps> = ({
   SecondIcon,
 }) => {
   const [isHover, setIsHover] = useState(false);
+
   return (
     <button className={`spring-btn ${customStyles}`} onClick={onClick}>
-      <BtnExclMark1 className="btn-excl1" color="#c0f6e8" />
-      <BtnExclMark2 className="btn-excl2" color="#c0f6e8" />
-      <BtnExclMark2 className="btn-excl3" color="#c0f6e8" />
+      <BtnExclMark1
+        className="btn-excl1"
+        color={isTransitionBouncy ? "#1c8c84" : null}
+      />
+      <BtnExclMark2
+        className="btn-excl2"
+        color={isTransitionBouncy ? "#1c8c84" : null}
+      />
+      <BtnExclMark2
+        className="btn-excl3"
+        color={isTransitionBouncy ? "#1c8c84" : null}
+      />
 
       <div className="content-wrapper">
         <motion.div
@@ -44,31 +54,40 @@ const SpringButton: FC<SpringButtonProps> = ({
         >
           <motion.div
             className="inside-excl-1"
-            animate={isHover ? { left: "1.25rem" } : { left: "0" }}
+            animate={
+              isHover ? { left: "1.25rem", top: "0.5rem" } : { left: "0" }
+            }
+            initial={{ left: "0" }}
             transition={
               isTransitionBouncy ? bouncyTransition : springTransition
             }
           >
-            <BtnExclMark1 className="btn-excl1" color="#1C8C84" />
+            <BtnExclMark1 className="btn-excl1 inside" color="#1c8c856c" />
           </motion.div>
 
           <motion.div
             className="inside-excl-2"
-            animate={isHover ? { right: "1.25rem" } : { right: "0rem" }}
+            animate={
+              isHover ? { right: "1.25rem", top: "0.5rem" } : { right: "0rem" }
+            }
+            initial={{ right: "0" }}
             transition={
               isTransitionBouncy ? bouncyTransition : springTransition
             }
           >
-            <BtnExclMark2 className="btn-excl2" color="#1C8C84" />
+            <BtnExclMark2 className="btn-excl2 inside" color="#1c8c856c" />
           </motion.div>
           <motion.div
             className="inside-excl-3"
-            animate={isHover ? { right: "1.25rem" } : { right: "0rem" }}
+            animate={
+              isHover ? { right: "1.25rem", top: "0.5rem" } : { right: "0rem" }
+            }
+            initial={{ right: "0" }}
             transition={
               isTransitionBouncy ? bouncyTransition : springTransition
             }
           >
-            <BtnExclMark2 className="btn-excl3" color="#1C8C84" />
+            <BtnExclMark2 className="btn-excl3 inside" color="#1c8c856c" />
           </motion.div>
         </motion.div>
 
