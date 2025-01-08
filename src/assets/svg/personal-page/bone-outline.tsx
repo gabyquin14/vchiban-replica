@@ -108,7 +108,7 @@ const BoneOutline = (props: Record<string, unknown>) => (
     <path
       d="M71.17 62.886c.343 2.492-.059 3.638-1.173 5.05M41.256 51.594l-9.27-12.051M18.52 34.761c-2.654-2.317-2.36-6.468-.105-8.638"
       stroke="#FF9C45"
-      stroke-width="4"
+      strokeWidth="4"
       stroke-linecap="round"
     ></path>
   </svg>

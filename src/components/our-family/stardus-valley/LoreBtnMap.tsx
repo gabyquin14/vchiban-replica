@@ -7,11 +7,7 @@ interface InfoBtnProps {
 }
 
 const LoreModalMap: React.FC<InfoBtnProps> = ({ customStyles }) => {
-  return (
-    <div className={`outer-circle ${customStyles}`}>
-      <Info />
-    </div>
-  );
+  return <div className={`outer-circle ${customStyles}`}>{/* <Info /> */}</div>;
 };
 
 export default LoreModalMap;

@@ -87,7 +87,7 @@ export const loreModalInfo = [
     title: "Buff's Cave",
     desc: "After a long stint of living in the forest, moving from tree to tree daily for rest, Buff found a cave to call her home. While the humans nearby in Stardust City didn’t treat her very nicely, this didn’t stop her from robbing them blind. In time, she created a beautiful nook to call her own, with a bed, a computer, and cute trinkets. She also got a sick jacket, which she may have left at Candii’s lab.",
     img: "https://framerusercontent.com/images/DnbqrbuD0d83kwNlpxaTx7vTtkY.png",
-    styles: "buff's",
+    styles: "buff",
   },
   {
     title: "Summer Adventure",

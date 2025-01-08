@@ -125,9 +125,9 @@ const Bunny = (props: Record<string, unknown>) => (
     <path
       d="M45.329 78.268c2.044-1.576 2.905-2.773 3.623-5.808 2.247 2.162 3.62 2.701 6.192 2.917"
       stroke="#FF78BC"
-      stroke-width="4"
+      strokeWidth="4"
       stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     ></path>
   </svg>
 );

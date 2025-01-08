@@ -1,27 +1,83 @@
 .outer-circle {
   background-color: var(--white);
-  min-width: 3rem;
-  min-height: 3rem;
-  width: 3rem;
-  height: 3rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgb(10, 5, 73) 0px 0px 14px 0px;
 
   &.club {
-    top: 50%;
-    left: 10%;
+    top: 47%;
+    left: 11%;
   }
 
   &.skyline {
-    top: 40%;
-    left: 18%;
+    top: 39%;
+    left: 19%;
+  }
+
+  &.gooberton {
+    top: 32%;
+    left: 26%;
   }
 
   &.silver {
-    top: 50%;
-    left: 10%;
+    top: 24%;
+    left: 15%;
+  }
+
+  &.coffee {
+    top: 14%;
+    left: 22%;
+  }
+
+  &.doodle {
+    top: 12%;
+    left: 33%;
+  }
+
+  &.farm {
+    top: 9%;
+    left: 44%;
+  }
+
+  &.mourningwood {
+    top: 42%;
+    left: 44%;
+  }
+
+  &.summer {
+    bottom: 19%;
+    left: 41%;
+  }
+
+  &.buff {
+    bottom: 35%;
+    left: 48%;
+  }
+
+  &.pet {
+    bottom: 48%;
+    left: 54%;
+  }
+
+  &.winter {
+    top: 10%;
+    right: 37%;
+  }
+
+  &.family {
+    top: 18%;
+    right: 33%;
+  }
+
+  &.blackthorn {
+    top: 34%;
+    right: 28%;
   }
 }
