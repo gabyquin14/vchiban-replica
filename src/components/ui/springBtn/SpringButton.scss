@@ -41,6 +41,16 @@
     .inside-excl-2,
     .inside-excl-3 {
       position: absolute;
+
+      .inside {
+        transform: translateY(2px);
+      }
+      .btn-excl3.inside {
+        transform: translate(2px, -4px);
+      }
+      // .btn-excl2.inside {
+      //   transform: translate(2px, -4px);
+      // }
     }
   }
 
@@ -79,7 +89,7 @@
   left: -1.25rem;
 }
 .btn-excl2 {
-  top: -2.5rem;
+  top: -2.75rem;
   right: 2rem;
 }
 .btn-excl3 {
