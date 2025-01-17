@@ -12,8 +12,8 @@ const ColoredCandiIcon = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M-8.695-1.519h79.352v112.218H-8.695z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M22.354 8.704a3.308 3.308 0 0 0-1.407 6.464.825.825 0 0 1 .631.984L8.734 75.135c-2.04 9.37 3.902 18.622 13.273 20.662 9.371 2.041 18.622-3.901 20.663-13.272L55.514 23.54a.827.827 0 0 1 .984-.632 3.308 3.308 0 1 0 1.408-6.464l-35.552-7.74Z"
       ></path>
     </mask>
@@ -33,14 +33,14 @@ const ColoredCandiIcon = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M-3.936 3.241h69.833V105.94H-3.936z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M22.354 8.704a3.308 3.308 0 0 0-1.407 6.464.825.825 0 0 1 .631.984L8.734 75.135c-2.04 9.37 3.902 18.622 13.273 20.662 9.371 2.041 18.622-3.901 20.663-13.272L55.514 23.54a.827.827 0 0 1 .984-.632 3.308 3.308 0 1 0 1.408-6.464l-35.552-7.74Z"
       ></path>
     </mask>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M22.354 8.704a3.308 3.308 0 0 0-1.407 6.464.825.825 0 0 1 .631.984L8.734 75.135c-2.04 9.37 3.902 18.622 13.273 20.662 9.371 2.041 18.622-3.901 20.663-13.272L55.514 23.54a.827.827 0 0 1 .984-.632 3.308 3.308 0 1 0 1.408-6.464l-35.552-7.74Z"
       fill="#F9F9ED"
     ></path>
@@ -59,8 +59,8 @@ const ColoredCandiIcon = (props: Record<string, unknown>) => (
       height="89"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M22.354 8.704a3.308 3.308 0 0 0-1.407 6.464.825.825 0 0 1 .631.984L8.734 75.135c-2.04 9.37 3.902 18.622 13.273 20.662 9.371 2.041 18.622-3.901 20.663-13.272L55.514 23.54a.827.827 0 0 1 .984-.632 3.308 3.308 0 1 0 1.408-6.464l-35.552-7.74Z"
         fill="#D9D9D9"
       ></path>
@@ -82,8 +82,8 @@ const ColoredCandiIcon = (props: Record<string, unknown>) => (
       ></circle>
     </g>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M22.711 92.565c7.586 1.652 15.075-3.158 16.727-10.744l6.708-30.804c.264-1.214-.644-2.395-1.86-2.145-3.307.678-5.39 3.078-7.39 5.384-2.509 2.891-4.89 5.635-9.395 4.654-6.028-1.313-9.62.44-11.51 1.745-.57.393-.938 1.01-1.085 1.686l-2.94 13.497c-1.651 7.587 3.16 15.076 10.745 16.727Z"
       fill="#AF67F7"
     ></path>

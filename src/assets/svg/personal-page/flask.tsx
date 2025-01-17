@@ -13,8 +13,8 @@ const Flask = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M-4.039-5.345h93.291v108.538H-4.039z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M14.355 24.855a2.619 2.619 0 1 0 2.29 4.71.655.655 0 0 1 .876.302l20.9 42.98c3.32 6.83 11.547 9.673 18.376 6.353 6.829-3.32 9.672-11.548 6.352-18.377l-20.9-42.98a.655.655 0 0 1 .303-.875 2.619 2.619 0 0 0-2.29-4.71L14.354 24.855Z"
       ></path>
     </mask>
@@ -34,8 +34,8 @@ const Flask = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M1.307.001h82.599v97.845H1.307z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M14.355 24.855a2.619 2.619 0 1 0 2.29 4.71.655.655 0 0 1 .876.302l20.9 42.98c3.32 6.83 11.547 9.673 18.376 6.353 6.829-3.32 9.672-11.548 6.352-18.377l-20.9-42.98a.655.655 0 0 1 .303-.875 2.619 2.619 0 0 0-2.29-4.71L14.354 24.855Z"
       ></path>
     </mask>
@@ -55,14 +55,14 @@ const Flask = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M6.654 5.348H78.56V92.5H6.654z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M14.355 24.855a2.619 2.619 0 1 0 2.29 4.71.655.655 0 0 1 .876.302l20.9 42.98c3.32 6.83 11.547 9.673 18.376 6.353 6.829-3.32 9.672-11.548 6.352-18.377l-20.9-42.98a.655.655 0 0 1 .303-.875 2.619 2.619 0 0 0-2.29-4.71L14.354 24.855Z"
       ></path>
     </mask>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M14.355 24.855a2.619 2.619 0 1 0 2.29 4.71.655.655 0 0 1 .876.302l20.9 42.98c3.32 6.83 11.547 9.673 18.376 6.353 6.829-3.32 9.672-11.548 6.352-18.377l-20.9-42.98a.655.655 0 0 1 .303-.875 2.619 2.619 0 0 0-2.29-4.71L14.354 24.855Z"
       fill="#F9F9ED"
     ></path>
@@ -81,8 +81,8 @@ const Flask = (props: Record<string, unknown>) => (
       height="70"
     >
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M14.355 24.855a2.619 2.619 0 1 0 2.29 4.71.655.655 0 0 1 .876.302l20.9 42.98c3.32 6.83 11.547 9.673 18.376 6.353 6.829-3.32 9.672-11.548 6.352-18.377l-20.9-42.98a.655.655 0 0 1 .303-.875 2.619 2.619 0 0 0-2.29-4.71L14.354 24.855Z"
         fill="#D9D9D9"
       ></path>
@@ -104,8 +104,8 @@ const Flask = (props: Record<string, unknown>) => (
       ></circle>
     </g>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M54.62 74.721c4.84-2.353 6.855-8.185 4.502-13.026l-9.239-18.999c-.543-1.116-2.007-1.48-2.688-.442-1.096 1.67-1.19 3.629-1.28 5.518-.126 2.65-.246 5.166-3.12 6.564-3.595 1.747-4.883 4.04-5.42 5.575-.228.654-.129 1.368.174 1.991l4.044 8.317c2.354 4.84 8.186 6.856 13.026 4.502Z"
       fill="#AF67F7"
     ></path>
