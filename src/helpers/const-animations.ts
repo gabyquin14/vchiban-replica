@@ -1,4 +1,14 @@
-export const springTransition = { type: "spring", stiffness: 300, damping: 14 };
+export const springTransition = {
+  type: "spring",
+  stiffness: 400,
+  damping: 14,
+  mass: 0.8,
+};
+export const springTransitionbtn = {
+  type: "spring",
+  stiffness: 300,
+  damping: 14,
+};
 export const bouncyTransition = {
   type: "spring",
   stiffness: 500,

@@ -9,12 +9,44 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .floating-icons {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      pointer-events: none;
+
+      .main-icon {
+        position: absolute;
+        top: 8rem;
+        right: -2rem;
+      }
+
+      .rosedoodle-icon {
+        top: 7rem;
+        right: 0rem;
+      }
+
+      .shiabun-icon {
+        top: 8rem;
+        right: 0rem;
+      }
+
+      .aicandii-icon {
+        top: 7rem;
+        right: 0rem;
+      }
+    }
   }
 
   &__image-wrapper {
     position: relative;
     height: 49.6rem;
     overflow: hidden;
+    pointer-events: none;
   }
 
   &__portrait-container {
@@ -110,13 +142,29 @@
     justify-content: center;
     border-radius: 1.2rem;
 
-    &.twitch {
+    a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    svg {
+      z-index: 1;
+      pointer-events: none;
+    }
+    .bouncy-bg {
+      z-index: 0;
+    }
+
+    &.twitch .bouncy-bg {
       background-color: var(--candi-purple);
     }
-    &.youtube {
+    &.youtube .bouncy-bg {
       background-color: var(--shia-dark-pink);
     }
-    &.twitter {
+    &.twitter .bouncy-bg {
       background-color: var(--header-link-hover);
     }
   }

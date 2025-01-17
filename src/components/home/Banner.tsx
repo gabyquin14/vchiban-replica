@@ -1,11 +1,5 @@
 "use client";
-import {
-  motion,
-  useTransform,
-  useMotionValue,
-  useTime,
-  useAnimate,
-} from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 import ChevronDown from "#/assets/svg/chevron-down";
 import Sparkles from "#/assets/svg/sparkles/sparkles";
 import { springTransition } from "#/helpers/const-animations";
@@ -23,10 +17,7 @@ import ColoredShiaIcon from "#/assets/svg/colored-shia-icon";
 import ColoredRoseIcon from "#/assets/svg/colored-rose-icon";
 import BannerButton from "./banner-btn/BannerButton";
 
-export default function Banner() {
-  const [isHover, setIsHover] = useState(false);
-  const time = useTime();
-
+const Banner = () => {
   const [scope1, animate1] = useAnimate();
   const [scope2, animate2] = useAnimate();
   const [scope3, animate3] = useAnimate();
@@ -148,4 +139,5 @@ export default function Banner() {
       </div>
     </section>
   );
-}
+};
+export default Banner;
