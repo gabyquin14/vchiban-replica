@@ -1,6 +1,5 @@
 "use client";
-import { motion, useAnimate } from "framer-motion";
-import ChevronDown from "#/assets/svg/chevron-down";
+import { motion, useAnimate, Variant } from "framer-motion";
 import Sparkles from "#/assets/svg/sparkles/sparkles";
 import { springTransition } from "#/helpers/const-animations";
 import Image from "next/image";
@@ -16,68 +15,52 @@ import ColoredCandiIcon from "#/assets/svg/colored-candi-icon";
 import ColoredShiaIcon from "#/assets/svg/colored-shia-icon";
 import ColoredRoseIcon from "#/assets/svg/colored-rose-icon";
 import BannerButton from "./banner-btn/BannerButton";
+import DraggableSticker from "../ui/draggableSticker/DraggableSticker";
 
 const Banner = () => {
-  const [scope1, animate1] = useAnimate();
-  const [scope2, animate2] = useAnimate();
-  const [scope3, animate3] = useAnimate();
-  const [scope4, animate4] = useAnimate();
+  const buffAnimation = {
+    x: [0, 20, 0],
+    y: [0, -20, 0],
+    rotate: [0, -5, 0],
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      repeatType: "mirror",
+    },
+  };
 
-  useEffect(() => {
-    animate1(
-      scope1.current,
-      {
-        x: [0, 20, 0],
-        y: [0, -20, 0],
-        rotate: [0, -5, 0],
-      },
-      {
-        duration: 8,
-        repeat: Infinity,
-        repeatType: "mirror",
-      }
-    );
-    animate2(
-      scope2.current,
-      {
-        x: [0, -25, 0],
-        y: [0, -10, 0],
-        rotate: [0, 15, 0],
-      },
-      {
-        duration: 8,
-        repeat: Infinity,
-        repeatType: "mirror",
-      }
-    );
-    animate3(
-      scope3.current,
-      {
-        x: [0, 20, 0],
-        y: [0, -20, 0],
-        rotate: [0, 15, 0],
-      },
-      {
-        duration: 4,
-        repeat: Infinity,
-        repeatType: "mirror",
-      }
-    );
-    animate4(
-      scope4.current,
-      {
-        x: [0, -20, 0],
-        y: [0, -20, 0],
-        rotate: [0, -5, 0],
-      },
-      {
-        duration: 6,
-        repeat: Infinity,
-        repeatType: "mirror",
-      }
-    );
-  }, [animate1, scope1, animate2, scope2, animate3, scope3, animate4, scope4]);
+  const candiAnimation = {
+    x: [0, -25, 0],
+    y: [0, -10, 0],
+    rotate: [0, 15, 0],
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      repeatType: "mirror",
+    },
+  };
 
+  const shiaAnimation = {
+    x: [0, 20, 0],
+    y: [0, -20, 0],
+    rotate: [0, 15, 0],
+    transition: {
+      duration: 4,
+      repeat: Infinity,
+      repeatType: "mirror",
+    },
+  };
+
+  const roseAnimation = {
+    x: [0, -20, 0],
+    y: [0, -20, 0],
+    rotate: [0, -5, 0],
+    transition: {
+      duration: 6,
+      repeat: Infinity,
+      repeatType: "mirror",
+    },
+  };
   return (
     <section className="home-section" aria-labelledby="banner-title">
       <div className="banner-wrapper">
@@ -124,20 +107,26 @@ const Banner = () => {
       </div>
 
       <div className="floating-icons">
-        <motion.div ref={scope1} className="buff-wrapper wrapper">
-          <ColoredBuffIcon className="buff" />
-        </motion.div>
-        <motion.div ref={scope2} className="candi-wrapper wrapper">
-          <ColoredCandiIcon className="candi" />
-        </motion.div>
-        <motion.div ref={scope3} className="shia-wrapper wrapper">
-          <ColoredShiaIcon className="shia" />
-        </motion.div>
-        <motion.div ref={scope4} className="rose-wrapper wrapper">
-          <ColoredRoseIcon className="rose" />
-        </motion.div>
+        <DraggableSticker alt="buff" floatAnimation={buffAnimation as Variant}>
+          <ColoredBuffIcon />
+        </DraggableSticker>
+
+        <DraggableSticker
+          alt="candi"
+          floatAnimation={candiAnimation as Variant}
+        >
+          <ColoredCandiIcon />
+        </DraggableSticker>
+
+        <DraggableSticker alt="shia" floatAnimation={shiaAnimation as Variant}>
+          <ColoredShiaIcon />
+        </DraggableSticker>
+        <DraggableSticker alt="rose" floatAnimation={roseAnimation as Variant}>
+          <ColoredRoseIcon />
+        </DraggableSticker>
       </div>
     </section>
   );
 };
+
 export default Banner;
