@@ -9,7 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { springTransition } from "#/helpers/const-animations";
 import DraggableSticker from "#/components/ui/draggableSticker/DraggableSticker";
-import { useRouter } from "next/router";
 
 interface StarProps {
   star: {
@@ -25,11 +24,11 @@ interface StarProps {
     loreImg2: string;
     loreImg3: string;
   };
+  onClick?: () => void;
 }
 
-const Card: FC<StarProps> = ({ star }) => {
+const Card: FC<StarProps> = ({ star, onClick }) => {
   const [isHover, setisHover] = useState(false);
-  const router = useRouter();
 
   const returnIcon = (name: string) => {
     const starName = name.toLocaleLowerCase();
@@ -41,10 +40,6 @@ const Card: FC<StarProps> = ({ star }) => {
       return "https://framerusercontent.com/images/8HR1brtaB3PFmcM4etpx3bPscK8.svg";
     if (starName === "shiabun")
       return "https://framerusercontent.com/images/D2eskKKL7ZV7NNnmcgISfwFaRk.svg";
-  };
-
-  const redirectToPersonalPage = (name: string) => {
-    router.push(`/our-family/${name.toLocaleLowerCase()}`);
   };
 
   return (
@@ -67,7 +62,7 @@ const Card: FC<StarProps> = ({ star }) => {
                 : "scale(1) translateY(0rem)",
             }}
             className="portrait-wrapper"
-            onClick={() => redirectToPersonalPage(star.name)}
+            onClick={onClick}
           >
             <Image
               alt={`${star.name} portrait`}
@@ -93,7 +88,7 @@ const Card: FC<StarProps> = ({ star }) => {
       <div className="creator-card__info">
         <h2
           className={`creator-card__name ${star.name.toLocaleLowerCase()}`}
-          onClick={() => redirectToPersonalPage(star.name)}
+          onClick={onClick}
         >
           {star.name}
         </h2>

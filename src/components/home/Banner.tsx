@@ -1,7 +1,20 @@
 "use client";
-import { motion, useAnimate, Variant } from "framer-motion";
+import {
+  motion,
+  useAnimate,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  Variant,
+} from "framer-motion";
 import Sparkles from "#/assets/svg/sparkles/sparkles";
-import { springTransition } from "#/helpers/const-animations";
+import {
+  buffAnimation,
+  candiAnimation,
+  roseAnimation,
+  shiaAnimation,
+  springTransition,
+} from "#/helpers/const-animations";
 import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { vchibanStars } from "#/helpers/members-info";
@@ -18,51 +31,34 @@ import BannerButton from "./banner-btn/BannerButton";
 import DraggableSticker from "../ui/draggableSticker/DraggableSticker";
 
 const Banner = () => {
-  const buffAnimation = {
-    x: [0, 20, 0],
-    y: [0, -20, 0],
-    rotate: [0, -5, 0],
-    transition: {
-      duration: 8,
-      repeat: Infinity,
-      repeatType: "mirror",
-    },
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const smoothX = useSpring(x, { stiffness: 100, damping: 14 });
+  const smoothY = useSpring(y, { stiffness: 100, damping: 14 });
+
+  // Transform values for each element
+  const houseX = useTransform(smoothX, [0, window.innerWidth], [-15, 15]);
+  const houseY = useTransform(smoothY, [0, window.innerHeight], [-15, 15]);
+
+  const exclMarkX = useTransform(smoothX, [0, window.innerWidth], [-10, 10]);
+  const exclMarkY = useTransform(smoothY, [0, window.innerHeight], [-10, 10]);
+
+  const handleMouse = (event: React.MouseEvent) => {
+    const { clientX, clientY } = event;
+    setMousePos({ x: clientX, y: clientY });
+    x.set(clientX);
+    y.set(clientY);
   };
 
-  const candiAnimation = {
-    x: [0, -25, 0],
-    y: [0, -10, 0],
-    rotate: [0, 15, 0],
-    transition: {
-      duration: 8,
-      repeat: Infinity,
-      repeatType: "mirror",
-    },
-  };
-
-  const shiaAnimation = {
-    x: [0, 20, 0],
-    y: [0, -20, 0],
-    rotate: [0, 15, 0],
-    transition: {
-      duration: 4,
-      repeat: Infinity,
-      repeatType: "mirror",
-    },
-  };
-
-  const roseAnimation = {
-    x: [0, -20, 0],
-    y: [0, -20, 0],
-    rotate: [0, -5, 0],
-    transition: {
-      duration: 6,
-      repeat: Infinity,
-      repeatType: "mirror",
-    },
-  };
   return (
-    <section className="home-section" aria-labelledby="banner-title">
+    <section
+      className="home-section"
+      aria-labelledby="banner-title"
+      onMouseMove={handleMouse}
+    >
       <div className="banner-wrapper">
         <HeaderSection
           as="header"
@@ -85,7 +81,7 @@ const Banner = () => {
                   layout="responsive"
                   width={791}
                   height={1274}
-                />{" "}
+                />
                 <ColoredBuffIcon />
               </li>
             ))}
@@ -98,11 +94,16 @@ const Banner = () => {
       </div>
       <div className="bg-wrapper">
         <div className="bg-svgs">
-          <House className="house" />
-          <div className="excl-marks">
+          <motion.div className="house" style={{ x: houseX, y: houseY }}>
+            <House />
+          </motion.div>
+          <motion.div
+            className="excl-marks"
+            style={{ x: exclMarkX, y: exclMarkY }}
+          >
             <BlueExclMark1 />
             <BlueExclMark2 />
-          </div>
+          </motion.div>
         </div>
       </div>
 
