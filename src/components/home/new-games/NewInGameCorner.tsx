@@ -7,6 +7,8 @@ import SpringButton from "#/components/ui/springBtn/SpringButton";
 import ChevronRight from "#/assets/svg/chevron-right";
 import GameExcl1 from "#/assets/svg/home/game-excl-1";
 import GameExcl2 from "#/assets/svg/home/game-excl-2";
+import { motion } from "framer-motion";
+import { bouncyTransition } from "#/helpers/const-animations";
 
 const NewInGamerCorner = () => {
   return (
@@ -45,27 +47,43 @@ const NewInGamerCorner = () => {
           height={276}
           className="gb-title"
         />
-        <Image
-          alt="Game Over Gooba ball"
-          src="https://framerusercontent.com/images/3dH40lIq8Vg4jszgH1HSi1Pmec.jpg"
-          width={272}
-          height={153}
+        <motion.div
+          whileHover={{ transform: "translateY(-1rem)" }}
+          transition={bouncyTransition}
           className="img-1"
-        />
-        <Image
-          alt="Gameplay 1 Gooba ball"
-          src="https://framerusercontent.com/images/dBfSWjP3Lgv1jH9QGez6azCAmos.jpg"
-          width={272}
-          height={153}
+        >
+          <Image
+            alt="Game Over Gooba ball"
+            src="https://framerusercontent.com/images/3dH40lIq8Vg4jszgH1HSi1Pmec.jpg"
+            width={272}
+            height={153}
+          />
+        </motion.div>
+
+        <motion.div
           className="img-2"
-        />
-        <Image
-          alt="Gameplay 2 Gooba ball"
-          src="https://framerusercontent.com/images/tZn0Ml3CD1UtGfNJgC5xXrk01pE.jpg"
-          width={272}
-          height={153}
+          whileHover={{ transform: "translateY(-1rem)" }}
+          transition={bouncyTransition}
+        >
+          <Image
+            alt="Gameplay 1 Gooba ball"
+            src="https://framerusercontent.com/images/dBfSWjP3Lgv1jH9QGez6azCAmos.jpg"
+            width={272}
+            height={153}
+          />
+        </motion.div>
+        <motion.div
           className="img-3"
-        />
+          whileHover={{ transform: "translateY(-1rem)" }}
+          transition={bouncyTransition}
+        >
+          <Image
+            alt="Gameplay 2 Gooba ball"
+            src="https://framerusercontent.com/images/tZn0Ml3CD1UtGfNJgC5xXrk01pE.jpg"
+            width={272}
+            height={153}
+          />
+        </motion.div>
       </div>
 
       <GameExcl1 className="excl-1" />

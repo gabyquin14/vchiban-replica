@@ -1,4 +1,10 @@
-export const springTransition = { type: "spring", stiffness: 300, damping: 14 };
+export const springTransition = {
+  type: "spring",
+  stiffness: 400,
+  damping: 14,
+  mass: 0.8,
+};
+
 export const bouncyTransition = {
   type: "spring",
   stiffness: 500,
@@ -55,3 +61,50 @@ export const excl3 = {
     transition: { duration: 0.3 },
   },
 };
+
+//Banner members stickers animations
+export const buffAnimation = {
+  x: [0, 20, 0],
+  y: [0, -20, 0],
+  rotate: [0, -5, 0],
+  transition: {
+    duration: 8,
+    repeat: Infinity,
+    repeatType: "mirror",
+  },
+};
+
+export const candiAnimation = {
+  x: [0, -25, 0],
+  y: [0, -10, 0],
+  rotate: [0, 15, 0],
+  transition: {
+    duration: 8,
+    repeat: Infinity,
+    repeatType: "mirror",
+  },
+};
+
+export const shiaAnimation = {
+  x: [0, 20, 0],
+  y: [0, -20, 0],
+  rotate: [0, 15, 0],
+  transition: {
+    duration: 4,
+    repeat: Infinity,
+    repeatType: "mirror",
+  },
+};
+
+export const roseAnimation = {
+  x: [0, -20, 0],
+  y: [0, -20, 0],
+  rotate: [0, -5, 0],
+  transition: {
+    duration: 6,
+    repeat: Infinity,
+    repeatType: "mirror",
+  },
+};
+
+//Banner house and exclamation marks animations

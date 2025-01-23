@@ -14,6 +14,9 @@ import Exclamation2 from "#/assets/svg/footer/excl-2";
 import Exclamation3 from "#/assets/svg/footer/excl-3";
 import Exclamation4 from "#/assets/svg/footer/excl-4";
 import Exclamation5 from "#/assets/svg/footer/excl-5";
+import Discord from "#/assets/svg/socials/discord";
+import { springTransition } from "#/helpers/const-animations";
+import { motion } from "framer-motion";
 
 const currentYear = new Date().getFullYear();
 
@@ -33,9 +36,10 @@ const secondaryLinks = [
 ];
 
 const socialLinks = [
-  { Icon: TwitchIcon, href: "" },
-  { Icon: TwitterIcon, href: "" },
-  { Icon: YoutubeIcon, href: "" },
+  { Icon: TwitchIcon, href: "https://www.twitch.tv/team/vchiban" },
+  { Icon: TwitterIcon, href: "https://x.com/vchiban" },
+  { Icon: YoutubeIcon, href: "https://www.youtube.com/@vchiban" },
+  { Icon: Discord, href: "https://discord.com/invite/XGTmDnntUW" },
 ];
 
 const Footer: FC = () => {
@@ -86,8 +90,13 @@ const Footer: FC = () => {
         <ul className="footer__socials">
           {socialLinks.map(({ Icon, href }, index) => (
             <li key={index} className="social">
-              <a href={href} className="social-link">
+              <a href={href} target="_blank" className="social-link spring-btn">
                 <Icon />
+                <motion.div
+                  className="bouncy-bg"
+                  whileHover={{ inset: "-4px -12px" }}
+                  transition={springTransition}
+                />
               </a>
             </li>
           ))}

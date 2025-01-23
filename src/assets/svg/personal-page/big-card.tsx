@@ -13,8 +13,8 @@ const BigCard = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M-1.12-1.117h71.808V58.13H-1.12z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M60.664 18.3a3 3 0 0 0-2.512-3.42L16.099 8.454a3 3 0 0 0-3.418 2.513L8.453 38.623a3 3 0 0 0 2.513 3.419l42.052 6.427a3 3 0 0 0 3.419-2.512l4.227-27.658Zm-39.456-1.7a2 2 0 0 0-2.279 1.674l-.312 2.044a2 2 0 0 0 1.674 2.28l29.635 4.529a2 2 0 0 0 2.28-1.675l.311-2.044a2 2 0 0 0-1.674-2.28L21.208 16.6Z"
       ></path>
     </mask>
@@ -34,14 +34,14 @@ const BigCard = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M3.438 3.442h62.691v50.13H3.438z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M60.664 18.3a3 3 0 0 0-2.512-3.42L16.099 8.454a3 3 0 0 0-3.418 2.513L8.453 38.623a3 3 0 0 0 2.513 3.419l42.052 6.427a3 3 0 0 0 3.419-2.512l4.227-27.658Zm-39.456-1.7a2 2 0 0 0-2.279 1.674l-.312 2.044a2 2 0 0 0 1.674 2.28l29.635 4.529a2 2 0 0 0 2.28-1.675l.311-2.044a2 2 0 0 0-1.674-2.28L21.208 16.6Z"
       ></path>
     </mask>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M60.664 18.3a3 3 0 0 0-2.512-3.42L16.099 8.454a3 3 0 0 0-3.418 2.513L8.453 38.623a3 3 0 0 0 2.513 3.419l42.052 6.427a3 3 0 0 0 3.419-2.512l4.227-27.658Zm-39.456-1.7a2 2 0 0 0-2.279 1.674l-.312 2.044a2 2 0 0 0 1.674 2.28l29.635 4.529a2 2 0 0 0 2.28-1.675l.311-2.044a2 2 0 0 0-1.674-2.28L21.208 16.6Z"
       fill="#AF67F7"
     ></path>

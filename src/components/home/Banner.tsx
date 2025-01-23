@@ -1,22 +1,64 @@
 "use client";
-import { motion } from "framer-motion";
-import ChevronDown from "#/assets/svg/chevron-down";
+import {
+  motion,
+  useAnimate,
+  useMotionValue,
+  useSpring,
+  useTransform,
+  Variant,
+} from "framer-motion";
 import Sparkles from "#/assets/svg/sparkles/sparkles";
-import { springTransition } from "#/helpers/const-animations";
+import {
+  buffAnimation,
+  candiAnimation,
+  roseAnimation,
+  shiaAnimation,
+  springTransition,
+} from "#/helpers/const-animations";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { vchibanStars } from "#/helpers/members-info";
 import HeaderSection from "../ui/headerSection/HeaderSection";
 import "./Home.scss";
 import House from "#/assets/svg/house";
 import BlueExclMark1 from "#/assets/svg/home/blue-excl-1";
 import BlueExclMark2 from "#/assets/svg/home/blue-excl-2";
+import ColoredBuffIcon from "#/assets/svg/colored-buff-icon";
+import ColoredCandiIcon from "#/assets/svg/colored-candi-icon";
+import ColoredShiaIcon from "#/assets/svg/colored-shia-icon";
+import ColoredRoseIcon from "#/assets/svg/colored-rose-icon";
+import BannerButton from "./banner-btn/BannerButton";
+import DraggableSticker from "../ui/draggableSticker/DraggableSticker";
 
-export default function Banner() {
-  const [isHover, setIsHover] = useState(false);
+const Banner = () => {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const smoothX = useSpring(x, { stiffness: 100, damping: 14 });
+  const smoothY = useSpring(y, { stiffness: 100, damping: 14 });
+
+  // Transform values for each element
+  const houseX = useTransform(smoothX, [0, window.innerWidth], [-15, 15]);
+  const houseY = useTransform(smoothY, [0, window.innerHeight], [-15, 15]);
+
+  const exclMarkX = useTransform(smoothX, [0, window.innerWidth], [-10, 10]);
+  const exclMarkY = useTransform(smoothY, [0, window.innerHeight], [-10, 10]);
+
+  const handleMouse = (event: React.MouseEvent) => {
+    const { clientX, clientY } = event;
+    setMousePos({ x: clientX, y: clientY });
+    x.set(clientX);
+    y.set(clientY);
+  };
 
   return (
-    <section className="home-section" aria-labelledby="banner-title">
+    <section
+      className="home-section"
+      aria-labelledby="banner-title"
+      onMouseMove={handleMouse}
+    >
       <div className="banner-wrapper">
         <HeaderSection
           as="header"
@@ -40,40 +82,52 @@ export default function Banner() {
                   width={791}
                   height={1274}
                 />
+                <ColoredBuffIcon />
               </li>
             ))}
           </ul>
         </div>
 
         <div className="see-more-btn-wrapper">
-          <button
-            className="see-more-btn"
-            onMouseEnter={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
-            aria-label="See more of what we can do"
-          >
-            <motion.div
-              whileHover={{ scale: 1.1 }}
-              transition={springTransition}
-              className="hover-motion blue"
-              aria-hidden="true"
-            />
-            <div className="content-wrapper">
-              <span className="content">See more of what we can do</span>
-              <ChevronDown aria-hidden="true" />
-            </div>
-          </button>
+          <BannerButton />
         </div>
       </div>
       <div className="bg-wrapper">
         <div className="bg-svgs">
-          <House className="house" />
-          <div className="excl-marks">
+          <motion.div className="house" style={{ x: houseX, y: houseY }}>
+            <House />
+          </motion.div>
+          <motion.div
+            className="excl-marks"
+            style={{ x: exclMarkX, y: exclMarkY }}
+          >
             <BlueExclMark1 />
             <BlueExclMark2 />
-          </div>
+          </motion.div>
         </div>
+      </div>
+
+      <div className="floating-icons">
+        <DraggableSticker alt="buff" floatAnimation={buffAnimation as Variant}>
+          <ColoredBuffIcon />
+        </DraggableSticker>
+
+        <DraggableSticker
+          alt="candi"
+          floatAnimation={candiAnimation as Variant}
+        >
+          <ColoredCandiIcon />
+        </DraggableSticker>
+
+        <DraggableSticker alt="shia" floatAnimation={shiaAnimation as Variant}>
+          <ColoredShiaIcon />
+        </DraggableSticker>
+        <DraggableSticker alt="rose" floatAnimation={roseAnimation as Variant}>
+          <ColoredRoseIcon />
+        </DraggableSticker>
       </div>
     </section>
   );
-}
+};
+
+export default Banner;

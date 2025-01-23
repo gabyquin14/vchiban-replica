@@ -1,0 +1,52 @@
+.banner {
+  .bouncy-bg {
+    background-color: rgb(249, 249, 237);
+    border-radius: 2.5rem;
+    box-shadow: rgba(249, 249, 237, 0.54) 0px 0px 122px 0px;
+    overflow: visible;
+  }
+
+  .sparkle1 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: -1.2rem;
+    left: 0rem;
+  }
+  .sparkle2 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 2.5rem;
+    left: -0.7rem;
+  }
+  .sparkle3 {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: 4.2rem;
+    left: 1.8rem;
+  }
+
+  .excl-mark {
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    top: -1.3rem;
+    right: 1rem;
+  }
+  .content-wrapper {
+    pointer-events: none;
+    z-index: 2;
+    position: relative;
+    overflow: visible;
+    padding: 2rem 4.7rem;
+  }
+
+  .text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+}

@@ -13,8 +13,8 @@ const SmallCard = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M-1.116-.721h50.742v42.74H-1.116z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M40.511 14.326a3 3 0 0 0-2.667-3.299l-24.86-2.633a3 3 0 0 0-3.3 2.667L8.03 26.674a3 3 0 0 0 2.667 3.299l24.861 2.633a3 3 0 0 0 3.3-2.667l1.654-15.613Zm-24.45-.93a1.937 1.937 0 1 0-.408 3.853l17.726 1.878a1.938 1.938 0 0 0 .408-3.854L16.06 13.396Z"
       ></path>
     </mask>
@@ -34,14 +34,14 @@ const SmallCard = (props: Record<string, unknown>) => (
     >
       <path fill="#fff" d="M3.283 3.679h41.943V37.62H3.283z"></path>
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M40.511 14.326a3 3 0 0 0-2.667-3.299l-24.86-2.633a3 3 0 0 0-3.3 2.667L8.03 26.674a3 3 0 0 0 2.667 3.299l24.861 2.633a3 3 0 0 0 3.3-2.667l1.654-15.613Zm-24.45-.93a1.937 1.937 0 1 0-.408 3.853l17.726 1.878a1.938 1.938 0 0 0 .408-3.854L16.06 13.396Z"
       ></path>
     </mask>
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M40.511 14.326a3 3 0 0 0-2.667-3.299l-24.86-2.633a3 3 0 0 0-3.3 2.667L8.03 26.674a3 3 0 0 0 2.667 3.299l24.861 2.633a3 3 0 0 0 3.3-2.667l1.654-15.613Zm-24.45-.93a1.937 1.937 0 1 0-.408 3.853l17.726 1.878a1.938 1.938 0 0 0 .408-3.854L16.06 13.396Z"
       fill="#AF67F7"
     ></path>

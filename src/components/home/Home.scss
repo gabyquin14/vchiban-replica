@@ -98,7 +98,7 @@
 
   .see-more-btn-wrapper {
     position: absolute;
-    top: 145%;
+    top: 147%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -127,6 +127,23 @@
         background-color: var(--white);
         z-index: 2;
       }
+    }
+  }
+
+  .floating-icons {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+
+    .wrapper {
+      position: absolute;
+      width: fit-content;
+      height: fit-content;
+    }
+
+    svg {
+      filter: drop-shadow(rgba(10, 5, 73, 0.24) 0px 8px 24px);
     }
   }
 }
