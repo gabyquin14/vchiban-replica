@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, useState } from "react";
 import Link from "next/link";
 import "./Footer.scss";
 import Logo from "#/assets/svg/dark-vchiban-logo";
@@ -15,7 +15,7 @@ import Exclamation3 from "#/assets/svg/footer/excl-3";
 import Exclamation4 from "#/assets/svg/footer/excl-4";
 import Exclamation5 from "#/assets/svg/footer/excl-5";
 import Discord from "#/assets/svg/socials/discord";
-import { springTransition } from "#/helpers/const-animations";
+import { bouncyTransition, springTransition } from "#/helpers/const-animations";
 import { motion } from "framer-motion";
 
 const currentYear = new Date().getFullYear();
@@ -43,6 +43,9 @@ const socialLinks = [
 ];
 
 const Footer: FC = () => {
+  const [hoveredIndex, setHoveredIndex] = useState<null | number>(null);
+  const [hoveredIndexSec, setHoveredIndexSec] = useState<null | number>(null);
+
   return (
     <footer className="footer">
       <section className="footer__info">
@@ -60,9 +63,24 @@ const Footer: FC = () => {
             <h3 className="footer__title">Site map</h3>
             <ul className="footer__list">
               {primaryLinks.map((link, index) => (
-                <li key={link.label} className="footer__item">
+                <li
+                  key={link.label}
+                  className="footer__item"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
                   <a href={link.href} className="footer__link">
-                    {index === 0 ? <DoubleArrowIcon /> : <ArrowIcon />}
+                    <motion.div
+                      animate={{
+                        transform:
+                          hoveredIndex === index
+                            ? "translateX(1rem)"
+                            : "translateX(0rem)",
+                      }}
+                      transition={bouncyTransition}
+                    >
+                      {index === 0 ? <DoubleArrowIcon /> : <ArrowIcon />}
+                    </motion.div>
                     <span>{link.label}</span>
                   </a>
                 </li>
@@ -75,9 +93,24 @@ const Footer: FC = () => {
             <h3 className="footer__title">More VchiBan</h3>
             <ul className="footer__list">
               {secondaryLinks.map((link, index) => (
-                <li key={link.label} className="footer__item">
+                <li
+                  key={link.label}
+                  className="footer__item"
+                  onMouseEnter={() => setHoveredIndexSec(index)}
+                  onMouseLeave={() => setHoveredIndexSec(null)}
+                >
                   <Link href={link.href} className="footer__link">
-                    {index === 0 ? <DoubleArrowIcon /> : <ArrowIcon />}
+                    <motion.div
+                      animate={{
+                        transform:
+                          hoveredIndexSec === index
+                            ? "translateX(1rem)"
+                            : "translateX(0rem)",
+                      }}
+                      transition={bouncyTransition}
+                    >
+                      {index === 0 ? <DoubleArrowIcon /> : <ArrowIcon />}
+                    </motion.div>
                     <span>{link.label}</span>
                   </Link>
                 </li>
@@ -94,7 +127,7 @@ const Footer: FC = () => {
                 <Icon />
                 <motion.div
                   className="bouncy-bg"
-                  whileHover={{ inset: "-4px -12px" }}
+                  whileHover={{ inset: "-4px -4px" }}
                   transition={springTransition}
                 />
               </a>

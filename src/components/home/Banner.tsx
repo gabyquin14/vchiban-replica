@@ -1,7 +1,6 @@
 "use client";
 import {
   motion,
-  useAnimate,
   useMotionValue,
   useSpring,
   useTransform,
@@ -13,10 +12,9 @@ import {
   candiAnimation,
   roseAnimation,
   shiaAnimation,
-  springTransition,
 } from "#/helpers/const-animations";
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import { vchibanStars } from "#/helpers/members-info";
 import HeaderSection from "../ui/headerSection/HeaderSection";
 import "./Home.scss";
