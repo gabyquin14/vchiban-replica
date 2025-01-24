@@ -38,11 +38,11 @@ const Banner = () => {
   const smoothY = useSpring(y, { stiffness: 100, damping: 14 });
 
   // Transform values for each element
-  const houseX = useTransform(smoothX, [0, window.innerWidth], [-15, 15]);
-  const houseY = useTransform(smoothY, [0, window.innerHeight], [-15, 15]);
+  const houseX = useTransform(smoothX, [0, window?.innerWidth], [-15, 15]);
+  const houseY = useTransform(smoothY, [0, window?.innerHeight], [-15, 15]);
 
-  const exclMarkX = useTransform(smoothX, [0, window.innerWidth], [-10, 10]);
-  const exclMarkY = useTransform(smoothY, [0, window.innerHeight], [-10, 10]);
+  const exclMarkX = useTransform(smoothX, [0, window?.innerWidth], [-10, 10]);
+  const exclMarkY = useTransform(smoothY, [0, window?.innerHeight], [-10, 10]);
 
   const handleMouse = (event: React.MouseEvent) => {
     const { clientX, clientY } = event;
