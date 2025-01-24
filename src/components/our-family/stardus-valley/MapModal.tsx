@@ -2,7 +2,6 @@ import "./MapModal.scss";
 import Image from "next/image";
 import { ModalInfoInterface } from "#/helpers/lore-modal-info";
 import Exit from "#/assets/svg/exit";
-import { div } from "framer-motion/client";
 
 interface ModalProps {
   info: ModalInfoInterface;
