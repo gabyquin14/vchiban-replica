@@ -10,9 +10,9 @@ interface ModalProps {
 }
 
 const MapModal: React.FC<ModalProps> = ({ info, closeModal }) => {
-  const redirectToVideo = () => {
-    window?.open(info.link, "_blank");
-  };
+  // const redirectToVideo = () => {
+  //   window?.open(info.link, "_blank");
+  // };
 
   return (
     <div className="map-modal" onClick={closeModal}>
@@ -20,7 +20,7 @@ const MapModal: React.FC<ModalProps> = ({ info, closeModal }) => {
         <div className="map-modal__header">
           <h1
             className={`${info.link ? "underline" : ""}`}
-            onClick={redirectToVideo}
+            // onClick={redirectToVideo}
           >
             {info.title}
           </h1>
