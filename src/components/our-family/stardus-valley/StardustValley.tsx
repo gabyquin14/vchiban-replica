@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import "./StardustValley.scss";
 import { ModalInfoInterface } from "#/helpers/lore-modal-info";
