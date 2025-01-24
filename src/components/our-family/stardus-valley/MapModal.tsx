@@ -1,3 +1,4 @@
+"use client";
 import "./MapModal.scss";
 import Image from "next/image";
 import { ModalInfoInterface } from "#/helpers/lore-modal-info";
@@ -10,7 +11,7 @@ interface ModalProps {
 
 const MapModal: React.FC<ModalProps> = ({ info, closeModal }) => {
   const redirectToVideo = () => {
-    window.open(info.link, "_blank");
+    window?.open(info.link, "_blank");
   };
 
   return (
