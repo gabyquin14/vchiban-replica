@@ -14,7 +14,7 @@ import {
   shiaAnimation,
 } from "#/helpers/const-animations";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { vchibanStars } from "#/helpers/members-info";
 import HeaderSection from "../ui/headerSection/HeaderSection";
 import "./Home.scss";
@@ -30,6 +30,10 @@ import DraggableSticker from "../ui/draggableSticker/DraggableSticker";
 
 const Banner = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: 0,
+    height: 0,
+  });
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -37,25 +41,54 @@ const Banner = () => {
   const smoothX = useSpring(x, { stiffness: 100, damping: 14 });
   const smoothY = useSpring(y, { stiffness: 100, damping: 14 });
 
-  // Transform values for each element
-  // const houseX = useTransform(smoothX, [0, window?.innerWidth], [-15, 15]);
-  // const houseY = useTransform(smoothY, [0, window?.innerHeight], [-15, 15]);
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setWindowDimensions({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      };
 
-  // const exclMarkX = useTransform(smoothX, [0, window?.innerWidth], [-10, 10]);
-  // const exclMarkY = useTransform(smoothY, [0, window?.innerHeight], [-10, 10]);
+      handleResize();
+      window.addEventListener("resize", handleResize);
 
-  // const handleMouse = (event: React.MouseEvent) => {
-  //   const { clientX, clientY } = event;
-  //   setMousePos({ x: clientX, y: clientY });
-  //   x.set(clientX);
-  //   y.set(clientY);
-  // };
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
+  const houseX = useTransform(smoothX, [0, windowDimensions?.width], [-15, 15]);
+  const houseY = useTransform(
+    smoothY,
+    [0, windowDimensions?.height],
+    [-15, 15]
+  );
+
+  const exclMarkX = useTransform(
+    smoothX,
+    [0, windowDimensions?.width],
+    [-10, 10]
+  );
+  const exclMarkY = useTransform(
+    smoothY,
+    [0, windowDimensions?.height],
+    [-10, 10]
+  );
+
+  const handleMouse = (event: React.MouseEvent) => {
+    const { clientX, clientY } = event;
+    setMousePos({ x: clientX, y: clientY });
+    x.set(clientX);
+    y.set(clientY);
+  };
 
   return (
     <section
       className="home-section"
       aria-labelledby="banner-title"
-      // onMouseMove={handleMouse}
+      onMouseMove={handleMouse}
     >
       <div className="banner-wrapper">
         <HeaderSection
@@ -92,13 +125,12 @@ const Banner = () => {
       </div>
       <div className="bg-wrapper">
         <div className="bg-svgs">
-          <motion.div>
-            {/* className="house" style={{ x: houseX, y: houseY }} */}
+          <motion.div className="house" style={{ x: houseX, y: houseY }}>
             <House />
           </motion.div>
           <motion.div
             className="excl-marks"
-            // style={{ x: exclMarkX, y: exclMarkY }}
+            style={{ x: exclMarkX, y: exclMarkY }}
           >
             <BlueExclMark1 />
             <BlueExclMark2 />
