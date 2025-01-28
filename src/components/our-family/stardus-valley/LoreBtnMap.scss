@@ -10,6 +10,17 @@
   justify-content: center;
   align-items: center;
   box-shadow: rgb(10, 5, 73) 0px 0px 14px 0px;
+  transform-origin: center;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  .info-icon {
+    position: absolute;
+    pointer-events: none;
+    box-sizing: border-box;
+    transform-origin: center;
+    padding: 0.6rem;
+  }
 
   &.club {
     top: 47%;

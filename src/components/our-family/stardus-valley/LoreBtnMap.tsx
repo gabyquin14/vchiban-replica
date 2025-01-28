@@ -1,13 +1,38 @@
-import "./LoreBtnMap.scss";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Info from "#/assets/svg/info";
-import React from "react";
+import "./LoreBtnMap.scss";
 
 interface InfoBtnProps {
   customStyles?: string;
 }
 
 const LoreModalMap: React.FC<InfoBtnProps> = ({ customStyles }) => {
-  return <div className={`outer-circle ${customStyles}`}>{/* <Info /> */}</div>;
+  const [isHover, setIsHover] = useState(false);
+
+  return (
+    <div className="lore-container">
+      <motion.div
+        className={`outer-circle ${customStyles} `}
+        onHoverStart={() => setIsHover(true)}
+        onHoverEnd={() => setIsHover(false)}
+        animate={{
+          scale: isHover ? 3.5 : 1,
+        }}
+        transition={{ type: "spring", stiffness: 100, damping: 10 }}
+      >
+        <motion.div
+          className="info-icon"
+          animate={{
+            scale: isHover ? 0.35 : 0,
+          }}
+          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+        >
+          <Info />
+        </motion.div>
+      </motion.div>
+    </div>
+  );
 };
 
 export default LoreModalMap;
