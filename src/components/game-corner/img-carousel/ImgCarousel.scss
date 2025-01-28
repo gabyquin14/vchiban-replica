@@ -19,8 +19,9 @@
 
   .img-wrapper:nth-child(1) {
     top: 0.5rem;
+    left: -28%;
     z-index: 0;
-    transform: translateX(-50%) rotate(-1deg);
+    transform: rotate(-1deg);
   }
   .img-wrapper:nth-child(2) {
     top: 5.5rem;
@@ -30,8 +31,8 @@
   }
   .img-wrapper:nth-child(3) {
     top: 0.5rem;
-    right: 0;
+    right: -28%;
     z-index: 1;
-    transform: translateX(49%) rotate(1deg);
+    transform: rotate(-10deg);
   }
 }
