@@ -12,14 +12,22 @@
     font-weight: 600;
     width: 21.6rem;
     padding: 0.8rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
 
     .bouncy-bg {
       background-color: var(--navy-blue-main);
     }
 
-    path {
+    .chevron svg path {
       color: var(--white);
       stroke: var(--white);
+    }
+
+    .content,
+    .chevron {
+      pointer-events: none;
+      z-index: 2;
     }
   }
 

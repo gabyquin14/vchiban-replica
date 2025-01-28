@@ -14,6 +14,8 @@ import SearchLight from "#/assets/svg/game-corner/searchlight";
 import Excl1 from "#/assets/svg/game-corner/excl-1";
 import Excl2 from "#/assets/svg/game-corner/excl-2";
 import Excl3 from "#/assets/svg/game-corner/excl-3";
+import { motion } from "framer-motion";
+import { bouncyTransition } from "#/helpers/const-animations";
 
 const GameCorner = () => {
   const [showGame, setShowGame] = useState(true);
@@ -55,6 +57,8 @@ const GameCorner = () => {
               bgImg="https://framerusercontent.com/images/hapuFFerT9LbwuSCXDjWdGQq8Vg.png"
               topImg="https://framerusercontent.com/images/hapuFFerT9LbwuSCXDjWdGQq8Vg.png"
               bottomImg="https://framerusercontent.com/images/Smq7EPDHiDtMLBRSesAFXp32vw.png"
+              setShowInfo={setShowGame}
+              showInfo={showGame}
             />
           </div>
 
@@ -82,11 +86,11 @@ const GameCorner = () => {
                   thirdImg="https://framerusercontent.com/images/hapuFFerT9LbwuSCXDjWdGQq8Vg.png"
                 />
               </div>
-
               <SpringButton
                 text="download and play"
                 firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
                 SecondIcon={ChevronRight}
+                isTransitionBouncy
               />
             </article>
           )}
@@ -100,6 +104,8 @@ const GameCorner = () => {
               bgImg="https://framerusercontent.com/images/8dxIOb4LGrRzzQjsIo5ho083KPM.png"
               topImg="https://framerusercontent.com/images/8dxIOb4LGrRzzQjsIo5ho083KPM.png"
               bottomImg="https://framerusercontent.com/images/ZktcXqBQQobyCy8BvcsH5oNVM.png"
+              setShowInfo={setShowOshi}
+              showInfo={showOshi}
             />
           </div>
 
@@ -144,6 +150,7 @@ const GameCorner = () => {
                 text="download and play"
                 firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
                 SecondIcon={ChevronRight}
+                isTransitionBouncy
               />
             </article>
           )}

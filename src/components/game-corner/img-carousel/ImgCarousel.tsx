@@ -1,5 +1,7 @@
 import Image from "next/image";
 import "./ImgCarousel.scss";
+import { motion } from "framer-motion";
+import { bouncyTransition, springTransition } from "#/helpers/const-animations";
 
 interface SpringButtonProps {
   firstImg: string;
@@ -14,7 +16,12 @@ const ImgCarousel: React.FC<SpringButtonProps> = ({
 }) => {
   return (
     <div className="img-carousel">
-      <div className="img-wrapper">
+      <motion.div
+        className="img-wrapper"
+        whileHover={{ transform: "rotate(-3deg)", top: "-1rem" }}
+        initial={{ transform: "rotate(-1deg)", top: "0.5rem" }}
+        transition={springTransition}
+      >
         <Image
           alt="gooba-1"
           src={firstImg}
@@ -22,9 +29,20 @@ const ImgCarousel: React.FC<SpringButtonProps> = ({
           height={442}
           className="bg-img"
         />
-      </div>
+      </motion.div>
 
-      <div className="img-wrapper">
+      <motion.div
+        className="img-wrapper"
+        whileHover={{
+          transform: "translateX(-49.5%) rotate(3deg)",
+          top: "4rem",
+        }}
+        initial={{
+          transform: "translateX(-49.5%) rotate(0deg)",
+          top: "5.5rem",
+        }}
+        transition={springTransition}
+      >
         <Image
           alt="gooba-2"
           src={secondImg}
@@ -32,8 +50,19 @@ const ImgCarousel: React.FC<SpringButtonProps> = ({
           height={442}
           className="bg-img"
         />
-      </div>
-      <div className="img-wrapper">
+      </motion.div>
+      <motion.div
+        className="img-wrapper"
+        whileHover={{
+          transform: "rotate(3deg)",
+          top: "-1rem",
+        }}
+        initial={{
+          transform: "rotate(1deg)",
+          top: "0.5rem",
+        }}
+        transition={springTransition}
+      >
         <Image
           alt="gooba-3"
           src={thirdImg}
@@ -41,7 +70,7 @@ const ImgCarousel: React.FC<SpringButtonProps> = ({
           height={442}
           className="bg-img"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
