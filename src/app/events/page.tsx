@@ -14,6 +14,8 @@ import SpringButton from "#/components/ui/springBtn/SpringButton";
 import ChevronRight from "#/assets/svg/chevron-right";
 import BigStar from "#/assets/svg/home/big-star";
 import SmallStar from "#/assets/svg/home/small-star";
+import { motion } from "framer-motion";
+import { springTransition } from "#/helpers/const-animations";
 
 const Events = () => {
   return (
@@ -92,7 +94,11 @@ const Events = () => {
       </section>
       <section className="container">
         <div className="image-stack">
-          <div className="image-1">
+          <motion.div
+            className="image-1"
+            whileHover={{ top: "0rem" }}
+            transition={springTransition}
+          >
             <Image
               src="https://framerusercontent.com/images/BfyxP4XFuXRdI0QtCWJnEKZVNM.png"
               alt="image 1"
@@ -100,8 +106,12 @@ const Events = () => {
               width={791}
               height={1274}
             />
-          </div>
-          <div className="image-2">
+          </motion.div>
+          <motion.div
+            className="image-2"
+            whileHover={{ top: "6rem" }}
+            transition={springTransition}
+          >
             <Image
               src="https://framerusercontent.com/images/MkvH4T0NBgnRAdpEDe1H3Yhzg10.png"
               alt="image 1"
@@ -109,8 +119,12 @@ const Events = () => {
               width={791}
               height={1274}
             />
-          </div>
-          <div className="image-3">
+          </motion.div>
+          <motion.div
+            className="image-3"
+            whileHover={{ top: "-1rem" }}
+            transition={springTransition}
+          >
             <Image
               src="https://framerusercontent.com/images/ytgjSDtqPpKOUU27lbjMUkItFpU.jpg"
               alt="image 1"
@@ -118,8 +132,12 @@ const Events = () => {
               width={791}
               height={1274}
             />
-          </div>
-          <div className="image-4">
+          </motion.div>
+          <motion.div
+            className="image-4"
+            whileHover={{ top: "6rem" }}
+            transition={springTransition}
+          >
             <Image
               src="https://framerusercontent.com/images/aBco0HxVVv03dg43G13LkVBkw.png"
               alt="image 1"
@@ -127,7 +145,7 @@ const Events = () => {
               width={791}
               height={1274}
             />
-          </div>
+          </motion.div>
         </div>
 
         <div className="description">
@@ -155,6 +173,7 @@ const Events = () => {
               text="send us an email"
               firstIcon="https://framerusercontent.com/images/0ZmqhaWed7cnNFP632ytqTVVDo.svg"
               SecondIcon={ChevronRight}
+              isTransitionBouncy
             />
           </div>
           <BigStar className="big" />
