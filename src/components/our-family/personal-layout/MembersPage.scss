@@ -2,7 +2,7 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding: 25.4rem 9.6rem 12.8rem;
+  padding: 25.4rem 9.6rem 17rem;
 
   &.buffpup {
     background-color: var(--buffpup-orange);
@@ -12,6 +12,12 @@
   }
   &.shiabun {
     background-color: var(--shia-light-pink);
+
+    .portrait-wrapper {
+      top: 15rem;
+      right: -22rem;
+      transform: scale(1.06);
+    }
   }
   &.rosedoodle {
     background-color: var(--rosedoodle-cyan);
@@ -24,6 +30,7 @@
     width: 126rem;
     height: 203.2rem;
     pointer-events: none;
+    z-index: 2;
 
     .portrait {
       width: 100%;
@@ -32,9 +39,17 @@
     }
   }
 
+  .members-socials {
+    .footer__socials {
+      gap: 2rem;
+    }
+  }
+
   .members-info {
     color: var(--white);
     width: 45%;
+    z-index: 2;
+    position: relative;
 
     .back-btn {
       display: flex;
@@ -88,11 +103,13 @@
 
     .lore {
       margin-top: 9.6rem;
+      width: fit-content;
 
       .lore__img-stack {
         position: relative;
         height: 23.6rem;
         width: 42rem;
+        filter: drop-shadow(rgba(10, 5, 73, 0.24) 0px 16px 36px);
 
         .lore-1,
         .lore-2,
@@ -122,16 +139,72 @@
           top: 2rem;
           transform: rotate(-11deg);
         }
-        .paw {
+        .magnet {
           position: absolute;
           bottom: -4rem;
           left: 5rem;
+
+          &.shiabun {
+            left: -1rem;
+            top: 14rem;
+          }
         }
         .lore-arrow {
           position: absolute;
           top: 3rem;
           right: -12rem;
         }
+      }
+    }
+  }
+
+  .backgroung-imgs {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .bg-icon {
+      position: absolute;
+      z-index: 0;
+    }
+    &.buffpup {
+      .paw1 {
+        top: -20%;
+        right: -23%;
+      }
+      .paw2 {
+        bottom: 7%;
+        left: -14%;
+      }
+      .bone1 {
+        top: -15%;
+        left: 8%;
+      }
+      .bone2 {
+        bottom: -13%;
+        right: -11%;
+      }
+    }
+    &.shiabun {
+      .spring1 {
+        top: -16%;
+        left: 0;
+      }
+      .spring2 {
+        bottom: -32%;
+        right: 0%;
+      }
+      .bunny1 {
+        top: -5%;
+        right: 2%;
+      }
+      .bunny2 {
+        bottom: -24%;
+        left: 4%;
       }
     }
   }

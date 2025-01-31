@@ -6,15 +6,15 @@ import TwitterIcon from "#/assets/svg/socials/twitter";
 import YoutubeIcon from "#/assets/svg/socials/youtube";
 import Tiktok from "#/assets/svg/socials/tiktok";
 import PersonalLayout from "#/components/our-family/personal-layout/PersonalLayout";
-import Flask from "#/assets/svg/personal-page/flask";
-import SmallCard from "#/assets/svg/personal-page/small-card";
-import SparklesAicandii from "#/assets/svg/sparkles/sparkles-aicandii";
-import BigCard from "#/assets/svg/personal-page/big-card";
 import SparklesShiabun from "#/assets/svg/sparkles/sparkles-shiabun";
-import Bunny from "#/assets/svg/personal-page/bunny";
-import SmallHeart from "#/assets/svg/personal-page/small-heart";
-import BigHeart from "#/assets/svg/personal-page/big-heart";
+import Bunny from "#/assets/svg/personal-page/shiabun/bunny";
+import SmallHeart from "#/assets/svg/personal-page/shiabun/small-heart";
+import BigHeart from "#/assets/svg/personal-page/shiabun/big-heart";
 import LoreSheet from "#/components/our-family/personal-layout/LoreSheet";
+import BunnySpring from "#/assets/svg/personal-page/shiabun/bunny-spring";
+import SpringBunnyHeart from "#/assets/svg/personal-page/shiabun/spring-bunny-heart";
+import BunnyHeart from "#/assets/svg/personal-page/shiabun/bunny-heart";
+import Spring from "#/assets/svg/personal-page/shiabun/spring";
 
 const Shiabun = () => {
   const socialLinks = [
@@ -43,8 +43,13 @@ const Shiabun = () => {
         ImgLore3={vchibanStars[3].loreImg3}
         LoreMagnet={BigHeart}
         showLore={showLore}
-      />
-      <LoreSheet />
+      >
+        <BunnySpring className="spring1 bg-icon" />
+        <SpringBunnyHeart className="bunny1 bg-icon" />
+        <BunnyHeart className="bunny2 bg-icon" />
+        <Spring className="spring2 bg-icon" />
+      </PersonalLayout>
+      {/* <LoreSheet /> */}
     </>
   );
 };

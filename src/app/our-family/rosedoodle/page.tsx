@@ -6,17 +6,17 @@ import TwitterIcon from "#/assets/svg/socials/twitter";
 import YoutubeIcon from "#/assets/svg/socials/youtube";
 import Tiktok from "#/assets/svg/socials/tiktok";
 import PersonalLayout from "#/components/our-family/personal-layout/PersonalLayout";
-import Flask from "#/assets/svg/personal-page/flask";
-import SmallCard from "#/assets/svg/personal-page/small-card";
+import Flask from "#/assets/svg/personal-page/aicandii/flask";
+import SmallCard from "#/assets/svg/personal-page/aicandii/small-card";
 import SparklesAicandii from "#/assets/svg/sparkles/sparkles-aicandii";
-import BigCard from "#/assets/svg/personal-page/big-card";
+import BigCard from "#/assets/svg/personal-page/aicandii/big-card";
 import SparklesShiabun from "#/assets/svg/sparkles/sparkles-shiabun";
-import Bunny from "#/assets/svg/personal-page/bunny";
-import SmallHeart from "#/assets/svg/personal-page/small-heart";
-import BigHeart from "#/assets/svg/personal-page/big-heart";
-import IceCream from "#/assets/svg/personal-page/ice-cream";
-import SmallPencil from "#/assets/svg/personal-page/small-pencil";
-import BigPencil from "#/assets/svg/personal-page/big-pencil";
+import Bunny from "#/assets/svg/personal-page/shiabun/bunny";
+import SmallHeart from "#/assets/svg/personal-page/shiabun/small-heart";
+import BigHeart from "#/assets/svg/personal-page/shiabun/big-heart";
+import IceCream from "#/assets/svg/personal-page/rosedoodle/ice-cream";
+import SmallPencil from "#/assets/svg/personal-page/rosedoodle/small-pencil";
+import BigPencil from "#/assets/svg/personal-page/rosedoodle/big-pencil";
 import LoreSheet from "#/components/our-family/personal-layout/LoreSheet";
 
 const Shiabun = () => {
