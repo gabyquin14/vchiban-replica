@@ -42,6 +42,9 @@ const PersonalLayout: FC<PersonalPageLayoutPros> = ({
   children,
 }) => {
   const [isHover, setIsHover] = useState(false);
+  const magnetAnimation = name.toLocaleLowerCase().includes("aicandii")
+    ? "rotate(6deg) translate(0rem, -4rem)"
+    : "rotate(-6deg) translate(0rem, -1rem)";
 
   return (
     <div className={`member-page ${name.toLocaleLowerCase()}`}>
@@ -61,11 +64,11 @@ const PersonalLayout: FC<PersonalPageLayoutPros> = ({
           see the rest of the family
         </button>
 
-        <div className="members-name">
+        <div className={`members-name ${name.toLocaleLowerCase()}`}>
           <h1>{name}.</h1>
           <Sparkles className="sparkles" />
-          <BigIcon className="bone" />
-          <SmallIcon className="paw" />
+          <BigIcon className="big-icon" />
+          <SmallIcon className="small-icon" />
         </div>
 
         <p className="description">{description}</p>
@@ -134,7 +137,7 @@ const PersonalLayout: FC<PersonalPageLayoutPros> = ({
               className={`magnet ${name.toLocaleLowerCase()}`}
               animate={{
                 transform: isHover
-                  ? "rotate(-6deg) translate(0rem, -1rem)"
+                  ? magnetAnimation
                   : "rotate(0deg) translate(0rem, 0rem)",
               }}
               initial={{ transform: "rotate(0deg) translate(0rem, 0rem)" }}

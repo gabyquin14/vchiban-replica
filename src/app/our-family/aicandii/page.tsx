@@ -11,6 +11,11 @@ import SmallCard from "#/assets/svg/personal-page/aicandii/small-card";
 import SparklesAicandii from "#/assets/svg/sparkles/sparkles-aicandii";
 import BigCard from "#/assets/svg/personal-page/aicandii/big-card";
 import LoreSheet from "#/components/our-family/personal-layout/LoreSheet";
+import Flask1 from "#/assets/svg/personal-page/aicandii/flask1";
+import Flask2 from "#/assets/svg/personal-page/aicandii/flask2";
+import Flask3 from "#/assets/svg/personal-page/aicandii/flask3";
+import Card1 from "#/assets/svg/personal-page/aicandii/card1";
+import Card2 from "#/assets/svg/personal-page/aicandii/card2";
 
 const Aicandii = () => {
   const socialLinks = [
@@ -37,8 +42,14 @@ const Aicandii = () => {
         ImgLore3={vchibanStars[1].loreImg3}
         LoreMagnet={BigCard}
         showLore={showLore}
-      />
-      <LoreSheet />
+      >
+        <Flask1 className="flask1 bg-icon" />
+        <Flask2 className="flask2 bg-icon" />
+        <Flask3 className="flask3 bg-icon" />
+        <Card1 className="card1 bg-icon" />
+        <Card2 className="card2 bg-icon" />
+      </PersonalLayout>
+      {/* <LoreSheet /> */}
     </>
   );
 };
