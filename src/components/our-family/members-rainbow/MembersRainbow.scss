@@ -6,22 +6,22 @@
     position: absolute;
 
     &.buffpup {
-      left: 4%;
+      left: 6%;
       top: 5rem;
       transform: rotate(-6deg);
     }
     &.aicandii {
-      left: 28%;
+      left: 30%;
       top: 0rem;
       transform: rotate(-2deg);
     }
     &.rosedoodle {
-      left: 52%;
+      left: 54%;
       top: 0rem;
       transform: rotate(2deg);
     }
     &.shiabun {
-      right: 4%;
+      right: 2%;
       top: 5rem;
       transform: rotate(8deg);
     }
@@ -33,6 +33,7 @@
     width: 31rem;
     overflow: hidden;
     border-radius: 6.4rem;
+    pointer-events: none;
   }
 
   &__portrait-container {
@@ -43,12 +44,14 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    pointer-events: all;
   }
 
   .portrait-wrapper {
     width: 76.8rem;
     height: 135rem;
     position: relative;
+    pointer-events: none;
   }
 
   &__portrait {
@@ -58,6 +61,7 @@
     transform: translateX(-50%) scale(2);
     width: 100%;
     object-fit: contain;
+    pointer-events: none;
 
     &.aicandii {
       left: 46%;

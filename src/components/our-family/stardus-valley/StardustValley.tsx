@@ -42,7 +42,7 @@ const StardustValley = () => {
               toggleModal(info);
             }}
           >
-            <LoreBtnMap customStyles={info.styles} />
+            <LoreBtnMap customStyles={info?.styles} />
           </div>
         ))}
 

@@ -88,6 +88,8 @@
 .btn-excl3 {
   position: absolute;
   z-index: 1;
+  transform: none;
+  transform-origin: 50% 50% 0px;
 }
 .btn-excl1 {
   top: -1.25rem;

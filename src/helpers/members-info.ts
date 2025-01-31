@@ -70,7 +70,7 @@ export const vchibanStars = [
     loreImg1:
       "https://framerusercontent.com/images/DwbdOtTgERJdqrtzXoZiSmn3DAo.png",
     loreImg2:
-      "https://framerusercontent.com/images/DwbdOtTgERJdqrtzXoZiSmn3DAo.png",
+      "https://framerusercontent.com/images/7sYdT69GJK4nH0gn551JR1iOJAU.png",
     loreImg3:
       "https://framerusercontent.com/images/n2Ze1NzzBk7oIzFEzopxURSF6d4.png",
   },

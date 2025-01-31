@@ -2,28 +2,47 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding: 25.4rem 9.6rem 12.8rem;
+  padding: 25.4rem 9.6rem 17rem;
 
   &.buffpup {
     background-color: var(--buffpup-orange);
+    .portrait-wrapper {
+      top: -0.5rem;
+      right: -27rem;
+    }
   }
   &.aicandii {
     background-color: var(--candi-purple);
+
+    .portrait-wrapper {
+      top: 12rem;
+      right: -20rem;
+    }
   }
   &.shiabun {
     background-color: var(--shia-light-pink);
+
+    .portrait-wrapper {
+      top: 15rem;
+      right: -22rem;
+      transform: scale(1.06);
+    }
   }
   &.rosedoodle {
-    background-color: var(--rosedoodle-cyan);
+    background-color: #3fc3a5;
+
+    .portrait-wrapper {
+      top: -9rem;
+      right: -25rem;
+    }
   }
 
   .portrait-wrapper {
-    top: -0.5rem;
-    right: -27rem;
     position: absolute;
     width: 126rem;
     height: 203.2rem;
     pointer-events: none;
+    z-index: 2;
 
     .portrait {
       width: 100%;
@@ -32,9 +51,17 @@
     }
   }
 
+  .members-socials {
+    .footer__socials {
+      gap: 2rem;
+    }
+  }
+
   .members-info {
     color: var(--white);
     width: 45%;
+    z-index: 2;
+    position: relative;
 
     .back-btn {
       display: flex;
@@ -55,6 +82,8 @@
 
     .members-name {
       position: relative;
+      width: fit-content;
+
       h1 {
         font-family: var(--gilboys);
         font-size: 12.8rem;
@@ -62,22 +91,42 @@
         line-height: 90%;
         display: inline-block;
       }
+      &.aicandii .sparkles {
+        top: -1rem;
+        left: -2rem;
+      }
+
       .sparkles {
         position: absolute;
         top: -3rem;
         left: -3rem;
       }
 
-      .paw {
+      .small-icon {
         position: absolute;
         bottom: 2rem;
         right: 6rem;
       }
 
-      .bone {
+      &.aicandii .small-icon {
+        bottom: 3.5rem;
+        right: 4rem;
+      }
+
+      .big-icon {
         position: absolute;
         top: -3rem;
         right: 10rem;
+      }
+      &.rosedoodle .small-icon {
+        bottom: 2.5rem;
+        right: -6.5rem;
+      }
+
+      &.rosedoodle .big-icon {
+        position: absolute;
+        top: -3rem;
+        right: -3rem;
       }
     }
     .description {
@@ -88,11 +137,13 @@
 
     .lore {
       margin-top: 9.6rem;
+      width: fit-content;
 
       .lore__img-stack {
         position: relative;
         height: 23.6rem;
         width: 42rem;
+        filter: drop-shadow(rgba(10, 5, 73, 0.24) 0px 16px 36px);
 
         .lore-1,
         .lore-2,
@@ -122,16 +173,128 @@
           top: 2rem;
           transform: rotate(-11deg);
         }
-        .paw {
+        .magnet {
           position: absolute;
           bottom: -4rem;
           left: 5rem;
+          width: fit-content;
+          height: fit-content;
+
+          &.shiabun {
+            left: -1rem;
+            top: 14rem;
+          }
+          &.aicandii {
+            right: 8rem;
+            left: unset;
+            top: -2rem;
+          }
+          &.rosedoodle {
+            right: -2rem;
+            left: unset;
+            bottom: -1rem;
+          }
         }
         .lore-arrow {
           position: absolute;
           top: 3rem;
           right: -12rem;
         }
+      }
+    }
+  }
+
+  .backgroung-imgs {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .bg-icon {
+      position: absolute;
+      z-index: 0;
+    }
+    &.buffpup {
+      .paw1 {
+        top: -20%;
+        right: -23%;
+      }
+      .paw2 {
+        bottom: 7%;
+        left: -14%;
+      }
+      .bone1 {
+        top: -15%;
+        left: 8%;
+      }
+      .bone2 {
+        bottom: -13%;
+        right: -11%;
+      }
+    }
+    &.shiabun {
+      .spring1 {
+        top: -16%;
+        left: 0;
+      }
+      .spring2 {
+        bottom: -32%;
+        right: 0%;
+      }
+      .bunny1 {
+        top: -5%;
+        right: 2%;
+      }
+      .bunny2 {
+        bottom: -24%;
+        left: 4%;
+      }
+    }
+    &.aicandii {
+      .flask1 {
+        top: 8%;
+        left: 35%;
+      }
+      .flask2 {
+        bottom: -9%;
+        right: 19%;
+      }
+      .flask3 {
+        bottom: -20%;
+        left: 1%;
+      }
+      .card1 {
+        top: 10%;
+        left: -12%;
+      }
+      .card2 {
+        top: 14%;
+        right: -9%;
+      }
+    }
+    &.rosedoodle {
+      .pencil1 {
+        top: -5%;
+        left: 0%;
+      }
+      .pencil2 {
+        top: 13%;
+        right: 14%;
+      }
+      .thingy {
+        top: 18%;
+        right: 43%;
+      }
+      .icecream1 {
+        bottom: -20%;
+        left: -11%;
+      }
+      .icecream2 {
+        bottom: -18%;
+        right: -16%;
       }
     }
   }

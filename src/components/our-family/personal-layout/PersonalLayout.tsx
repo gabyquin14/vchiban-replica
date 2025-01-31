@@ -1,18 +1,11 @@
 "use client";
-import { FC } from "react";
-import { vchibanStars } from "#/helpers/members-info";
+import { FC, ReactNode, useState } from "react";
 import Image from "next/image";
 import "./MembersPage.scss";
-import TwitchIcon from "#/assets/svg/socials/twitch";
-import TwitterIcon from "#/assets/svg/socials/twitter";
-import YoutubeIcon from "#/assets/svg/socials/youtube";
-import Tiktok from "#/assets/svg/socials/tiktok";
 import ChevronRight from "#/assets/svg/chevron-right";
-import Paw from "#/assets/svg/personal-page/paw";
 import LoreArrow from "#/assets/svg/personal-page/lore-arrow";
-import SparklesBuffpup from "#/assets/svg/sparkles/sparkles-buffpup";
-import PawSmall from "#/assets/svg/personal-page/paw-small";
-import BoneOutline from "#/assets/svg/personal-page/bone-outline";
+import { motion } from "framer-motion";
+import { bouncyTransition, springTransition } from "#/helpers/const-animations";
 
 interface PersonalPageLayoutPros {
   portrait: string;
@@ -30,6 +23,7 @@ interface PersonalPageLayoutPros {
     href: string | undefined;
   }[];
   showLore: () => void;
+  children?: ReactNode;
 }
 
 const PersonalLayout: FC<PersonalPageLayoutPros> = ({
@@ -45,7 +39,13 @@ const PersonalLayout: FC<PersonalPageLayoutPros> = ({
   ImgLore3,
   LoreMagnet,
   showLore,
+  children,
 }) => {
+  const [isHover, setIsHover] = useState(false);
+  const magnetAnimation = name.toLocaleLowerCase().includes("aicandii")
+    ? "rotate(6deg) translate(0rem, -4rem)"
+    : "rotate(-6deg) translate(0rem, -1rem)";
+
   return (
     <div className={`member-page ${name.toLocaleLowerCase()}`}>
       <div className="portrait-wrapper">
@@ -64,11 +64,11 @@ const PersonalLayout: FC<PersonalPageLayoutPros> = ({
           see the rest of the family
         </button>
 
-        <div className="members-name">
+        <div className={`members-name ${name.toLocaleLowerCase()}`}>
           <h1>{name}.</h1>
           <Sparkles className="sparkles" />
-          <BigIcon className="bone" />
-          <SmallIcon className="paw" />
+          <BigIcon className="big-icon" />
+          <SmallIcon className="small-icon" />
         </div>
 
         <p className="description">{description}</p>
@@ -77,29 +77,80 @@ const PersonalLayout: FC<PersonalPageLayoutPros> = ({
           <ul className="footer__socials">
             {socialLinks.map(({ Icon, href }, index) => (
               <li key={index} className="social">
-                <a href={href} className="social-link">
+                <a href={href} className="social-link spring-btn">
                   <Icon />
+                  <motion.div
+                    className="bouncy-bg"
+                    whileHover={{ inset: "-4px -4px" }}
+                    transition={springTransition}
+                  />
                 </a>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="lore" onClick={showLore}>
-          <div className="lore__img-stack">
-            <div className="lore-3">
+        <motion.div
+          className="lore"
+          onClick={showLore}
+          onHoverStart={() => setIsHover(true)}
+          onHoverEnd={() => setIsHover(false)}
+        >
+          <motion.div className="lore__img-stack">
+            <motion.div
+              className="lore-3"
+              animate={{
+                transform: isHover
+                  ? "rotate(-14deg) translate(-1rem, 0rem)"
+                  : "rotate(-11deg) translate(0rem, 0rem)",
+              }}
+              initial={{ transform: "rotate(-11deg) translate(0rem, 0rem)" }}
+              transition={bouncyTransition}
+            >
               <Image alt="lore-img" src={ImgLore3} width={420} height={236} />
-            </div>
-            <div className="lore-2">
+            </motion.div>
+            <motion.div
+              className="lore-2"
+              animate={{
+                transform: isHover
+                  ? "rotate(2deg) translate(1rem, -1rem)"
+                  : "rotate(2deg) translate(0rem, 0rem)",
+              }}
+              initial={{ transform: "rotate(2deg) translate(0rem, 0rem)" }}
+              transition={bouncyTransition}
+            >
               <Image alt="lore-img" src={ImgLore2} width={420} height={236} />
-            </div>
-            <div className="lore-1">
+            </motion.div>
+            <motion.div
+              className="lore-1"
+              animate={{
+                transform: isHover
+                  ? "rotate(-6deg) translate(0rem, -2.5rem)"
+                  : "rotate(-5deg) translate(0rem, 0rem)",
+              }}
+              initial={{ transform: "rotate(-5deg) translate(0rem, 0rem)" }}
+              transition={bouncyTransition}
+            >
               <Image alt="lore-img" src={ImgLore1} width={420} height={236} />
-            </div>
-            <LoreMagnet className="paw" />
+            </motion.div>
+            <motion.div
+              className={`magnet ${name.toLocaleLowerCase()}`}
+              animate={{
+                transform: isHover
+                  ? magnetAnimation
+                  : "rotate(0deg) translate(0rem, 0rem)",
+              }}
+              initial={{ transform: "rotate(0deg) translate(0rem, 0rem)" }}
+              transition={bouncyTransition}
+            >
+              <LoreMagnet />
+            </motion.div>
             <LoreArrow className="lore-arrow" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
+      </div>
+      <div className={`backgroung-imgs ${name.toLocaleLowerCase()}`}>
+        {children}
       </div>
     </div>
   );
