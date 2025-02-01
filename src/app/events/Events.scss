@@ -10,19 +10,35 @@
     .excl-3 {
       position: absolute;
       z-index: -1;
+
+      @media screen and (max-width: 600px) {
+        transform: scale(0.67);
+      }
     }
 
     .excl-1 {
       top: 5rem;
       left: 41rem;
+      @media screen and (max-width: 600px) {
+        top: -6rem;
+        left: -5rem;
+      }
     }
     .excl-2 {
       top: 17.5rem;
       right: 49rem;
+      @media screen and (max-width: 600px) {
+        top: 2rem;
+        right: 1rem;
+      }
     }
     .excl-3 {
       top: 30.5rem;
       right: 39rem;
+      @media screen and (max-width: 600px) {
+        top: 15rem;
+        right: -4rem;
+      }
     }
   }
 
@@ -36,21 +52,43 @@
     width: 100%;
     height: fit-content;
 
+    @media screen and (max-width: 600px) {
+      gap: 3rem;
+      flex-direction: column;
+      padding: 0 2.4rem 12.8rem;
+    }
+
     p:first-child {
+      display: flex;
+      flex-direction: column;
       font-size: 4.8rem;
       line-height: 100%;
       font-family: var(--tommy);
+
+      @media screen and (max-width: 600px) {
+        gap: 1rem;
+        flex-direction: row;
+        font-size: 3.6rem;
+      }
     }
     p:last-child {
       font-size: 3.6rem;
       display: flex;
       flex-direction: column;
       font-weight: 900;
+
+      @media screen and (max-width: 600px) {
+        font-size: 2.8rem;
+      }
     }
     p:last-child span {
       font-size: 1.8rem;
       font-weight: 800;
       line-height: 200%;
+
+      @media screen and (max-width: 600px) {
+        font-size: 1.6rem;
+      }
     }
   }
   .premier-experiences {
@@ -65,17 +103,31 @@
     .excl-4 {
       top: -9rem;
       left: 21rem;
+      @media screen and (max-width: 600px) {
+        top: 1rem;
+        left: -10rem;
+      }
     }
 
     .excl-5 {
       top: -5rem;
       left: 40rem;
+      @media screen and (max-width: 600px) {
+        top: 4rem;
+        left: 8rem;
+      }
     }
   }
   .experiences {
     display: flex;
     padding: 0 128px 96px;
     gap: 9.6rem;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+      padding: 0 2.4rem 96px;
+      gap: 3rem;
+    }
 
     .info {
       display: flex;
@@ -84,14 +136,29 @@
       font-size: 1.8rem;
       font-weight: 800;
       gap: 1.8rem;
+
+      @media screen and (max-width: 600px) {
+        text-align: center;
+        font-size: 1.6rem;
+      }
     }
     .video-wrapper {
       margin-right: 4.8rem;
-      min-height: 482px;
+      min-height: 48.2rem;
+      height: 48.2rem;
       min-width: 27.2rem;
+      width: 27.2rem;
       object-position: 50% 50%;
       text-align: center;
       position: relative;
+
+      @media screen and (max-width: 600px) {
+        min-height: 35.2rem;
+        height: 35.2rem;
+        min-width: 21.5rem;
+        width: 21.5rem;
+        margin: 0 auto;
+      }
     }
     .video-wrapper span {
       position: absolute;
@@ -113,11 +180,24 @@
       transform: rotate(4deg);
       box-shadow: 0 48px 64px #0a05493d;
     }
+    .art-by {
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
   }
   .image-stack {
     position: relative;
     min-height: 64.8rem;
     padding-top: 9.6rem;
+
+    @media screen and (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0rem;
+      gap: 6rem;
+    }
 
     img {
       border-radius: 1.6rem;
@@ -131,11 +211,19 @@
       position: absolute;
       top: 2rem;
       left: -13rem;
-      width: 520px !important;
-      height: 468px !important;
+      width: 520px;
+      height: 468px;
       z-index: 0;
       transform: rotate(-3deg);
       border-radius: 1.6rem;
+
+      @media screen and (max-width: 600px) {
+        order: 1;
+        position: unset;
+        max-width: 35rem;
+        width: 100%;
+        height: 31.2rem;
+      }
     }
     .image-2 {
       position: absolute;
@@ -145,16 +233,32 @@
       height: 443px !important;
       z-index: 1;
       border-radius: 1.6rem;
+
+      @media screen and (max-width: 600px) {
+        order: 4;
+        position: unset;
+        max-width: 32.6rem !important;
+        width: 100%;
+        height: unset !important;
+      }
     }
     .image-3 {
       position: absolute;
       top: 0;
       left: 55%;
-      width: 513px !important;
-      height: 460px !important;
+      width: 513px;
+      height: 460px;
       z-index: 0;
       transform: rotate(2deg);
       border-radius: 1.6rem;
+
+      @media screen and (max-width: 600px) {
+        order: 2;
+        position: unset;
+        max-width: 35rem;
+        width: 100%;
+        height: 31.2rem;
+      }
 
       img {
         object-position: 50% 15%;
@@ -164,11 +268,19 @@
       position: absolute;
       top: 7rem;
       left: 87%;
-      width: 350px !important;
-      height: 464px !important;
+      width: 350px;
+      height: 464px;
       z-index: 1;
       transform: rotate(-4deg);
       border-radius: 1.6rem;
+
+      @media screen and (max-width: 600px) {
+        order: 3;
+        position: unset;
+        max-width: 32.6rem;
+        width: 100%;
+        height: 43.2rem;
+      }
     }
   }
 
@@ -181,9 +293,13 @@
     font-weight: 800;
     line-height: 150%;
     text-align: center;
-    padding: 0 12.8rem;
+    padding: 0 12.8rem 12.8rem;
     position: relative;
-    padding-bottom: 12.8rem;
+
+    @media screen and (max-width: 600px) {
+      padding: 12rem 1.7rem 12.8rem;
+      font-size: 1.6rem;
+    }
 
     .call-to-action {
       display: flex;
@@ -206,11 +322,19 @@
       bottom: 3rem;
       left: 48rem;
       transform: scale(0.85);
+      @media screen and (max-width: 600px) {
+        bottom: 20rem;
+        left: -4.5rem;
+      }
     }
 
     .small {
       bottom: 14rem;
       right: 45rem;
+      @media screen and (max-width: 600px) {
+        right: -1.5rem;
+        bottom: 18rem;
+      }
     }
     .medium {
       bottom: 10rem;

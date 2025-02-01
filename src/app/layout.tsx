@@ -42,7 +42,7 @@ export default function RootLayout({
           href="https://framerusercontent.com/images/QypSA7Jg3SzOQBdCsrB1t4ZF6NU.svg"
           sizes="any"
         />
-        <Navbar />
+        {/* <Navbar /> */}
         <>{children}</>
         <Footer />
       </body>

@@ -50,7 +50,9 @@ const Footer: FC = () => {
   return (
     <footer className="footer">
       <section className="footer__info">
-        <Logo />
+        <figure className="logo">
+          <Logo />
+        </figure>
         <p className="footer__info-copyright">
           copyright ©️ {currentYear} VchiBan.
         </p>
