@@ -40,10 +40,24 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
+
+.navbar-dektop {
+  display: block;
+}
+.navbar-mobile {
+  display: none;
+}
 @media screen and (max-width: 400px) {
   body,
   html {
     width: fit-content;
+  }
+
+  .navbar-dektop {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block;
   }
 }
 

@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/header/Navbar";
 import Footer from "../components/footer/Footer";
+import MobileNavbar from "#/components/header/MobileNavbar";
 
 const gilboys = localFont({
   src: "../fonts/jt_gilboys/Jt Gilboys.otf",
@@ -42,7 +43,12 @@ export default function RootLayout({
           href="https://framerusercontent.com/images/QypSA7Jg3SzOQBdCsrB1t4ZF6NU.svg"
           sizes="any"
         />
-        {/* <Navbar /> */}
+        <div className="navbar-mobile">
+          <MobileNavbar />
+        </div>
+        <div className="navbar-desktop">
+          <Navbar />
+        </div>
         <>{children}</>
         <Footer />
       </body>
