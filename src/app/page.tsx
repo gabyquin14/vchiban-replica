@@ -6,7 +6,7 @@ import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
 
 export default function Home() {
   return (
-    <section className="home">
+    <section style={{ position: "relative" }}>
       <Banner />
       <CreatorCard />
       <NewFromWorldVchiban />

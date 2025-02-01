@@ -29,7 +29,7 @@
     }
   }
   &.rosedoodle {
-    background-color: #3fc3a5;
+    background-color: var(--rosedoodle-bg-dark-cyan);
 
     .portrait-wrapper {
       top: -9rem;
