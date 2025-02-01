@@ -10,14 +10,10 @@ import Spring1 from "#/assets/svg/home/spring-1";
 import Spring2 from "#/assets/svg/home/spring-2";
 import BigStar from "#/assets/svg/home/big-star";
 import SmallStar from "#/assets/svg/home/small-star";
-import BtnExclMark1 from "#/assets/svg/spring-btn/excl-1";
-import BtnExclMark2 from "#/assets/svg/spring-btn/excl-2";
-import { bouncyTransition, springTransition } from "#/helpers/const-animations";
 import { motion } from "framer-motion";
-import { text } from "stream/consumers";
+import { bouncyTransition } from "#/helpers/const-animations";
 
 const NewFromWorldVchiban: FC = () => {
-  const [isHover, setIsHover] = useState({ podcast: false, game: false });
   return (
     <section className="new-world">
       <HeaderSection
@@ -37,63 +33,18 @@ const NewFromWorldVchiban: FC = () => {
       />
 
       <div className="event-list">
-        <article
-          className="event-card"
-          onMouseEnter={() =>
-            setIsHover((prev) => ({ ...prev, podcast: true }))
-          }
-          onMouseLeave={() =>
-            setIsHover((prev) => ({ ...prev, podcast: false }))
-          }
-        >
-          <motion.div
-            className="gooba-ball"
-            transition={bouncyTransition}
-            animate={
-              isHover.podcast
-                ? { transform: "translateY(-0.5rem)" }
-                : { transform: "translateY(0rem)" }
-            }
-          >
-            <Image
-              alt="VchiBanter Podcast!"
-              src="https://framerusercontent.com/images/SBHjYQFNnH5D1U2nNJF8bBR8uSY.png"
-              width={676}
-              height={340}
-              className="event-image"
-            />
-            <CardButton />
-          </motion.div>
-
-          <h3 className="event-title">VchiBanter Podcast Out Now!</h3>
-        </article>
-
-        <article
-          className="event-card"
-          onMouseEnter={() => setIsHover((prev) => ({ ...prev, game: true }))}
-          onMouseLeave={() => setIsHover((prev) => ({ ...prev, game: false }))}
-        >
-          <motion.div
-            className="gooba-ball"
-            transition={bouncyTransition}
-            animate={
-              isHover.game
-                ? { transform: "translateY(-1rem)" }
-                : { transform: "translateY(0rem)" }
-            }
-          >
-            <Image
-              alt="Gooba Ball"
-              src="https://framerusercontent.com/images/dBfSWjP3Lgv1jH9QGez6azCAmos.jpg"
-              width={676}
-              height={340}
-              className="event-image"
-            />
-            <CardButton />
-          </motion.div>
-          <h3 className="event-title">Play Gooba Ball</h3>
-        </article>
+        <EventCard
+          imageSrc="https://framerusercontent.com/images/SBHjYQFNnH5D1U2nNJF8bBR8uSY.png"
+          altText="VchiBanter Podcast!"
+          title="VchiBanter Podcast Out Now!"
+        />
+        <EventCard
+          imageSrc="https://framerusercontent.com/images/dBfSWjP3Lgv1jH9QGez6azCAmos.jpg"
+          altText="Gooba Ball"
+          title="Play Gooba Ball"
+        />
       </div>
+
       <Spring1 className="spring-1" />
       <Spring2 className="spring-2" />
       <BigStar className="star-1" />
@@ -103,8 +54,47 @@ const NewFromWorldVchiban: FC = () => {
   );
 };
 
+const EventCard: FC<{
+  imageSrc: string;
+  altText: string;
+  title: string;
+}> = ({ imageSrc, altText, title }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <article
+      className="event-card"
+      onMouseEnter={() => {
+        setIsHovered(true);
+      }}
+      onMouseLeave={() => {
+        setIsHovered(false);
+      }}
+    >
+      <motion.div
+        className="gooba-ball"
+        transition={bouncyTransition}
+        animate={{
+          transform: isHovered ? "translateY(-0.5rem)" : "translateY(0rem)",
+        }}
+      >
+        <Image
+          alt={altText}
+          src={imageSrc}
+          width={676}
+          height={340}
+          className="event-image"
+        />
+        <CardButton />
+      </motion.div>
+      <h3 className="event-title">{title}</h3>
+    </article>
+  );
+};
+
 const CardButton = () => {
   const [isHover, setIsHover] = useState(false);
+
   return (
     <button className="spring-btn see-more-btn">
       <div className="content-wrapper">
@@ -115,7 +105,6 @@ const CardButton = () => {
           onHoverStart={() => setIsHover(true)}
           onHoverEnd={() => setIsHover(false)}
         />
-
         <span className="content">see more</span>
         <ChevronRight className="second-icon" />
       </div>

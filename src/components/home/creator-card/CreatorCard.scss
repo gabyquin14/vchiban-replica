@@ -5,6 +5,11 @@
   padding: 0 6.4rem 0;
   position: relative;
 
+  @media screen and (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
@@ -135,7 +140,7 @@
     }
 
     svg {
-      z-index: 1;
+      z-index: 2;
       pointer-events: none;
     }
     .bouncy-bg {

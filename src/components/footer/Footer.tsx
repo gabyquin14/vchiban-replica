@@ -15,8 +15,9 @@ import Exclamation3 from "#/assets/svg/footer/excl-3";
 import Exclamation4 from "#/assets/svg/footer/excl-4";
 import Exclamation5 from "#/assets/svg/footer/excl-5";
 import Discord from "#/assets/svg/socials/discord";
-import { bouncyTransition, springTransition } from "#/helpers/const-animations";
+import { bouncyTransition } from "#/helpers/const-animations";
 import { motion } from "framer-motion";
+import BouncyBgButton from "../ui/bouncy-bg-button/BouncyBgButton";
 
 const currentYear = new Date().getFullYear();
 
@@ -123,14 +124,7 @@ const Footer: FC = () => {
         <ul className="footer__socials">
           {socialLinks.map(({ Icon, href }, index) => (
             <li key={index} className="social">
-              <a href={href} target="_blank" className="social-link spring-btn">
-                <Icon />
-                <motion.div
-                  className="bouncy-bg"
-                  whileHover={{ inset: "-4px -4px" }}
-                  transition={springTransition}
-                />
-              </a>
+              <BouncyBgButton href={href} Icon={Icon} />
             </li>
           ))}
         </ul>
