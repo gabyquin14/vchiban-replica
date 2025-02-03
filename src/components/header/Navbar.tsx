@@ -6,13 +6,21 @@ import VchibanLogo from "#/assets/svg/vchiban-logo";
 import NavbarItem from "./NavbarItem";
 import GameCornerBtn from "./GameCornerBtn";
 
-const Navbar: FC = () => {
+interface NavbarProp {
+  bgColor?: string;
+}
+
+const Navbar: FC<NavbarProp> = ({ bgColor }) => {
   return (
-    <motion.nav className="navbar">
+    <motion.nav className="navbar" style={{ backgroundColor: bgColor }}>
       <ul className="navbar-header">
         <NavbarItem content="home" link="/" />
         <NavbarItem content="our family" link="/our-family" />
         <NavbarItem content="events" link="/events" />
+        <NavbarItem
+          content="podcast"
+          link="https://www.vchiban.com/podcast/latest-episode"
+        />
       </ul>
 
       <div className="vchiban-logo-container">

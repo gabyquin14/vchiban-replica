@@ -6,6 +6,7 @@ import CineStrip1 from "#/assets/svg/animations/cine-strip-1";
 import CineStrip2 from "#/assets/svg/animations/cine-strip-2";
 import CineStrip3 from "#/assets/svg/animations/cine-strip-3";
 import CineStrip4 from "#/assets/svg/animations/cine-strip-4";
+import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
 
 const Animations = () => {
   const animationsLinks = [
@@ -73,12 +74,14 @@ const Animations = () => {
 
       <section className="videos-list">
         {animationsLinks.map((link) => (
-          <article className="video-card" key={link.title}>
+          <article key={link.title}>
             <VideoCard key={link.videoId} link={link} />
           </article>
         ))}
         <CineStrip4 className="strip4" />
       </section>
+
+      <FooterSeparator />
     </div>
   );
 };

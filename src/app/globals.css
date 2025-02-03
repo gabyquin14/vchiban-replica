@@ -23,6 +23,7 @@
   --candi-purple: #af67f7;
   --rosedoodle-dark-cyan: #1c8c84;
   --rosedoodle-cyan: #49d3af;
+  --rosedoodle-bg-dark-cyan: #3fc3a5;
   --header-link-hover: #66b5f3;
   --game-corner-bg: #cde4ee;
   --navy-blue-main: #0a0549;
@@ -40,21 +41,30 @@ body {
   overflow-x: hidden;
 }
 
+.navbar-dektop {
+  display: block;
+}
+.navbar-mobile {
+  display: none;
+}
+@media screen and (max-width: 400px) {
+  body,
+  html {
+    width: fit-content;
+  }
+
+  .navbar-dektop {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-.footer-separator {
-  height: 4.8rem;
-  width: 100%;
-  background-color: var(--footer-bg);
-}
-.footer-separator div {
-  height: 100%;
-  width: 100%;
-  border-radius: 0 0 4.8rem 4.8rem;
 }
 
 ::-webkit-scrollbar {

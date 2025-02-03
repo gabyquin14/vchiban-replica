@@ -35,7 +35,7 @@ const Events = () => {
 
       <section className="nothing-to-see">
         <p>
-          More Info <br /> Soon 👀
+          <span>More Info </span> <span>Soon 👀 </span>
         </p>
         <p>
           Coming soon! <br /> <span>Stay tuned for more info!</span>
@@ -44,7 +44,7 @@ const Events = () => {
       <section className="premier-experiences">
         <HeaderSection
           as="div"
-          title="WE MAKE <br />PREMIER EXPERIENCES."
+          title="<span>WE MAKE</span> <span>PREMIER EXPERIENCES.<span/>"
           SparklesComponent={SparklesPremierExperience}
           customStyles="premier"
           headingLevel="h2"
@@ -88,7 +88,7 @@ const Events = () => {
                 type="video/mp4"
               />
             </video>
-            <span>Art by: Double_Zr_Tap</span>
+            <span className="art-by">Art by: Double_Zr_Tap</span>
           </div>
         </div>
       </section>

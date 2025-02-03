@@ -37,7 +37,7 @@ const NewInGamerCorner = () => {
             firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
             SecondIcon={ChevronRight}
             customStyles="play-now"
-          ></SpringButton>
+          />
         </div>
 
         <Image
@@ -47,10 +47,11 @@ const NewInGamerCorner = () => {
           height={276}
           className="gb-title"
         />
+
         <motion.div
+          className="img-1"
           whileHover={{ transform: "translateY(-1rem)" }}
           transition={bouncyTransition}
-          className="img-1"
         >
           <Image
             alt="Game Over Gooba ball"
@@ -72,6 +73,7 @@ const NewInGamerCorner = () => {
             height={153}
           />
         </motion.div>
+
         <motion.div
           className="img-3"
           whileHover={{ transform: "translateY(-1rem)" }}
@@ -91,4 +93,5 @@ const NewInGamerCorner = () => {
     </section>
   );
 };
+
 export default NewInGamerCorner;
