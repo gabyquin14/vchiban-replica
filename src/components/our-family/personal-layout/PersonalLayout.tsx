@@ -16,9 +16,9 @@ interface PersonalPageLayoutProps {
   ImgLore1: string;
   ImgLore2: string;
   ImgLore3: string;
-  Sparkles: FC;
-  BigIcon: FC;
-  SmallIcon: FC;
+  Sparkles: (props: Record<string, unknown>) => React.JSX.Element;
+  BigIcon: (props: Record<string, unknown>) => React.JSX.Element;
+  SmallIcon: (props: Record<string, unknown>) => React.JSX.Element;
   LoreMagnet: FC;
   socialLinks: { Icon: FC<object>; href: string | undefined }[];
   showLore: () => void;
