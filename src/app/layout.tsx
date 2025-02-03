@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "../components/header/Navbar";
 import Footer from "../components/footer/Footer";
 import MobileNavbar from "#/components/header/MobileNavbar";
+import StickyNavbar from "#/components/header/StickyNavbar";
 
 const gilboys = localFont({
   src: "../fonts/jt_gilboys/Jt Gilboys.otf",
@@ -43,9 +44,10 @@ export default function RootLayout({
           href="https://framerusercontent.com/images/QypSA7Jg3SzOQBdCsrB1t4ZF6NU.svg"
           sizes="any"
         />
-        <div className="navbar-mobile">
+        {/* <div className="navbar-mobile">
           <MobileNavbar />
-        </div>
+        </div>*/}
+        <StickyNavbar />
         <div className="navbar-desktop">
           <Navbar />
         </div>

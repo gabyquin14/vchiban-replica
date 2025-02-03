@@ -74,7 +74,7 @@ const Animations = () => {
 
       <section className="videos-list">
         {animationsLinks.map((link) => (
-          <article className="video-card" key={link.title}>
+          <article key={link.title}>
             <VideoCard key={link.videoId} link={link} />
           </article>
         ))}
