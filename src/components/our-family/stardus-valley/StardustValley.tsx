@@ -9,6 +9,7 @@ import { loreModalInfo } from "#/helpers/lore-modal-info";
 import LoreBtnMap from "./LoreBtnMap";
 import MapModal from "./MapModal";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 const StardustValley = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -45,15 +46,11 @@ const StardustValley = () => {
             <LoreBtnMap customStyles={info?.styles} />
           </div>
         ))}
-
-        {modalOpen && (
-          <div>
-            <MapModal
-              info={modalInfo as ModalInfoInterface}
-              closeModal={toggleModal}
-            />
-          </div>
-        )}
+        <AnimatePresence mode="wait">
+          {modalOpen && modalInfo && (
+            <MapModal key="modal" info={modalInfo} closeModal={toggleModal} />
+          )}
+        </AnimatePresence>
 
         <BigStamp className="big-stamp" />
         <SmallStamp className="small-stamp" />
