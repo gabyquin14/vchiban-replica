@@ -12,7 +12,10 @@ interface NavbarProp {
 
 const Navbar: FC<NavbarProp> = ({ bgColor }) => {
   return (
-    <motion.nav className="navbar" style={{ backgroundColor: bgColor }}>
+    <motion.nav
+      className="navbar navbar-desktop"
+      style={{ backgroundColor: bgColor }}
+    >
       <ul className="navbar-header">
         <NavbarItem content="home" link="/" />
         <NavbarItem content="our family" link="/our-family" />

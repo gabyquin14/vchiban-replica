@@ -30,12 +30,12 @@ const MapModal: React.FC<ModalProps> = ({ info, closeModal }) => {
       <motion.div
         className="map-modal__content"
         onClick={(e: React.MouseEvent<HTMLElement>) => e.stopPropagation()}
-        initial={{ opacity: 0, scale: 0.9, y: "-3rem" }}
-        animate={{ opacity: 1, scale: 1, y: "0rem" }}
-        exit={{ opacity: 0, scale: 0.9, y: "-3rem" }}
-        transition={{ duration: 0.3 }}
+        initial={{ opacity: 0, transform: "translateY(40rem) rotate(5deg)" }}
+        animate={{ opacity: 1, transform: "translateY(0rem) rotate(0deg)" }}
+        exit={{ opacity: 0, transform: "translateY(40rem) rotate(0deg)" }}
+        transition={{ duration: 0.5 }}
         onAnimationComplete={(definition: string) => {
-          if (definition === "exit") closeModal(); // 🔥 Espera a que la animación termine
+          if (definition === "exit") closeModal();
         }}
       >
         <div className="map-modal__header">

@@ -16,12 +16,15 @@ const StickyNavbar = () => {
   return (
     <>
       {/* Invisible div que detecta si el navbar original está en vista */}
-      <motion.div ref={navbarRef} className="navbar-placeholder"></motion.div>
+      <motion.div
+        ref={navbarRef}
+        className="navbar-placeholder navbar-desktop"
+      ></motion.div>
 
       <AnimatePresence mode="wait">
         {!isNavbarInView && (
           <motion.div
-            className="navbar-fixed"
+            className="navbar-fixed navbar-desktop"
             initial={{ opacity: 0, top: "-6rem", transform: "scale(0.9)" }}
             animate={{ opacity: 1, top: "-3rem", transform: "scale(1)" }}
             exit={{

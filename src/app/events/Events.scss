@@ -1,6 +1,7 @@
 .events {
   height: min-content;
   position: relative;
+  overflow-x: hidden;
 
   .header-wrapper {
     position: relative;
