@@ -44,14 +44,14 @@ export default function RootLayout({
           href="https://framerusercontent.com/images/QypSA7Jg3SzOQBdCsrB1t4ZF6NU.svg"
           sizes="any"
         />
-        {/* <div className="navbar-mobile">
-          <MobileNavbar />
-        </div>*/}
+
+        {/* Navbars */}
+        <MobileNavbar />
         <StickyNavbar />
-        <div className="navbar-desktop">
-          <Navbar />
-        </div>
+        <Navbar />
+
         <>{children}</>
+
         <Footer />
       </body>
     </html>
