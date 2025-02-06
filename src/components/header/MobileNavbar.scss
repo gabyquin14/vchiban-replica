@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    gap: 1rem;
+    gap: 2rem;
     color: var(--navy-blue-main);
     font-size: 3.6rem;
     font-weight: 900;
@@ -30,8 +30,8 @@
 
     .excl1 {
       position: absolute;
-      top: 13rem;
-      left: 6rem;
+      bottom: -5rem;
+      right: 8rem;
       z-index: 11;
     }
     .excl2 {

@@ -5,9 +5,11 @@
   padding: 0 6.4rem 0;
   position: relative;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 810px) {
     display: flex;
     flex-direction: column;
+    padding: 0;
+    width: 100vw;
   }
 
   &__item {
@@ -26,6 +28,9 @@
     overflow: hidden;
     pointer-events: all;
     cursor: pointer;
+    @media screen and (max-width: 810px) {
+      height: 35rem;
+    }
   }
 
   .floating-icons {
@@ -33,22 +38,35 @@
     height: 100%;
     position: absolute;
     pointer-events: none;
+    @media screen and (max-width: 810px) {
+      scale: 0.8;
+    }
   }
 
   &__portrait-container {
     position: relative;
-    height: 49.6rem;
     width: 66rem;
+    height: 49.6rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     overflow: hidden;
+    @media screen and (max-width: 810px) {
+      width: 100%;
+      max-width: 70rem;
+      height: 34rem;
+    }
   }
 
   .portrait-wrapper {
     width: 76.8rem;
     height: 135rem;
     position: relative;
+    @media screen and (max-width: 810px) {
+      min-width: 44rem;
+      width: 44rem;
+      height: 36rem;
+    }
   }
 
   &__portrait {
@@ -67,6 +85,10 @@
     height: 36.8rem;
     width: 100%;
     border-radius: 3.2rem;
+
+    @media screen and (max-width: 810px) {
+      height: 24rem;
+    }
 
     img {
       object-fit: none;
@@ -95,6 +117,10 @@
     align-items: center;
     gap: 1.6rem;
     pointer-events: all;
+    @media screen and (max-width: 810px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__name {
@@ -103,6 +129,9 @@
     font-family: var(--tommy);
     display: inline;
     cursor: pointer;
+    @media screen and (max-width: 810px) {
+      font-size: 3.6rem;
+    }
   }
 
   &__name.buffpup {

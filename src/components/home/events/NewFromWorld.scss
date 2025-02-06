@@ -4,10 +4,16 @@
   gap: 6.4rem;
   padding: 15rem 6.4rem 18rem;
   position: relative;
+  @media screen and (max-width: 810px) {
+    padding: 15rem 0rem 18rem;
+  }
 
   .event-list {
     display: flex;
     gap: 3.2rem;
+    @media screen and (max-width: 810px) {
+      flex-direction: column;
+    }
   }
 
   .event-card {

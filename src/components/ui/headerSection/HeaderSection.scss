@@ -4,6 +4,8 @@
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
 
   @media screen and (max-width: 810px) {
@@ -13,6 +15,7 @@
 
   .title-wrapper {
     position: relative;
+    width: fit-content;
   }
 
   .title {
@@ -74,29 +77,51 @@
       left: 50%;
       transform: translateX(-48%);
       @media screen and (max-width: 810px) {
-        top: -7.5rem;
+        top: -7rem;
         left: unset;
         right: 0;
-        transform: translateX(21%) scale(0.5);
+        transform: translateX(26%) scale(0.5);
       }
     }
   }
 
   &.new-projects {
     padding: 0rem 6.4rem 0rem;
-
+    @media screen and (max-width: 810px) {
+      padding: 0rem;
+    }
     .title {
-      font-size: 9.8rem !important;
+      font-size: 9.8rem;
       line-height: 100%;
       margin-bottom: 1.5rem;
+
+      @media screen and (max-width: 810px) {
+        font-size: 4rem;
+        white-space: nowrap;
+      }
+
       span {
         font-size: 12.8rem;
+        @media screen and (max-width: 810px) {
+          font-size: 6rem;
+        }
       }
     }
     .sparkles {
       top: -2rem;
       left: 50%;
       transform: translateX(-43.5%);
+      @media screen and (max-width: 810px) {
+        top: -6rem;
+        left: 0;
+        transform: translateX(-50%);
+        scale: 0.47;
+      }
+    }
+    .description {
+      @media screen and (max-width: 810px) {
+        padding: 0rem 2.4rem;
+      }
     }
   }
 

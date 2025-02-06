@@ -4,7 +4,7 @@
   min-height: calc(100vh + 28rem);
   width: 100vw;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .banner-wrapper {
     width: 100%;
@@ -113,8 +113,9 @@
       @media screen and (max-width: 810px) {
         bottom: unset;
         top: 5.5rem;
-        left: -200%;
-        transform: scale(0.72) !important;
+        left: -70rem;
+        right: unset;
+        scale: 0.72 !important;
       }
     }
 
