@@ -4,8 +4,9 @@
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 810px) {
     padding: 16rem 2.4rem 9.6rem;
     gap: 1rem;
   }
@@ -21,7 +22,7 @@
     color: var(--navy-blue-main);
     text-align: center;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       font-size: 6rem;
     }
   }
@@ -49,21 +50,35 @@
     text-align: center;
     padding: 0 12.8rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       font-size: 1.6rem;
       padding: 0;
     }
   }
 
   &.banner {
+    @media screen and (max-width: 810px) {
+      padding: 19rem 0rem 9.6rem;
+    }
     .title {
       line-height: 90%;
       font-size: 128px;
+
+      @media screen and (max-width: 810px) {
+        font-size: 6rem;
+        white-space: nowrap;
+      }
     }
     .sparkles {
       top: -4rem;
       left: 50%;
       transform: translateX(-48%);
+      @media screen and (max-width: 810px) {
+        top: -7.5rem;
+        left: unset;
+        right: 0;
+        transform: translateX(21%) scale(0.5);
+      }
     }
   }
 
@@ -102,7 +117,7 @@
   &.animation {
     padding: 25rem 6.4rem 9.6rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       padding: 16rem 2.4rem 15rem;
     }
     .sparkles {
@@ -110,7 +125,7 @@
       left: 50%;
       transform: translateX(-52%);
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         top: -3rem;
         left: unset;
         transform: scale(0.5) translateX(-55%);
@@ -121,7 +136,7 @@
   &.events {
     padding: 25rem 6.4rem 9.6rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       padding: 15rem 2.4rem 9.6rem;
     }
 
@@ -130,7 +145,7 @@
       left: 50%;
       transform: translateX(-50%);
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         top: -2.9rem;
         right: 0%;
         left: unset;
@@ -142,7 +157,7 @@
   &.premier {
     padding: 0rem 6.4rem 6rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       padding: 10rem 0 5.5rem;
     }
 
@@ -152,7 +167,7 @@
       display: flex;
       flex-direction: column;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         font-size: 4rem;
         white-space: nowrap;
       }
@@ -163,7 +178,7 @@
       left: 50%;
       transform: translateX(-54%);
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         top: -6rem;
         right: -10%;
         left: unset;

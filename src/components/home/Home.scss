@@ -2,7 +2,9 @@
   display: flex;
   justify-content: center;
   min-height: calc(100vh + 28rem);
+  width: 100vw;
   position: relative;
+  overflow-x: hidden;
 
   .banner-wrapper {
     width: 100%;
@@ -22,6 +24,9 @@
       );
       mask-composite: exclude;
       -webkit-mask-composite: destination-over;
+      @media screen and (max-width: 810px) {
+        min-height: 55rem;
+      }
     }
 
     .stars-list {
@@ -36,11 +41,17 @@
         position: absolute;
         width: 79rem;
         height: 12.7rem;
+
+        @media screen and (max-width: 810px) {
+          width: 40rem;
+          height: 67rem;
+        }
       }
 
       .star-portrait img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
     }
 
@@ -49,21 +60,37 @@
       top: 0;
       left: -33%;
       transform: rotate(-6deg);
+      @media screen and (max-width: 810px) {
+        top: 5rem;
+        left: 18%;
+      }
     }
     .aicandii {
       top: -1.5rem;
       left: -2%;
+      @media screen and (max-width: 810px) {
+        top: 4rem;
+        left: 26rem;
+      }
     }
     .shiabun {
       top: -2rem;
       right: -5%;
       transform: scale(1.1) rotate(2deg);
+      @media screen and (max-width: 810px) {
+        right: 26%;
+        top: 6rem;
+      }
     }
     .rosedoodle {
       top: -2rem;
       right: -38%;
       transform: scale(1.05) rotate(8deg);
       z-index: 3;
+      @media screen and (max-width: 810px) {
+        right: 20rem;
+        top: 5rem;
+      }
     }
   }
 
@@ -82,6 +109,13 @@
       position: absolute;
       bottom: 10rem;
       left: -32rem;
+
+      @media screen and (max-width: 810px) {
+        bottom: unset;
+        top: 5.5rem;
+        left: -200%;
+        transform: scale(0.72) !important;
+      }
     }
 
     .excl-marks {
@@ -89,9 +123,16 @@
       right: 7rem;
       top: 10rem;
       display: flex;
+      @media screen and (max-width: 810px) {
+        top: 12rem;
+        right: -10rem;
+      }
 
       svg:nth-child(2) {
         transform: translate(-20%, 40%);
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
     }
   }
@@ -101,6 +142,10 @@
     top: 147%;
     left: 50%;
     transform: translateX(-50%);
+    @media screen and (max-width: 810px) {
+      top: unset;
+      bottom: -82%;
+    }
 
     .see-more-btn {
       padding: 2rem 4.8rem;
@@ -135,6 +180,10 @@
     height: 100%;
     position: absolute;
     pointer-events: none;
+
+    @media screen and (max-width: 810px) {
+      display: none;
+    }
 
     .wrapper {
       position: absolute;

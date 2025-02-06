@@ -13,6 +13,12 @@
   border-radius: 1.6rem;
   box-sizing: border-box;
 
+  &.navbar-desktop {
+    @media screen and (max-width: 810px) {
+      display: none;
+    }
+  }
+
   &-header {
     display: flex;
     justify-content: space-between;

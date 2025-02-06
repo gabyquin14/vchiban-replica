@@ -47,17 +47,14 @@ body {
 .navbar-mobile {
   display: none;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 810px) {
   body,
   html {
     width: fit-content;
   }
 
-  .navbar-dektop {
+  ::-webkit-scrollbar {
     display: none;
-  }
-  .navbar-mobile {
-    display: block;
   }
 }
 
