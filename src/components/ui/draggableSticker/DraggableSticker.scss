@@ -5,6 +5,10 @@
   width: fit-content;
   height: fit-content;
   pointer-events: all;
+  @media screen and (max-width: 810px) {
+    top: 0rem;
+    right: -6rem;
+  }
 }
 
 .buff {

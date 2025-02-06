@@ -58,7 +58,7 @@ const BannerButton = () => {
 
         <div className="text-wrapper">
           <span>See more of what we can do</span>
-          <span className="mobile-copy">See more</span>
+          <span className="mobile-copy">See more!</span>
           <ChevronDown />
         </div>
       </div>

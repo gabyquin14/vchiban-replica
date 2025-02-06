@@ -57,6 +57,8 @@ const Banner = () => {
   const y = useMotionValue(0);
   const smoothX = useSpring(x, { stiffness: 100, damping: 14 });
   const smoothY = useSpring(y, { stiffness: 100, damping: 14 });
+  const houseSmoothX = useSpring(x, { stiffness: 100, damping: 40 });
+  const houseSmoothY = useSpring(y, { stiffness: 100, damping: 40 });
 
   // Handle window resize
   useEffect(() => {
@@ -73,8 +75,16 @@ const Banner = () => {
   }, []);
 
   // Parallax transformations
-  const houseX = useTransform(smoothX, [0, windowDimensions.width], [-15, 15]);
-  const houseY = useTransform(smoothY, [0, windowDimensions.height], [-15, 15]);
+  const houseX = useTransform(
+    houseSmoothX,
+    [0, windowDimensions.width],
+    [-15, 15]
+  );
+  const houseY = useTransform(
+    houseSmoothY,
+    [0, windowDimensions.height],
+    [-15, 15]
+  );
   const exclMarkX = useTransform(
     smoothX,
     [0, windowDimensions.width],

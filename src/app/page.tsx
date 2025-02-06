@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <section style={{ position: "relative" }}>
       <Banner />
-      {/* <CreatorCard />
+      <CreatorCard />
       <NewFromWorldVchiban />
       <NewInGamerCorner />
-      <FooterSeparator /> */}
+      <FooterSeparator />
     </section>
   );
 }
