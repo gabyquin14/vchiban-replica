@@ -11,7 +11,7 @@
   z-index: 0;
   overflow: hidden;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 810px) {
     flex-direction: column-reverse;
     align-items: center;
     padding: 6.4rem 2rem;
@@ -32,7 +32,7 @@
     min-width: 68.8rem;
     position: relative;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       gap: 2rem;
       height: fit-content;
       min-height: fit-content;
@@ -47,13 +47,13 @@
       color: #908e9b;
       white-space: nowrap;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         position: unset;
       }
     }
 
     .logo {
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         transform: scale(1.2);
       }
     }
@@ -66,7 +66,7 @@
     flex-wrap: wrap;
     gap: 9rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       width: 100%;
       gap: 6.4rem;
     }
@@ -75,7 +75,7 @@
       display: flex;
       gap: 6.4rem;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         margin: 0 auto;
         align-items: center;
         flex-direction: column;
@@ -92,7 +92,7 @@
         font-size: 2.4rem;
         font-weight: 900;
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 810px) {
           font-size: 2rem;
         }
       }

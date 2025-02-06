@@ -2,8 +2,10 @@ import "./LoreSheet.scss";
 const LoreSheet = () => {
   return (
     <div className="lore-sheet">
+      
       <div className="lore-content">
-        <div>
+        in construction
+        {/* <div>
           <h1>Buffpup</h1>
           <p>
             BUFFPUP&apos;S ASSOCIATE REPORT,
@@ -26,7 +28,7 @@ const LoreSheet = () => {
           more. Also, don&apos;t touch the sleeping bag. We don&apos;t know
           who&apos;s in there right now, but they&apos;re probably asleep. (And
           possibly stuck in there.)
-        </p>
+        </p> */}
       </div>
     </div>
   );

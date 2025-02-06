@@ -12,7 +12,7 @@
       position: absolute;
       z-index: -1;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         transform: scale(0.67);
       }
     }
@@ -20,7 +20,7 @@
     .excl-1 {
       top: 5rem;
       left: 41rem;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         top: -6rem;
         left: -5rem;
       }
@@ -28,7 +28,7 @@
     .excl-2 {
       top: 17.5rem;
       right: 49rem;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         top: 2rem;
         right: 1rem;
       }
@@ -36,7 +36,7 @@
     .excl-3 {
       top: 30.5rem;
       right: 39rem;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         top: 15rem;
         right: -4rem;
       }
@@ -53,7 +53,7 @@
     width: 100%;
     height: fit-content;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       gap: 3rem;
       flex-direction: column;
       padding: 0 2.4rem 12.8rem;
@@ -66,7 +66,7 @@
       line-height: 100%;
       font-family: var(--tommy);
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         gap: 1rem;
         flex-direction: row;
         font-size: 3.6rem;
@@ -78,7 +78,7 @@
       flex-direction: column;
       font-weight: 900;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         font-size: 2.8rem;
       }
     }
@@ -87,7 +87,7 @@
       font-weight: 800;
       line-height: 200%;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         font-size: 1.6rem;
       }
     }
@@ -104,7 +104,7 @@
     .excl-4 {
       top: -9rem;
       left: 21rem;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         top: 1rem;
         left: -10rem;
       }
@@ -113,7 +113,7 @@
     .excl-5 {
       top: -5rem;
       left: 40rem;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         top: 4rem;
         left: 8rem;
       }
@@ -124,7 +124,7 @@
     padding: 0 128px 96px;
     gap: 9.6rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       flex-direction: column;
       padding: 0 2.4rem 96px;
       gap: 3rem;
@@ -138,7 +138,7 @@
       font-weight: 800;
       gap: 1.8rem;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         text-align: center;
         font-size: 1.6rem;
       }
@@ -153,7 +153,7 @@
       text-align: center;
       position: relative;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         min-height: 35.2rem;
         height: 35.2rem;
         min-width: 21.5rem;
@@ -182,7 +182,7 @@
       box-shadow: 0 48px 64px #0a05493d;
     }
     .art-by {
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         display: none;
       }
     }
@@ -192,7 +192,7 @@
     min-height: 64.8rem;
     padding-top: 9.6rem;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -218,7 +218,7 @@
       transform: rotate(-3deg);
       border-radius: 1.6rem;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         order: 1;
         position: unset;
         max-width: 35rem;
@@ -235,7 +235,7 @@
       z-index: 1;
       border-radius: 1.6rem;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         order: 4;
         position: unset;
         max-width: 32.6rem !important;
@@ -253,7 +253,7 @@
       transform: rotate(2deg);
       border-radius: 1.6rem;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         order: 2;
         position: unset;
         max-width: 35rem;
@@ -275,7 +275,7 @@
       transform: rotate(-4deg);
       border-radius: 1.6rem;
 
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         order: 3;
         position: unset;
         max-width: 32.6rem;
@@ -297,7 +297,7 @@
     padding: 0 12.8rem 12.8rem;
     position: relative;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 810px) {
       padding: 12rem 1.7rem 12.8rem;
       font-size: 1.6rem;
     }
@@ -323,7 +323,7 @@
       bottom: 3rem;
       left: 48rem;
       transform: scale(0.85);
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         bottom: 20rem;
         left: -4.5rem;
       }
@@ -332,7 +332,7 @@
     .small {
       bottom: 14rem;
       right: 45rem;
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 810px) {
         right: -1.5rem;
         bottom: 18rem;
       }
