@@ -195,9 +195,18 @@
   .excl-1 {
     top: 4rem;
     left: 25rem;
+    @media screen and (max-width: 810px) {
+      top: 15rem;
+      left: -25rem;
+    }
   }
   .excl-2 {
     top: 3rem;
     right: 13rem;
+    @media screen and (max-width: 810px) {
+      top: 25rem;
+      left: unset;
+      right: -17rem;
+    }
   }
 }

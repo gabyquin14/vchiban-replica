@@ -127,15 +127,29 @@
 
   &.new-game-corner {
     padding: 0rem 6.4rem 0rem;
+
+    @media screen and (max-width: 810px) {
+      padding: 0rem;
+    }
     .title {
       font-size: 9.6rem;
       line-height: 80%;
+      @media screen and (max-width: 810px) {
+        font-size: 4rem;
+        white-space: nowrap;
+      }
     }
 
     .sparkles {
       top: -2rem;
       left: 50%;
       transform: translateX(-49%);
+      @media screen and (max-width: 810px) {
+        top: -5.5rem;
+        scale: 0.4;
+        left: 0%;
+        transform: translateX(-77%);
+      }
     }
   }
 
