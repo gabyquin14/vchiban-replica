@@ -1,19 +1,38 @@
 import { FC } from "react";
 import "./BouncyBgButton.scss";
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import { springTransition } from "#/helpers/const-animations";
 import Link from "next/link";
 
 interface Props {
-  href: string;
-  Icon?: React.FC<React.SVGProps<SVGSVGElement>>;
+  href?: string;
+  action?: () => void;
+  Icon?: React.ElementType;
   text?: string;
+  transition?: boolean;
+  iconAnimation?: MotionProps; // Nueva prop para animar el Icon
 }
 
-const BouncyBgButton: FC<Props> = ({ href, Icon, text }) => {
-  return (
-    <Link href={href} target="_blank" className="bouncy-btn">
-      {Icon && <Icon className="icon" />}
+const BouncyBgButton: FC<Props> = ({
+  href,
+  Icon,
+  text,
+  action,
+  transition,
+  iconAnimation,
+}) => {
+  const isLink = Boolean(href);
+
+  const ButtonContent = (
+    <>
+      {Icon &&
+        (iconAnimation ? (
+          <motion.div className="icon" {...iconAnimation}>
+            <Icon />
+          </motion.div>
+        ) : (
+          <Icon className="icon" />
+        ))}
       {text && (
         <div className="content-wrapper">
           <span className="content">{text}</span>
@@ -24,7 +43,23 @@ const BouncyBgButton: FC<Props> = ({ href, Icon, text }) => {
         whileHover={{ inset: "-4px -4px" }}
         transition={springTransition}
       />
-    </Link>
+    </>
+  );
+
+  if (isLink) {
+    return (
+      <Link href={href!} target="_blank" className="bouncy-btn">
+        {ButtonContent}
+      </Link>
+    );
+  }
+
+  const ButtonComponent = transition ? motion.button : "button";
+
+  return (
+    <ButtonComponent onClick={action} className="bouncy-btn">
+      {ButtonContent}
+    </ButtonComponent>
   );
 };
 

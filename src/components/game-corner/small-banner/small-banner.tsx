@@ -7,6 +7,7 @@ import SpringButton from "../../ui/springBtn/SpringButton";
 import { motion } from "framer-motion";
 import ChevronRight from "#/assets/svg/chevron-right";
 import { bouncyTransition, springTransition } from "#/helpers/const-animations";
+import BouncyBgButton from "#/components/ui/bouncy-bg-button/BouncyBgButton";
 
 interface SmallBannerProps {
   bgImg: string;
@@ -58,28 +59,17 @@ const SmallBanner: React.FC<SmallBannerProps> = ({
               className="gooba-2"
             />
           )}
-          <button
-            className="spring-btn game-corner"
-            onClick={() => setShowInfo((prev) => !prev)}
-          >
-            <span className="content">
-              {showInfo ? "collapse" : "view more"}
-            </span>
-            <motion.div
-              className="bouncy-bg"
-              whileHover={{ inset: "-4px -12px" }}
-              transition={bouncyTransition}
-            ></motion.div>
-            <motion.div
-              className="chevron"
-              animate={{
+          <BouncyBgButton
+            action={() => setShowInfo((prev) => !prev)}
+            text={showInfo ? "collapse" : "view more"}
+            Icon={ChevronDown}
+            iconAnimation={{
+              animate: {
                 transform: showInfo ? "rotate(180deg)" : "rotate(0deg)",
-              }}
-              transition={springTransition}
-            >
-              <ChevronDown />
-            </motion.div>
-          </button>
+              },
+              transition: bouncyTransition,
+            }}
+          />
         </div>
       </div>
     </div>
