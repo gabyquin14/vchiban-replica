@@ -72,7 +72,7 @@ const EventCard: FC<{
       }}
     >
       <motion.div
-        className="gooba-ball"
+        className="card"
         transition={bouncyTransition}
         animate={{
           transform: isHovered ? "translateY(-0.5rem)" : "translateY(0rem)",

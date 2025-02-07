@@ -6,6 +6,7 @@
   position: relative;
   @media screen and (max-width: 810px) {
     padding: 15rem 0rem 18rem;
+    width: 100vw;
   }
 
   .event-list {
@@ -21,16 +22,23 @@
     flex-direction: column;
     gap: 1.2rem;
     position: relative;
+    @media screen and (max-width: 810px) {
+      width: 100%;
+    }
 
     .event-image {
       border-radius: 2.4rem;
       width: 67.6rem;
       height: 34rem;
       object-fit: cover;
+      @media screen and (max-width: 810px) {
+        width: 100%;
+      }
     }
 
-    .gooba-ball {
+    .card {
       position: relative;
+      width: fit-content;
     }
     .new-world {
       position: absolute;
@@ -73,6 +81,9 @@
       line-height: 150%;
       text-align: center;
       margin-top: 1.6rem;
+      @media screen and (max-width: 810px) {
+        font-size: 2.4rem;
+      }
     }
   }
 
@@ -88,26 +99,41 @@
   .spring-1 {
     top: 8.5rem;
     left: 4.5rem;
+    @media screen and (max-width: 810px) {
+      display: none;
+    }
   }
 
   .spring-2 {
     top: 8rem;
     right: 10rem;
+    @media screen and (max-width: 810px) {
+      display: none;
+    }
   }
 
   .star-1 {
     top: 8rem;
     left: 27rem;
     z-index: -1;
+    @media screen and (max-width: 810px) {
+      left: -4rem;
+    }
   }
 
   .star-2 {
     top: 28.5rem;
     right: 7rem;
+    @media screen and (max-width: 810px) {
+      display: none;
+    }
   }
 
   .star-3 {
     top: 4rem;
     left: 34rem;
+    @media screen and (max-width: 810px) {
+      left: 3rem;
+    }
   }
 }

@@ -5,6 +5,10 @@
   padding: 0 6.4rem 9.6rem;
   position: relative;
 
+  @media screen and (max-width: 810px) {
+    padding: 0 0rem 9.6rem;
+  }
+
   .game-wrapper {
     position: relative;
 
@@ -12,6 +16,9 @@
       position: relative;
       height: 50.4rem;
       width: 100%;
+      @media screen and (max-width: 810px) {
+        height: 57rem;
+      }
     }
     .gooba-ball-main-img:before {
       content: "";
@@ -38,6 +45,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      @media screen and (max-width: 810px) {
+        width: 30rem;
+      }
     }
     .bottom-info {
       display: flex;
@@ -47,12 +57,23 @@
       bottom: 0rem;
       width: 100%;
       padding: 0 5rem 2rem;
+
+      @media screen and (max-width: 810px) {
+        padding: 0;
+        flex-direction: column;
+        gap: 2rem;
+        bottom: 4rem;
+      }
     }
     h3 {
       font-size: 6.4rem;
       font-weight: 800;
       color: var(--white);
       font-family: var(--tommy);
+
+      @media screen and (max-width: 810px) {
+        font-size: 3.6rem;
+      }
     }
 
     .img-1 {
@@ -66,6 +87,12 @@
         transform: rotate(3deg);
         box-shadow: rgba(10, 5, 73, 0.32) 0px 16px 28px 0px;
       }
+      @media screen and (max-width: 810px) {
+        scale: 0.6;
+        top: 0rem;
+        right: -8rem;
+        width: fit-content;
+      }
     }
     .img-2 {
       position: absolute;
@@ -77,6 +104,12 @@
         border-radius: 1.2rem;
         box-shadow: rgba(10, 5, 73, 0.32) 0px 16px 28px 0px;
       }
+      @media screen and (max-width: 810px) {
+        scale: 0.6;
+        top: -6rem;
+        left: -4rem;
+        width: fit-content;
+      }
     }
     .img-3 {
       position: absolute;
@@ -87,6 +120,12 @@
         transform: rotate(5deg);
         border-radius: 1.2rem;
         box-shadow: rgba(10, 5, 73, 0.32) 0px 16px 28px 0px;
+      }
+      @media screen and (max-width: 810px) {
+        scale: 0.6;
+        top: 1rem;
+        left: -8rem;
+        width: fit-content;
       }
     }
   }
@@ -100,9 +139,16 @@
   .excl-1 {
     top: -1rem;
     left: 10rem;
+    @media screen and (max-width: 810px) {
+      left: -8rem;
+    }
   }
   .excl-2 {
     top: -5rem;
     right: 14rem;
+    @media screen and (max-width: 810px) {
+      top: -2rem;
+      right: -6rem;
+    }
   }
 }
