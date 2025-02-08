@@ -7,6 +7,11 @@
   justify-content: center;
   position: relative;
 
+  @media screen and (max-width: 810px) {
+    padding: 16rem 2.4rem 9.6em;
+    overflow: hidden;
+  }
+
   .section-title {
     z-index: 2;
   }
@@ -24,6 +29,9 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @media screen and (max-width: 810px) {
+      font-size: 1.6rem;
+    }
   }
 
   .exclamation-marks {
@@ -34,6 +42,11 @@
     top: 6.5rem;
     right: 10.5rem;
     z-index: -1;
+    @media screen and (max-width: 810px) {
+      scale: 0.8;
+      top: -8rem;
+      right: -7rem;
+    }
 
     svg:last-child {
       margin-left: -3rem;
