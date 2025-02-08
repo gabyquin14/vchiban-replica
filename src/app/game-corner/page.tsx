@@ -40,7 +40,7 @@ const GameCorner = () => {
             </>
           }
           SparklesComponent={SparklesGameCorner}
-          customStyles="game-corner"
+          customStyles="game-cornerr"
         />
         <SanjisEyebrow className="sanjis-eyebrow" />
         <div className="separator">
@@ -61,7 +61,7 @@ const GameCorner = () => {
             />
           </div>
 
-          {/* {showGame && (
+          {showGame && (
             <article className="game-header">
               <Image
                 alt="gooba-ball"
@@ -92,10 +92,10 @@ const GameCorner = () => {
                 isTransitionBouncy
               />
             </article>
-          )} */}
+          )}
         </section>
 
-        {/*   <section>
+        <section>
           <div className="banner-container">
             <SmallBanner
               text="Meet your Oshi"
@@ -152,10 +152,10 @@ const GameCorner = () => {
               />
             </article>
           )}
-        </section>*/}
+        </section>
       </div>
 
-      {/* <FooterSeparator color="var(--game-corner-bg)" />  */}
+      <FooterSeparator color="var(--game-corner-bg)" />
     </main>
   );
 };
