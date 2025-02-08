@@ -123,9 +123,7 @@ const OurFamily = () => {
           SparklesComponent={SparklesOurFamily}
           customStyles="our-family"
         />
-
         {/* Background images tracking mouse movement */}
-
         <motion.div
           className="excl-marks"
           style={{ x: exclMarkX, y: exclMarkY }}

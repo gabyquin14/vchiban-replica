@@ -62,7 +62,7 @@ const MobileNavbar: FC = () => {
               </a>
             </li>
             <li>
-              <a href="/https://shop.vchiban.com/">merch</a>
+              <a href="https://shop.vchiban.com/">merch</a>
             </li>
             <li>
               <a href="/animations">animations</a>

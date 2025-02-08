@@ -243,13 +243,26 @@
   &.our-family {
     padding: 26rem 6.4rem 9.6rem;
 
+    @media screen and (max-width: 810px) {
+      padding: 16rem 2rem 9.6rem;
+    }
+
     .title {
       line-height: 110%;
+    }
+    .preDescription {
+      @media screen and (max-width: 810px) {
+        font-size: 2rem;
+        padding-bottom: 3rem;
+      }
     }
 
     .description {
       padding: 0 6.4rem;
       gap: 2rem;
+      @media screen and (max-width: 810px) {
+        padding: 0;
+      }
 
       .stars span:first-child {
         color: var(--buffpup-dark-orange);
@@ -270,20 +283,44 @@
       top: -2rem;
       left: 50%;
       transform: translateX(-51%);
+
+      @media screen and (max-width: 810px) {
+        scale: 0.5;
+        top: -4rem;
+        left: 0%;
+        transform: translateX(-58%);
+      }
     }
   }
 
   &.stardust-valley {
     padding: 12.8rem 6.4rem 0rem;
+    @media screen and (max-width: 810px) {
+      padding: 12.8rem 0rem 0rem;
+    }
+
     .title {
       line-height: 110%;
       font-size: 9.6rem;
+
+      @media screen and (max-width: 810px) {
+        font-size: 4rem;
+        white-space: nowrap;
+        margin: 0 auto;
+      }
     }
     .sparkles {
       position: absolute;
       top: -1rem;
       left: 50%;
       transform: translateX(-50%);
+
+      @media screen and (max-width: 810px) {
+        scale: 0.5;
+        top: -3rem;
+        left: 0%;
+        transform: translateX(-60%);
+      }
     }
   }
 
@@ -294,29 +331,57 @@
       line-height: 80%;
       font-size: 9.6rem;
       margin-bottom: 1.5rem;
+
+      @media screen and (max-width: 810px) {
+        font-size: 4rem;
+        white-space: nowrap;
+      }
     }
+    .description {
+      @media screen and (max-width: 810px) {
+        padding: 0 2rem;
+      }
+    }
+
     .sparkles {
       position: absolute;
       top: -3rem;
       left: 50%;
       transform: translateX(-51%);
+      @media screen and (max-width: 810px) {
+        top: -7rem;
+        left: 0%;
+        transform: translateX(-30%) scaleX(0.42) scaleY(0.4);
+      }
     }
   }
 
   &.game-corner {
     padding: 13.5rem 6.4rem 0;
+    @media screen and (max-width: 810px) {
+      padding: 13.5rem 0rem 0;
+    }
 
     .title {
       line-height: 75%;
+      @media screen and (max-width: 810px) {
+        font-size: 6rem;
+      }
 
       span {
         font-size: 9.6rem;
+        @media screen and (max-width: 810px) {
+          font-size: 4rem;
+        }
       }
     }
 
     .description {
       margin-top: 3rem;
       padding: 0 2rem;
+      @media screen and (max-width: 810px) {
+        padding: 0;
+      }
     }
 
     .sparkles {
@@ -324,6 +389,13 @@
       top: -1.5rem;
       left: 50%;
       transform: translateX(-49%);
+
+      @media screen and (max-width: 810px) {
+        scale: 0.5;
+        top: -5.5rem;
+        left: 0%;
+        transform: translateX(-56%);
+      }
     }
   }
 }

@@ -8,6 +8,10 @@
     position: absolute;
     z-index: 0;
     top: 0.5rem;
+    @media screen and (max-width: 810px) {
+      top: 6rem;
+      left: -10rem;
+    }
   }
 
   .map-wrapper {
@@ -19,6 +23,10 @@
       transform: rotate(-1deg);
       box-shadow: 0 48px 64px #0a05493d;
       border-radius: 0.5rem;
+      @media screen and (max-width: 810px) {
+        height: 20rem;
+        width: 37rem;
+      }
     }
 
     .big-stamp {
@@ -26,12 +34,20 @@
       top: -4.5rem;
       right: 4.5rem;
       filter: drop-shadow(0px 8px 24px rgba(10, 5, 73, 0.24));
+      @media screen and (max-width: 810px) {
+        scale: 0.4;
+        right: -2rem;
+      }
     }
     .small-stamp {
       position: absolute;
       bottom: -3rem;
       left: 7rem;
       filter: drop-shadow(0px 8px 24px rgba(10, 5, 73, 0.24));
+      @media screen and (max-width: 810px) {
+        scale: 0.6;
+        left: 2rem;
+      }
     }
   }
 }
