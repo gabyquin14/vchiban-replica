@@ -4,6 +4,10 @@
   overflow: hidden;
   padding: 25.4rem 9.6rem 17rem;
 
+  @media screen and (max-width: 810px) {
+    padding: 16rem 2.4rem 17rem;
+  }
+
   &.buffpup {
     background-color: var(--buffpup-orange);
     .portrait-wrapper {
@@ -62,6 +66,9 @@
     width: 45%;
     z-index: 2;
     position: relative;
+    @media screen and (max-width: 810px) {
+      width: 100%;
+    }
 
     .back-btn {
       display: flex;
@@ -71,6 +78,9 @@
       font-size: 1.8rem;
       font-weight: 800;
       margin-bottom: 6.4rem;
+      @media screen and (max-width: 810px) {
+        white-space: nowrap;
+      }
 
       .back-svg {
         transform: rotate(180deg);
@@ -90,6 +100,10 @@
         font-weight: 400;
         line-height: 90%;
         display: inline-block;
+
+        @media screen and (max-width: 810px) {
+          font-size: 6rem;
+        }
       }
       &.aicandii .sparkles {
         top: -1rem;
@@ -100,12 +114,22 @@
         position: absolute;
         top: -3rem;
         left: -3rem;
+        @media screen and (max-width: 810px) {
+          scale: 0.45;
+          top: -5rem;
+          left: -13rem;
+        }
       }
 
       .small-icon {
         position: absolute;
         bottom: 2rem;
         right: 6rem;
+        @media screen and (max-width: 810px) {
+          scale: 0.5;
+          bottom: -0.5rem;
+          right: -4.5rem;
+        }
       }
 
       &.aicandii .small-icon {
@@ -117,6 +141,12 @@
         position: absolute;
         top: -3rem;
         right: 10rem;
+
+        @media screen and (max-width: 810px) {
+          scale: 0.5;
+          top: -4.5rem;
+          right: -3.5rem;
+        }
       }
       &.rosedoodle .small-icon {
         bottom: 2.5rem;
@@ -133,6 +163,10 @@
       font-size: 1.8rem;
       font-weight: 800;
       margin-bottom: 2.4rem;
+      @media screen and (max-width: 810px) {
+        font-size: 1.6rem;
+        margin: 1.8rem 0 2rem;
+      }
     }
 
     .lore {
@@ -160,6 +194,11 @@
           min-width: 42rem;
           background-position: center;
           border-radius: 1.2rem;
+
+          @media screen and (max-width: 810px) {
+            max-height: 13.8rem;
+            min-width: 24.6rem;
+          }
         }
         .lore-1 {
           transform: rotate(-5deg);
@@ -199,7 +238,17 @@
           position: absolute;
           top: 3rem;
           right: -12rem;
+          @media screen and (max-width: 810px) {
+            right: 8rem;
+          }
         }
+      }
+    }
+
+    .footer__socials {
+      @media screen and (max-width: 810px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   }
