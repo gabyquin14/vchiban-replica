@@ -66,16 +66,6 @@ const PersonalLayout: FC<PersonalPageLayoutProps> = ({
   return (
     <div style={{ position: "relative" }}>
       <div className={`member-page ${name.toLocaleLowerCase()}`}>
-        <div className="portrait-wrapper">
-          <Image
-            alt="portrait"
-            src={portrait}
-            width={1260}
-            height={2032}
-            className="portrait"
-          />
-        </div>
-
         <div className="members-info">
           <button className="back-btn">
             <ChevronRight className="back-svg" />
@@ -143,6 +133,15 @@ const PersonalLayout: FC<PersonalPageLayoutProps> = ({
 
         <div className={`backgroung-imgs ${name.toLocaleLowerCase()}`}>
           {children}
+        </div>
+        <div className="portrait-wrapper">
+          <Image
+            alt="portrait"
+            src={portrait}
+            width={1260}
+            height={2032}
+            className="portrait"
+          />
         </div>
       </div>
       <FooterSeparator name={name.toLocaleLowerCase()} />

@@ -3,9 +3,10 @@
   min-height: 100vh;
   overflow: hidden;
   padding: 25.4rem 9.6rem 17rem;
+  box-sizing: border-box;
 
   @media screen and (max-width: 810px) {
-    padding: 16rem 2.4rem 17rem;
+    padding: 16rem 2.4rem 80rem;
   }
 
   &.buffpup {
@@ -13,6 +14,13 @@
     .portrait-wrapper {
       top: -0.5rem;
       right: -27rem;
+      @media screen and (max-width: 810px) {
+        bottom: -72rem;
+        top: unset;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
   &.aicandii {
@@ -21,6 +29,13 @@
     .portrait-wrapper {
       top: 12rem;
       right: -20rem;
+      @media screen and (max-width: 810px) {
+        bottom: -80rem;
+        top: unset;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
   &.shiabun {
@@ -30,6 +45,13 @@
       top: 15rem;
       right: -22rem;
       transform: scale(1.06);
+      @media screen and (max-width: 810px) {
+        bottom: -78rem;
+        top: unset;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
   &.rosedoodle {
@@ -38,6 +60,13 @@
     .portrait-wrapper {
       top: -9rem;
       right: -25rem;
+      @media screen and (max-width: 810px) {
+        bottom: -60rem;
+        top: unset;
+        right: unset;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
 
@@ -47,6 +76,12 @@
     height: 203.2rem;
     pointer-events: none;
     z-index: 2;
+    overflow: hidden;
+
+    @media screen and (max-width: 810px) {
+      width: 100rem;
+      height: 161.9rem;
+    }
 
     .portrait {
       width: 100%;
@@ -105,22 +140,6 @@
           font-size: 6rem;
         }
       }
-      &.aicandii .sparkles {
-        top: -1rem;
-        left: -2rem;
-      }
-
-      .sparkles {
-        position: absolute;
-        top: -3rem;
-        left: -3rem;
-        @media screen and (max-width: 810px) {
-          scale: 0.45;
-          top: -5rem;
-          left: -13rem;
-        }
-      }
-
       .small-icon {
         position: absolute;
         bottom: 2rem;
@@ -131,12 +150,6 @@
           right: -4.5rem;
         }
       }
-
-      &.aicandii .small-icon {
-        bottom: 3.5rem;
-        right: 4rem;
-      }
-
       .big-icon {
         position: absolute;
         top: -3rem;
@@ -148,15 +161,66 @@
           right: -3.5rem;
         }
       }
+      .sparkles {
+        position: absolute;
+        top: -3rem;
+        left: -3rem;
+        @media screen and (max-width: 810px) {
+          scale: 0.45;
+          top: -5rem;
+          left: -13rem;
+        }
+      }
+
+      &.shiabun .sparkles {
+        top: -5rem;
+        left: -11rem;
+      }
+      &.shiabun .big-icon {
+        scale: 0.4;
+        top: -4rem;
+        right: -4rem;
+      }
+      &.shiabun .small-icon {
+        scale: 0.4;
+        top: 0.5rem;
+        right: -4.5rem;
+      }
+      &.aicandii .sparkles {
+        top: -3rem;
+        left: -11rem;
+      }
+      &.aicandii .big-icon {
+        scale: 0.4;
+        top: -4rem;
+      }
+      &.aicandii .small-icon {
+        scale: 0.45;
+        bottom: 0rem;
+        right: -5rem;
+      }
       &.rosedoodle .small-icon {
         bottom: 2.5rem;
         right: -6.5rem;
+        @media screen and (max-width: 810px) {
+          scale: 0.45;
+          bottom: 0rem;
+          right: -4rem;
+        }
       }
-
       &.rosedoodle .big-icon {
         position: absolute;
         top: -3rem;
         right: -3rem;
+        @media screen and (max-width: 810px) {
+          scale: 0.45;
+          top: -4rem;
+          right: -3rem;
+        }
+      }
+      &.rosedoodle .sparkles {
+        top: -5rem;
+        left: -20rem;
       }
     }
     .description {
@@ -178,6 +242,11 @@
         height: 23.6rem;
         width: 42rem;
         filter: drop-shadow(rgba(10, 5, 73, 0.24) 0px 16px 36px);
+
+        @media screen and (max-width: 810px) {
+          height: 16rem;
+          width: 28rem;
+        }
 
         .lore-1,
         .lore-2,
@@ -218,10 +287,18 @@
           left: 5rem;
           width: fit-content;
           height: fit-content;
+          @media screen and (max-width: 810px) {
+            bottom: -6rem;
+            left: 4rem;
+          }
 
           &.shiabun {
             left: -1rem;
             top: 14rem;
+            @media screen and (max-width: 810px) {
+              left: -2rem;
+              top: 5rem;
+            }
           }
           &.aicandii {
             right: 8rem;
@@ -239,7 +316,7 @@
           top: 3rem;
           right: -12rem;
           @media screen and (max-width: 810px) {
-            right: 8rem;
+            right: -6rem;
           }
         }
       }
@@ -270,80 +347,138 @@
       .paw1 {
         top: -20%;
         right: -23%;
+        @media screen and (max-width: 810px) {
+          right: -52rem;
+          top: -12%;
+        }
       }
       .paw2 {
         bottom: 7%;
         left: -14%;
+        @media screen and (max-width: 810px) {
+          left: -36rem;
+          bottom: 18%;
+        }
       }
       .bone1 {
         top: -15%;
         left: 8%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
       .bone2 {
         bottom: -13%;
         right: -11%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
     }
     &.shiabun {
       .spring1 {
-        top: -16%;
-        left: 0;
+        top: -11%;
+        left: -60%;
       }
       .spring2 {
         bottom: -32%;
         right: 0%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
       .bunny1 {
         top: -5%;
         right: 2%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
       .bunny2 {
-        bottom: -24%;
-        left: 4%;
+        bottom: 24%;
+        left: -44%;
       }
     }
     &.aicandii {
       .flask1 {
         top: 8%;
         left: 35%;
+        @media screen and (max-width: 810px) {
+          top: 10%;
+          left: unset;
+          right: -24%;
+        }
       }
       .flask2 {
         bottom: -9%;
         right: 19%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
       .flask3 {
         bottom: -20%;
         left: 1%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
       .card1 {
         top: 10%;
         left: -12%;
+        @media screen and (max-width: 810px) {
+          top: 7%;
+          left: -110%;
+        }
       }
       .card2 {
         top: 14%;
         right: -9%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
     }
     &.rosedoodle {
       .pencil1 {
         top: -5%;
         left: 0%;
+        @media screen and (max-width: 810px) {
+          top: -3%;
+          left: -25%;
+        }
       }
       .pencil2 {
         top: 13%;
         right: 14%;
+        @media screen and (max-width: 810px) {
+          top: 9%;
+          right: -62%;
+        }
       }
       .thingy {
         top: 18%;
         right: 43%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
       .icecream1 {
         bottom: -20%;
         left: -11%;
+        @media screen and (max-width: 810px) {
+          bottom: -15%;
+          left: 30%;
+          scale: 1.5;
+          transform: rotate(-10deg);
+        }
       }
       .icecream2 {
         bottom: -18%;
         right: -16%;
+        @media screen and (max-width: 810px) {
+          display: none;
+        }
       }
     }
   }
