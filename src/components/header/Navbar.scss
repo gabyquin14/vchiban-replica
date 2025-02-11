@@ -14,7 +14,7 @@
   box-sizing: border-box;
 
   &.navbar-desktop {
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       display: none;
     }
   }

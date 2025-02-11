@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 
@@ -14,6 +14,22 @@ interface VideoCardProps {
   link: Link;
 }
 const VideoCard = ({ link }: VideoCardProps) => {
+  const [videoSize, setVideoSize] = useState({ width: "90%", height: "auto" });
+  useEffect(() => {
+    const updateSize = () => {
+      const screenWidth = window.innerWidth;
+      const newWidth = screenWidth < 810 ? "100%" : "100%";
+      const newHeight =
+        screenWidth < 810 ? `${(9 / 16) * screenWidth}px` : "95vh";
+
+      setVideoSize({ width: newWidth, height: newHeight });
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
     <motion.div
       className="video-card"
@@ -29,6 +45,8 @@ const VideoCard = ({ link }: VideoCardProps) => {
       <ReactPlayer
         url={`https://www.youtube.com/embed/${link.videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white`}
         controls={true}
+        width={videoSize.width}
+        height={videoSize.height}
         className="video"
       />
     </motion.div>
