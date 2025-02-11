@@ -122,25 +122,27 @@ const Banner = () => {
         />
 
         {/* Team Members */}
-        <div className="members-wrapper">
-          <ul className="stars-list" role="list" aria-label="Team members">
-            {vchibanStars.map(({ name, image }) => (
-              <li
-                key={name}
-                className={`star-portrait ${name.toLowerCase()}`}
-                aria-label={`Portrait of ${name}`}
-              >
-                <Image
-                  src={image}
-                  alt={`Portrait of ${name}`}
-                  priority
-                  layout="responsive"
-                  width={791}
-                  height={1274}
-                />
-              </li>
-            ))}
-          </ul>
+        <div className="team-members">
+          <div className="members-wrapper">
+            <ul className="stars-list" role="list" aria-label="Team members">
+              {vchibanStars.map(({ name, image }) => (
+                <li
+                  key={name}
+                  className={`star-portrait ${name.toLowerCase()}`}
+                  aria-label={`Portrait of ${name}`}
+                >
+                  <Image
+                    src={image}
+                    alt={`Portrait of ${name}`}
+                    priority
+                    layout="responsive"
+                    width={791}
+                    height={1274}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Banner Button */}
