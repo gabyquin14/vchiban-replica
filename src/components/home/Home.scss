@@ -6,7 +6,8 @@
   position: relative;
   overflow: hidden;
   @media screen and (max-width: 810px) {
-    min-height: calc(100vh + 15rem);
+    // min-height: calc(100vh + 15rem);
+    min-height: fit-content;
   }
 
   .banner-wrapper {
@@ -19,7 +20,7 @@
       min-height: 65rem;
       max-width: 150rem;
       position: absolute;
-      top: 71%;
+      top: -33%;
       -webkit-mask: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 1) 85%,
@@ -34,6 +35,7 @@
       -webkit-mask-composite: destination-over;
       @media screen and (max-width: 810px) {
         min-height: 55rem;
+        top: -20%;
       }
     }
 
@@ -101,6 +103,10 @@
       }
     }
   }
+  .team-members {
+    height: 50rem;
+    position: relative;
+  }
 
   .bg-wrapper {
     width: 100%;
@@ -148,12 +154,12 @@
 
   .see-more-btn-wrapper {
     position: absolute;
-    top: 147%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     @media screen and (max-width: 810px) {
       top: unset;
-      bottom: -82%;
+      bottom: 18%;
     }
 
     .see-more-btn {
