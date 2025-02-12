@@ -39,6 +39,9 @@
     .card {
       position: relative;
       width: fit-content;
+      @media screen and (max-width: 810px) {
+        width: 100%;
+      }
     }
     .new-world {
       position: absolute;

@@ -4,10 +4,7 @@
   font-family: var(--font-primary);
   background-color: var(--game-corner-bg);
   position: relative;
-
-  @media screen and (max-width: 810px) {
-    overflow: hidden;
-  }
+  overflow: hidden;
 
   .searchlight-1,
   .searchlight-2,
@@ -19,6 +16,9 @@
   .searchlight-1 {
     top: 8rem;
     left: -22rem;
+    @media screen and (max-width: 1320px) {
+      left: -26rem;
+    }
     @media screen and (max-width: 810px) {
       top: -1rem;
       left: -34rem;
@@ -29,6 +29,9 @@
     top: -3.5rem;
     left: 6.5rem;
     transform: rotate(18deg);
+    @media screen and (max-width: 1320px) {
+      left: -12rem;
+    }
     @media screen and (max-width: 810px) {
       display: none;
     }
@@ -37,6 +40,11 @@
     top: -4.5rem;
     right: 7rem;
     transform: rotate(55deg);
+    @media screen and (max-width: 1320px) {
+      right: -14rem;
+      top: -4rem;
+      transform: rotate(52deg);
+    }
     @media screen and (max-width: 810px) {
       top: -2rem;
       right: -32rem;
@@ -46,6 +54,10 @@
     top: 7rem;
     right: -21rem;
     transform: rotate(73deg);
+    @media screen and (max-width: 1320px) {
+      top: 9rem;
+      right: -26rem;
+    }
     @media screen and (max-width: 810px) {
       display: none;
     }
@@ -102,7 +114,7 @@
     padding: 0 7rem 16.8rem;
 
     @media screen and (max-width: 810px) {
-      padding: 4rem 2.4rem;
+      padding: 4rem 2.4rem 16.8rem;
     }
 
     section {

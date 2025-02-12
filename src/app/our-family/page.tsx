@@ -142,33 +142,35 @@ const OurFamily = () => {
           <House />
         </motion.div>
 
-        <motion.button
-          className="more-lore"
-          onHoverStart={() => setIsHover(true)}
-          onHoverEnd={() => setIsHover(false)}
-        >
+        <button className="lore-btn">
           <motion.div
-            className="chevron"
-            animate={{
-              transform: isHover ? "translateY(1rem)" : "translateY(0rem)",
-            }}
-            initial={{ transform: "translateY(0rem)" }}
-            transition={springTransition}
+            className="more-lore"
+            onHoverStart={() => setIsHover(true)}
+            onHoverEnd={() => setIsHover(false)}
           >
-            <ChevronDown />
+            <motion.div
+              className="chevron"
+              animate={{
+                transform: isHover ? "translateY(1rem)" : "translateY(0rem)",
+              }}
+              initial={{ transform: "translateY(0rem)" }}
+              transition={springTransition}
+            >
+              <ChevronDown />
+            </motion.div>
+            See more lore
+            <motion.div
+              className="chevron"
+              animate={{
+                transform: isHover ? "translateY(1rem)" : "translateY(0rem)",
+              }}
+              initial={{ transform: "translateY(0rem)" }}
+              transition={springTransition}
+            >
+              <ChevronDown />
+            </motion.div>
           </motion.div>
-          See more lore
-          <motion.div
-            className="chevron"
-            animate={{
-              transform: isHover ? "translateY(1rem)" : "translateY(0rem)",
-            }}
-            initial={{ transform: "translateY(0rem)" }}
-            transition={springTransition}
-          >
-            <ChevronDown />
-          </motion.div>
-        </motion.button>
+        </button>
       </div>
       <div className="family__stardust-map">
         <div className="header-and-map">

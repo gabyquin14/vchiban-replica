@@ -8,6 +8,10 @@
   justify-content: center;
   box-sizing: border-box;
 
+  @media screen and (max-width: 1320px) {
+    padding: 16rem 2.4rem 9.6rem;
+  }
+
   @media screen and (max-width: 810px) {
     padding: 16rem 2.4rem 9.6rem;
     gap: 1rem;
@@ -358,18 +362,27 @@
 
   &.game-cornerr {
     padding: 13.5rem 6.4rem 0;
+    // @media screen and (max-width: 1320px) {
+    //   padding: 2rem 0rem 0;
+    // }
     @media screen and (max-width: 810px) {
       padding: 13.5rem 0rem 0;
     }
 
     .title {
       line-height: 75%;
+      @media screen and (max-width: 1320px) {
+        font-size: 9.6rem;
+      }
       @media screen and (max-width: 810px) {
         font-size: 6rem;
       }
 
       span {
         font-size: 9.6rem;
+        @media screen and (max-width: 1320px) {
+          font-size: 6.4rem;
+        }
         @media screen and (max-width: 810px) {
           font-size: 4rem;
         }
@@ -379,6 +392,9 @@
     .description {
       margin-top: 3rem;
       padding: 0 2rem;
+      @media screen and (max-width: 1320px) {
+        padding: 0rem;
+      }
       @media screen and (max-width: 810px) {
         padding: 0;
       }
