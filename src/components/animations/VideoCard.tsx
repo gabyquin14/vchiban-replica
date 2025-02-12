@@ -16,18 +16,20 @@ interface VideoCardProps {
 const VideoCard = ({ link }: VideoCardProps) => {
   const [videoSize, setVideoSize] = useState({ width: "90%", height: "auto" });
   useEffect(() => {
-    const updateSize = () => {
-      const screenWidth = window.innerWidth;
-      const newWidth = screenWidth < 810 ? "100%" : "100%";
-      const newHeight =
-        screenWidth < 810 ? `${(9 / 16) * screenWidth}px` : "95vh";
+    if (typeof window !== "undefined") {
+      const updateSize = () => {
+        const screenWidth = window.innerWidth;
+        const newWidth = screenWidth < 810 ? "100%" : "100%";
+        const newHeight =
+          screenWidth < 810 ? `${(9 / 16) * screenWidth}px` : "95vh";
 
-      setVideoSize({ width: newWidth, height: newHeight });
-    };
+        setVideoSize({ width: newWidth, height: newHeight });
+      };
 
-    updateSize();
-    window.addEventListener("resize", updateSize);
-    return () => window.removeEventListener("resize", updateSize);
+      updateSize();
+      window.addEventListener("resize", updateSize);
+      return () => window.removeEventListener("resize", updateSize);
+    }
   }, []);
 
   return (
