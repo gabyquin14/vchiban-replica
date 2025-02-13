@@ -63,10 +63,16 @@
     font-family: var(--tommy);
     padding: 0.5rem 5rem;
 
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       font-size: 3.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @media screen and (max-width: 810px) {
       flex-direction: column;
       gap: 1.5rem;
+      top: unset;
+      transform: unset;
     }
   }
 
@@ -109,7 +115,7 @@
       transform: rotate(5deg);
       transform-origin: 50% 50% 0px;
       opacity: 1;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         display: none;
       }
     }
@@ -122,7 +128,7 @@
       transform: rotate(-2deg);
       transform-origin: 50% 50% 0px;
       opacity: 1;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         display: none;
       }
     }

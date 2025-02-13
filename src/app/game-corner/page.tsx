@@ -28,7 +28,6 @@ const GameCorner = () => {
       <SearchLight className="searchlight-3" />
       <SearchLight className="searchlight-4" />
       <header>
-        <SanjisEyebrow className="sanjis-eyebrow" />
         <HeaderSection
           as="h1"
           title="<span>GAME</span> <br/> CORNER."
@@ -41,8 +40,10 @@ const GameCorner = () => {
           }
           SparklesComponent={SparklesGameCorner}
           customStyles="game-cornerr"
-        />
-        <SanjisEyebrow className="sanjis-eyebrow" />
+        >
+          <SanjisEyebrow className="sanjis-eyebrow" />
+          <SanjisEyebrow className="sanjis-eyebrow" />
+        </HeaderSection>
         <div className="separator">
           <div></div>
         </div>

@@ -362,9 +362,10 @@
 
   &.game-cornerr {
     padding: 13.5rem 6.4rem 0;
-    // @media screen and (max-width: 1320px) {
-    //   padding: 2rem 0rem 0;
-    // }
+
+    @media screen and (max-width: 1320px) {
+      padding: 10rem 4rem 0;
+    }
     @media screen and (max-width: 810px) {
       padding: 13.5rem 0rem 0;
     }
@@ -394,6 +395,12 @@
       padding: 0 2rem;
       @media screen and (max-width: 1320px) {
         padding: 0rem;
+        font-size: 1.6rem;
+      }
+      br {
+        @media screen and (max-width: 1320px) {
+          display: none;
+        }
       }
       @media screen and (max-width: 810px) {
         padding: 0;
@@ -405,6 +412,13 @@
       top: -1.5rem;
       left: 50%;
       transform: translateX(-49%);
+
+      @media screen and (max-width: 1320px) {
+        scale: 0.75;
+        top: -4em;
+        left: 0%;
+        transform: translateX(-20%);
+      }
 
       @media screen and (max-width: 810px) {
         scale: 0.5;

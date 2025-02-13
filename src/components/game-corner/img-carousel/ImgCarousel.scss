@@ -2,6 +2,7 @@
   position: relative;
   height: 50rem;
   width: 100%;
+
   @media screen and (max-width: 810px) {
     height: 100%;
     display: flex;
@@ -22,8 +23,12 @@
     width: 100%;
     max-width: 78.6rem;
 
+    @media screen and (max-width: 1320px) {
+      max-width: 47rem;
+    }
     @media screen and (max-width: 810px) {
       position: unset;
+      max-width: 100%;
     }
   }
 
