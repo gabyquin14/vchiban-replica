@@ -29,6 +29,10 @@
     color: var(--navy-blue-main);
     text-align: center;
 
+    @media screen and (max-width: 1320px) {
+      font-size: 9.6rem;
+    }
+
     @media screen and (max-width: 810px) {
       font-size: 6rem;
     }
@@ -160,7 +164,7 @@
   &.animation {
     padding: 25rem 6.4rem 9.6rem;
 
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       padding: 16rem 2.4rem 15rem;
     }
     .sparkles {
@@ -168,11 +172,21 @@
       left: 50%;
       transform: translateX(-52%);
 
+      @media screen and (max-width: 1320px) {
+        scale: 0.7;
+        top: -2rem;
+        left: unset;
+        transform: translateX(-21%);
+      }
       @media screen and (max-width: 810px) {
+        scale: 0.5;
         top: -3rem;
         left: unset;
-        transform: scale(0.5) translateX(-55%);
+        transform: translateX(-55%);
       }
+    }
+    .description {
+      padding: 0;
     }
   }
 

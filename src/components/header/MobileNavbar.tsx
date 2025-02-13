@@ -15,7 +15,6 @@ const MobileNavbar: FC = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const toogleOpenMenu = (val: boolean) => {
-    console.log(val, "openMe");
     document.body.style.overflow = !val ? "visible" : "hidden";
     setOpenMenu(val);
   };
