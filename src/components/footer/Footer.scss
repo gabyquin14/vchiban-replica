@@ -11,7 +11,7 @@
   z-index: 0;
   overflow: hidden;
 
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 1080px) {
     flex-direction: column-reverse;
     align-items: center;
     padding: 6.4rem 2rem;
@@ -53,6 +53,9 @@
     }
 
     .logo {
+      @media screen and (max-width: 1080px) {
+        transform: scale(0.8);
+      }
       @media screen and (max-width: 810px) {
         transform: scale(1.2);
       }
@@ -66,9 +69,10 @@
     flex-wrap: wrap;
     gap: 9rem;
 
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1080px) {
       width: 100%;
       gap: 6.4rem;
+      align-items: center;
     }
 
     &-groups {
@@ -125,6 +129,7 @@
     flex: 1;
     gap: 1rem;
     margin-top: auto;
+    width: 100%;
 
     .social {
       display: flex;

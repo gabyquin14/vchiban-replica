@@ -53,6 +53,10 @@
     width: 100%;
     height: fit-content;
 
+    @media screen and (max-width: 1320px) {
+      padding: 0 6.4rem 12.8rem;
+      gap: 5rem;
+    }
     @media screen and (max-width: 810px) {
       gap: 3rem;
       flex-direction: column;
@@ -66,10 +70,16 @@
       line-height: 100%;
       font-family: var(--tommy);
 
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
+        display: block;
         gap: 1rem;
-        flex-direction: row;
         font-size: 3.6rem;
+        max-width: 30%;
+      }
+
+      @media screen and (max-width: 810px) {
+        flex-direction: row;
+        max-width: unset;
       }
     }
     p:last-child {
@@ -124,10 +134,13 @@
     padding: 0 128px 96px;
     gap: 9.6rem;
 
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       flex-direction: column;
-      padding: 0 2.4rem 96px;
+      padding: 0 6.4rem 96px;
       gap: 3rem;
+    }
+    @media screen and (max-width: 810px) {
+      padding: 0 2.4rem 96px;
     }
 
     .info {
@@ -138,7 +151,7 @@
       font-weight: 800;
       gap: 1.8rem;
 
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         text-align: center;
         font-size: 1.6rem;
       }
@@ -153,7 +166,7 @@
       text-align: center;
       position: relative;
 
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         min-height: 35.2rem;
         height: 35.2rem;
         min-width: 21.5rem;
@@ -187,11 +200,20 @@
       }
     }
   }
+
+  .container {
+    max-width: 100%;
+  }
+
   .image-stack {
     position: relative;
     min-height: 64.8rem;
     padding-top: 9.6rem;
 
+    @media screen and (max-width: 1320px) {
+      min-height: 90rem;
+      width: 100vw;
+    }
     @media screen and (max-width: 810px) {
       display: flex;
       flex-direction: column;
@@ -218,6 +240,10 @@
       transform: rotate(-3deg);
       border-radius: 1.6rem;
 
+      @media screen and (max-width: 1080px) {
+        left: -20%;
+      }
+
       @media screen and (max-width: 810px) {
         order: 1;
         position: unset;
@@ -234,6 +260,11 @@
       height: 443px !important;
       z-index: 1;
       border-radius: 1.6rem;
+
+      @media screen and (max-width: 1080px) {
+        top: 35rem;
+        left: -5%;
+      }
 
       @media screen and (max-width: 810px) {
         order: 4;
@@ -252,6 +283,11 @@
       z-index: 0;
       transform: rotate(2deg);
       border-radius: 1.6rem;
+
+      @media screen and (max-width: 1080px) {
+        right: 5%;
+        left: unset;
+      }
 
       @media screen and (max-width: 810px) {
         order: 2;
@@ -272,8 +308,13 @@
       width: 350px;
       height: 464px;
       z-index: 1;
-      transform: rotate(-4deg);
       border-radius: 1.6rem;
+
+      @media screen and (max-width: 1080px) {
+        top: 35rem;
+        right: -5%;
+        left: unset;
+      }
 
       @media screen and (max-width: 810px) {
         order: 3;
@@ -297,6 +338,9 @@
     padding: 0 12.8rem 12.8rem;
     position: relative;
 
+    @media screen and (max-width: 1320px) {
+      padding: 12rem 6.4rem 12.8rem;
+    }
     @media screen and (max-width: 810px) {
       padding: 12rem 1.7rem 12.8rem;
       font-size: 1.6rem;
