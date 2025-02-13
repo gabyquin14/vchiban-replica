@@ -23,6 +23,10 @@
       transform: rotate(-1deg);
       box-shadow: 0 48px 64px #0a05493d;
       border-radius: 0.5rem;
+      @media screen and (max-width: 1320px) {
+        height: 39.3rem;
+        width: 70rem;
+      }
       @media screen and (max-width: 810px) {
         height: 20rem;
         width: 37rem;

@@ -10,12 +10,14 @@
   &__banner {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     height: 100%;
     min-height: 90rem;
     max-width: 151.2rem;
     position: relative;
 
+    @media screen and (max-width: 1320px) {
+      min-height: 92rem;
+    }
     @media screen and (max-width: 810px) {
       min-height: 80rem;
     }
@@ -58,6 +60,11 @@
       left: -2rem;
       gap: 1rem;
       z-index: -1;
+
+      @media screen and (max-width: 1320px) {
+        top: 18rem;
+      }
+
       @media screen and (max-width: 810px) {
         display: none;
       }
@@ -72,10 +79,15 @@
       top: 20rem;
       right: -22rem;
       z-index: -1;
+      @media screen and (max-width: 1320px) {
+        top: 28rem;
+        left: unset;
+        right: -56rem;
+      }
       @media screen and (max-width: 810px) {
         scale: 0.7;
         top: 18rem;
-        left: 0;
+        left: unset;
         right: -6rem;
       }
     }
@@ -86,11 +98,15 @@
       height: 34rem;
       bottom: 0;
       z-index: 0;
+      @media screen and (max-width: 1320px) {
+        scale: 0.8;
+        left: -14rem;
+        bottom: -2rem;
+      }
 
       @media screen and (max-width: 810px) {
         scale: 0.5;
         left: -11rem;
-        bottom: -2rem;
       }
     }
 
@@ -128,6 +144,10 @@
     padding: 0rem 12.8rem 12.8rem;
     max-width: 151.2rem;
 
+    @media screen and (max-width: 1320px) {
+      padding: 0rem 4rem 12.8rem;
+    }
+
     @media screen and (max-width: 810px) {
       padding: 0rem 0rem 12.8rem;
     }
@@ -146,7 +166,7 @@
       flex-direction: column;
       gap: 2rem;
 
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         font-size: 1.6rem;
         padding: 1rem 2rem 0;
       }
@@ -164,16 +184,9 @@
       }
 
       .video {
-        width: 88.8rem !important;
-        height: 50rem !important;
         aspect-ratio: 16 / 9;
         border-radius: 1.2rem;
         box-shadow: 0 48px 64px #0a05493d;
-
-        @media screen and (max-width: 810px) {
-          width: 100% !important;
-          height: unset !important;
-        }
       }
 
       iframe {
@@ -204,18 +217,18 @@
     .rainbow-showcase {
       position: relative;
       height: 65rem;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         height: unset;
       }
     }
     .members-card {
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         flex-direction: column;
         align-items: center;
       }
     }
     .members-card__item {
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         display: flex;
         flex-direction: column;
         position: unset;
@@ -223,7 +236,7 @@
       }
     }
     .members-card__image-wrapper {
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         height: 38rem;
       }
     }
@@ -239,7 +252,7 @@
       top: 26rem;
       left: -25rem;
 
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         top: 0rem;
         left: -30rem;
       }
@@ -247,7 +260,7 @@
     .candii {
       top: 10rem;
       left: 34.5rem;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         top: 40rem;
         left: unset;
         right: -16rem;
@@ -257,7 +270,7 @@
       top: 5rem;
       right: -15rem;
 
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         top: 112rem;
         right: unset;
         right: -22rem;
@@ -266,7 +279,7 @@
     .rose {
       top: 18rem;
       right: 30rem;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         top: 82rem;
         right: unset;
         left: -22rem;
@@ -292,13 +305,15 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 3.2rem;
 
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         display: flex;
         flex-direction: column;
       }
 
       .container {
         max-height: 13.6rem;
+        min-height: 13.6rem;
+        height: 13.6rem;
         overflow: hidden;
         position: relative;
 
@@ -357,11 +372,13 @@
           font-family: var(--tommy);
           padding: 0 3rem;
 
+          @media screen and (max-width: 1320px) {
+            font-size: 4.8rem;
+          }
           @media screen and (max-width: 810px) {
             flex-direction: column;
             justify-content: center;
             gap: 2rem;
-            font-size: 3.6rem;
             bottom: 0;
             height: 100%;
           }
@@ -382,14 +399,23 @@
     .excl-1 {
       top: 17.5rem;
       left: 2rem;
+      @media screen and (max-width: 1320px) {
+        left: -9rem;
+      }
     }
     .excl-2 {
       top: 7rem;
       left: 15rem;
+      @media screen and (max-width: 1320px) {
+        left: 4rem;
+      }
     }
     .excl-3 {
       top: -6rem;
       right: 6rem;
+      @media screen and (max-width: 1320px) {
+        right: -6rem;
+      }
     }
   }
 }
