@@ -109,7 +109,7 @@ const Events = () => {
           </motion.div>
           <motion.div
             className="image-2"
-            whileHover={{ top: "6rem" }}
+            whileHover={{ transform: "translateY(-2rem)" }}
             transition={springTransition}
           >
             <Image
@@ -135,7 +135,7 @@ const Events = () => {
           </motion.div>
           <motion.div
             className="image-4"
-            whileHover={{ top: "6rem" }}
+            whileHover={{ transform: "translateY(-2rem)" }}
             transition={springTransition}
           >
             <Image
