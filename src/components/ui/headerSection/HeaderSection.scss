@@ -68,6 +68,9 @@
   }
 
   &.banner {
+    @media screen and (max-width: 1320px) {
+      padding: 19rem 0rem 9.6rem;
+    }
     @media screen and (max-width: 810px) {
       padding: 19rem 0rem 9.6rem;
     }
@@ -75,15 +78,25 @@
       line-height: 90%;
       font-size: 128px;
 
+      @media screen and (max-width: 1320px) {
+        font-size: 9.6rem;
+        white-space: nowrap;
+      }
       @media screen and (max-width: 810px) {
         font-size: 6rem;
-        white-space: nowrap;
       }
     }
     .sparkles {
       top: -4rem;
       left: 50%;
       transform: translateX(-48%);
+      @media screen and (max-width: 1320px) {
+        scale: 0.8;
+        top: -4.5rem;
+        left: unset;
+        right: 0;
+        transform: translateX(15%);
+      }
       @media screen and (max-width: 810px) {
         top: -7rem;
         left: unset;
@@ -95,7 +108,7 @@
 
   &.new-projects {
     padding: 0rem 6.4rem 0rem;
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       padding: 0rem;
     }
     .title {
@@ -103,13 +116,20 @@
       line-height: 100%;
       margin-bottom: 1.5rem;
 
+      @media screen and (max-width: 1320px) {
+        font-size: 6.4rem;
+        line-height: 110%;
+        white-space: nowrap;
+      }
       @media screen and (max-width: 810px) {
         font-size: 4rem;
-        white-space: nowrap;
       }
 
       span {
         font-size: 12.8rem;
+        @media screen and (max-width: 1320px) {
+          font-size: 9.6rem;
+        }
         @media screen and (max-width: 810px) {
           font-size: 6rem;
         }
@@ -119,9 +139,15 @@
       top: -2rem;
       left: 50%;
       transform: translateX(-43.5%);
+
+      @media screen and (max-width: 1320px) {
+        top: -2rem;
+        left: unset;
+        transform: translateX(-16%);
+        scale: 0.8;
+      }
       @media screen and (max-width: 810px) {
         top: -6rem;
-        left: 0;
         transform: translateX(-50%);
         scale: 0.47;
       }
@@ -142,9 +168,12 @@
     .title {
       font-size: 9.6rem;
       line-height: 80%;
+      @media screen and (max-width: 1320px) {
+        font-size: 6.4rem;
+        white-space: nowrap;
+      }
       @media screen and (max-width: 810px) {
         font-size: 4rem;
-        white-space: nowrap;
       }
     }
 
@@ -152,10 +181,15 @@
       top: -2rem;
       left: 50%;
       transform: translateX(-49%);
+      @media screen and (max-width: 1320px) {
+        top: -4rem;
+        scale: 0.7;
+        left: 0%;
+        transform: translateX(-27%);
+      }
       @media screen and (max-width: 810px) {
         top: -5.5rem;
         scale: 0.4;
-        left: 0%;
         transform: translateX(-77%);
       }
     }

@@ -5,6 +5,9 @@
   padding: 0 6.4rem 9.6rem;
   position: relative;
 
+  @media screen and (max-width: 1320px) {
+    padding: 0 4rem 14rem;
+  }
   @media screen and (max-width: 810px) {
     padding: 0 0rem 9.6rem;
   }
@@ -16,6 +19,11 @@
       position: relative;
       height: 50.4rem;
       width: 100%;
+
+      @media screen and (max-width: 1320px) {
+        height: 62rem;
+        max-height: 62rem;
+      }
       @media screen and (max-width: 810px) {
         height: 57rem;
       }
@@ -45,6 +53,9 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      @media screen and (max-width: 1320px) {
+        width: 33rem;
+      }
       @media screen and (max-width: 810px) {
         width: 30rem;
       }
@@ -58,7 +69,7 @@
       width: 100%;
       padding: 0 5rem 2rem;
 
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         padding: 0;
         flex-direction: column;
         gap: 2rem;
@@ -71,6 +82,9 @@
       color: var(--white);
       font-family: var(--tommy);
 
+      @media screen and (max-width: 1320px) {
+        font-size: 4.8rem;
+      }
       @media screen and (max-width: 810px) {
         font-size: 3.6rem;
       }
@@ -87,11 +101,15 @@
         transform: rotate(3deg);
         box-shadow: rgba(10, 5, 73, 0.32) 0px 16px 28px 0px;
       }
+      @media screen and (max-width: 1320px) {
+        scale: 0.7;
+        top: 4rem;
+        right: -6rem;
+        width: fit-content;
+      }
       @media screen and (max-width: 810px) {
         scale: 0.6;
         top: 0rem;
-        right: -8rem;
-        width: fit-content;
       }
     }
     .img-2 {
@@ -104,11 +122,17 @@
         border-radius: 1.2rem;
         box-shadow: rgba(10, 5, 73, 0.32) 0px 16px 28px 0px;
       }
+
+      @media screen and (max-width: 1320px) {
+        scale: 0.7;
+        top: -4rem;
+        left: 0rem;
+        width: fit-content;
+      }
       @media screen and (max-width: 810px) {
         scale: 0.6;
         top: -6rem;
         left: -4rem;
-        width: fit-content;
       }
     }
     .img-3 {
@@ -121,11 +145,17 @@
         border-radius: 1.2rem;
         box-shadow: rgba(10, 5, 73, 0.32) 0px 16px 28px 0px;
       }
+
+      @media screen and (max-width: 1320px) {
+        scale: 0.7;
+        top: 6rem;
+        left: -6rem;
+        width: fit-content;
+      }
       @media screen and (max-width: 810px) {
         scale: 0.6;
         top: 1rem;
         left: -8rem;
-        width: fit-content;
       }
     }
   }

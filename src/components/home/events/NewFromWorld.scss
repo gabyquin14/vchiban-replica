@@ -4,7 +4,7 @@
   gap: 6.4rem;
   padding: 15rem 6.4rem 18rem;
   position: relative;
-  @media screen and (max-width: 810px) {
+  @media screen and (max-width: 1320px) {
     padding: 15rem 0rem 18rem;
     width: 100vw;
   }
@@ -12,8 +12,9 @@
   .event-list {
     display: flex;
     gap: 3.2rem;
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       flex-direction: column;
+      margin: 0 auto;
     }
   }
 
@@ -84,7 +85,7 @@
       line-height: 150%;
       text-align: center;
       margin-top: 1.6rem;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         font-size: 2.4rem;
       }
     }
@@ -102,7 +103,7 @@
   .spring-1 {
     top: 8.5rem;
     left: 4.5rem;
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       display: none;
     }
   }
@@ -110,7 +111,7 @@
   .spring-2 {
     top: 8rem;
     right: 10rem;
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       display: none;
     }
   }
@@ -119,6 +120,9 @@
     top: 8rem;
     left: 27rem;
     z-index: -1;
+    @media screen and (max-width: 1320px) {
+      left: 0rem;
+    }
     @media screen and (max-width: 810px) {
       left: -4rem;
     }
@@ -127,7 +131,7 @@
   .star-2 {
     top: 28.5rem;
     right: 7rem;
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       display: none;
     }
   }
@@ -135,6 +139,9 @@
   .star-3 {
     top: 4rem;
     left: 34rem;
+    @media screen and (max-width: 1320px) {
+      left: 9rem;
+    }
     @media screen and (max-width: 810px) {
       left: 3rem;
     }
