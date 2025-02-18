@@ -61,13 +61,16 @@
     text-align: center;
     padding: 0 12.8rem;
 
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       font-size: 1.6rem;
       padding: 0;
     }
   }
 
   &.banner {
+    @media screen and (max-width: 1320px) {
+      padding: 19rem 0rem 9.6rem;
+    }
     @media screen and (max-width: 810px) {
       padding: 19rem 0rem 9.6rem;
     }
@@ -75,15 +78,25 @@
       line-height: 90%;
       font-size: 128px;
 
+      @media screen and (max-width: 1320px) {
+        font-size: 9.6rem;
+        white-space: nowrap;
+      }
       @media screen and (max-width: 810px) {
         font-size: 6rem;
-        white-space: nowrap;
       }
     }
     .sparkles {
       top: -4rem;
       left: 50%;
       transform: translateX(-48%);
+      @media screen and (max-width: 1320px) {
+        scale: 0.8;
+        top: -4.5rem;
+        left: unset;
+        right: 0;
+        transform: translateX(15%);
+      }
       @media screen and (max-width: 810px) {
         top: -7rem;
         left: unset;
@@ -95,7 +108,7 @@
 
   &.new-projects {
     padding: 0rem 6.4rem 0rem;
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       padding: 0rem;
     }
     .title {
@@ -103,13 +116,20 @@
       line-height: 100%;
       margin-bottom: 1.5rem;
 
+      @media screen and (max-width: 1320px) {
+        font-size: 6.4rem;
+        line-height: 110%;
+        white-space: nowrap;
+      }
       @media screen and (max-width: 810px) {
         font-size: 4rem;
-        white-space: nowrap;
       }
 
       span {
         font-size: 12.8rem;
+        @media screen and (max-width: 1320px) {
+          font-size: 9.6rem;
+        }
         @media screen and (max-width: 810px) {
           font-size: 6rem;
         }
@@ -119,9 +139,15 @@
       top: -2rem;
       left: 50%;
       transform: translateX(-43.5%);
+
+      @media screen and (max-width: 1320px) {
+        top: -2rem;
+        left: unset;
+        transform: translateX(-16%);
+        scale: 0.8;
+      }
       @media screen and (max-width: 810px) {
         top: -6rem;
-        left: 0;
         transform: translateX(-50%);
         scale: 0.47;
       }
@@ -142,9 +168,12 @@
     .title {
       font-size: 9.6rem;
       line-height: 80%;
+      @media screen and (max-width: 1320px) {
+        font-size: 6.4rem;
+        white-space: nowrap;
+      }
       @media screen and (max-width: 810px) {
         font-size: 4rem;
-        white-space: nowrap;
       }
     }
 
@@ -152,10 +181,15 @@
       top: -2rem;
       left: 50%;
       transform: translateX(-49%);
+      @media screen and (max-width: 1320px) {
+        top: -4rem;
+        scale: 0.7;
+        left: 0%;
+        transform: translateX(-27%);
+      }
       @media screen and (max-width: 810px) {
         top: -5.5rem;
         scale: 0.4;
-        left: 0%;
         transform: translateX(-77%);
       }
     }
@@ -277,7 +311,7 @@
   &.our-family {
     padding: 26rem 6.4rem 9.6rem;
 
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       padding: 16rem 2rem 9.6rem;
     }
 
@@ -285,7 +319,7 @@
       line-height: 110%;
     }
     .preDescription {
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         font-size: 2rem;
         padding-bottom: 3rem;
       }
@@ -294,6 +328,11 @@
     .description {
       padding: 0 6.4rem;
       gap: 2rem;
+
+      @media screen and (max-width: 1320px) {
+        padding: 1rem 5rem 0;
+        text-align: center;
+      }
       @media screen and (max-width: 810px) {
         padding: 0;
       }
@@ -317,7 +356,12 @@
       top: -2rem;
       left: 50%;
       transform: translateX(-51%);
-
+      @media screen and (max-width: 1320px) {
+        scale: 0.7;
+        top: -3rem;
+        left: 0%;
+        transform: translateX(-21%);
+      }
       @media screen and (max-width: 810px) {
         scale: 0.5;
         top: -4rem;
@@ -329,6 +373,7 @@
 
   &.stardust-valley {
     padding: 12.8rem 6.4rem 0rem;
+
     @media screen and (max-width: 810px) {
       padding: 12.8rem 0rem 0rem;
     }
@@ -337,10 +382,13 @@
       line-height: 110%;
       font-size: 9.6rem;
 
-      @media screen and (max-width: 810px) {
-        font-size: 4rem;
+      @media screen and (max-width: 1320px) {
+        font-size: 6.4rem;
         white-space: nowrap;
         margin: 0 auto;
+      }
+      @media screen and (max-width: 810px) {
+        font-size: 4rem;
       }
     }
     .sparkles {
@@ -348,6 +396,13 @@
       top: -1rem;
       left: 50%;
       transform: translateX(-50%);
+
+      @media screen and (max-width: 1320px) {
+        scale: 0.7;
+        top: -2rem;
+        left: 0%;
+        transform: translateX(-25%);
+      }
 
       @media screen and (max-width: 810px) {
         scale: 0.5;
@@ -366,9 +421,12 @@
       font-size: 9.6rem;
       margin-bottom: 1.5rem;
 
+      @media screen and (max-width: 1320px) {
+        font-size: 6.4rem;
+        white-space: nowrap;
+      }
       @media screen and (max-width: 810px) {
         font-size: 4rem;
-        white-space: nowrap;
       }
     }
     .description {
@@ -382,6 +440,14 @@
       top: -3rem;
       left: 50%;
       transform: translateX(-51%);
+
+      @media screen and (max-width: 1320px) {
+        scale: 0.7;
+        top: -5rem;
+        left: 0%;
+        transform: translateX(-27%);
+      }
+
       @media screen and (max-width: 810px) {
         top: -7rem;
         left: 0%;

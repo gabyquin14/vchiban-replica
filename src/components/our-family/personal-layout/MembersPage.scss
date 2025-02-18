@@ -4,7 +4,11 @@
   overflow: hidden;
   padding: 25.4rem 9.6rem 17rem;
   box-sizing: border-box;
+  color: var(--light-text);
 
+  @media screen and (max-width: 1320px) {
+    padding: 16rem 6.4rem 80rem;
+  }
   @media screen and (max-width: 810px) {
     padding: 16rem 2.4rem 80rem;
   }
@@ -14,7 +18,7 @@
     .portrait-wrapper {
       top: -0.5rem;
       right: -27rem;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         bottom: -72rem;
         top: unset;
         right: unset;
@@ -25,11 +29,10 @@
   }
   &.aicandii {
     background-color: var(--candi-purple);
-
     .portrait-wrapper {
       top: 12rem;
       right: -20rem;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         bottom: -80rem;
         top: unset;
         right: unset;
@@ -45,7 +48,7 @@
       top: 15rem;
       right: -22rem;
       transform: scale(1.06);
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         bottom: -78rem;
         top: unset;
         right: unset;
@@ -60,7 +63,7 @@
     .portrait-wrapper {
       top: -9rem;
       right: -25rem;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         bottom: -60rem;
         top: unset;
         right: unset;
@@ -78,7 +81,7 @@
     z-index: 2;
     overflow: hidden;
 
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       width: 100rem;
       height: 161.9rem;
     }
@@ -97,11 +100,10 @@
   }
 
   .members-info {
-    color: var(--white);
     width: 45%;
     z-index: 2;
     position: relative;
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 1320px) {
       width: 100%;
     }
 
@@ -136,6 +138,9 @@
         line-height: 90%;
         display: inline-block;
 
+        @media screen and (max-width: 1320px) {
+          font-size: 9.6rem;
+        }
         @media screen and (max-width: 810px) {
           font-size: 6rem;
         }
@@ -144,6 +149,11 @@
         position: absolute;
         bottom: 2rem;
         right: 6rem;
+        @media screen and (max-width: 1320px) {
+          scale: 0.8;
+          bottom: 1rem;
+          right: -7rem;
+        }
         @media screen and (max-width: 810px) {
           scale: 0.5;
           bottom: -0.5rem;
@@ -155,6 +165,11 @@
         top: -3rem;
         right: 10rem;
 
+        @media screen and (max-width: 1320px) {
+          scale: 0.8;
+          top: -4.5rem;
+          right: -4rem;
+        }
         @media screen and (max-width: 810px) {
           scale: 0.5;
           top: -4.5rem;
@@ -165,6 +180,11 @@
         position: absolute;
         top: -3rem;
         left: -3rem;
+        @media screen and (max-width: 1320px) {
+          scale: 0.8;
+          top: -4rem;
+          left: -8rem;
+        }
         @media screen and (max-width: 810px) {
           scale: 0.45;
           top: -5rem;
@@ -173,35 +193,93 @@
       }
 
       &.shiabun .sparkles {
-        top: -5rem;
-        left: -11rem;
+        top: -2rem;
+        left: 0rem;
+        @media screen and (max-width: 1320px) {
+          scale: 0.75;
+          top: -4rem;
+          right: -1rem;
+          left: unset;
+        }
+        @media screen and (max-width: 810px) {
+          scale: 0.45;
+          top: -5rem;
+          left: -11rem;
+        }
       }
       &.shiabun .big-icon {
-        scale: 0.4;
-        top: -4rem;
+        top: -2rem;
         right: -4rem;
+        @media screen and (max-width: 1320px) {
+          scale: 0.7;
+          top: -3rem;
+        }
+        @media screen and (max-width: 810px) {
+          scale: 0.4;
+          top: -4rem;
+        }
       }
       &.shiabun .small-icon {
-        scale: 0.4;
-        top: 0.5rem;
-        right: -4.5rem;
+        bottom: 3rem;
+        right: -9rem;
+        @media screen and (max-width: 1320px) {
+          scale: 0.7;
+          top: 2.5rem;
+          right: -6.5rem;
+        }
+        @media screen and (max-width: 810px) {
+          scale: 0.4;
+          top: 0.5rem;
+          right: -4.5rem;
+        }
       }
       &.aicandii .sparkles {
-        top: -3rem;
-        left: -11rem;
+        top: -1rem;
+        left: -2rem;
+        @media screen and (max-width: 1320px) {
+          top: -2rem;
+          left: -6rem;
+        }
+        @media screen and (max-width: 810px) {
+          top: -3rem;
+          left: -11rem;
+        }
       }
       &.aicandii .big-icon {
-        scale: 0.4;
-        top: -4rem;
+        top: -3rem;
+        right: -3rem;
+        @media screen and (max-width: 1320px) {
+          top: -3rem;
+          right: -3rem;
+        }
+        @media screen and (max-width: 810px) {
+          top: -4rem;
+          right: -4rem;
+          scale: 0.4;
+        }
       }
       &.aicandii .small-icon {
-        scale: 0.45;
-        bottom: 0rem;
-        right: -5rem;
+        bottom: 3rem;
+        right: -10rem;
+        @media screen and (max-width: 1320px) {
+          scale: 0.8;
+          bottom: 2rem;
+          right: -8rem;
+        }
+        @media screen and (max-width: 810px) {
+          scale: 0.45;
+          bottom: 0rem;
+          right: -5rem;
+        }
       }
       &.rosedoodle .small-icon {
         bottom: 2.5rem;
         right: -6.5rem;
+        @media screen and (max-width: 1320px) {
+          scale: 0.65;
+          bottom: 2rem;
+          right: -5rem;
+        }
         @media screen and (max-width: 810px) {
           scale: 0.45;
           bottom: 0rem;
@@ -209,9 +287,12 @@
         }
       }
       &.rosedoodle .big-icon {
-        position: absolute;
         top: -3rem;
         right: -3rem;
+        @media screen and (max-width: 1320px) {
+          top: -4rem;
+          scale: 0.65;
+        }
         @media screen and (max-width: 810px) {
           scale: 0.45;
           top: -4rem;
@@ -219,15 +300,23 @@
         }
       }
       &.rosedoodle .sparkles {
-        top: -5rem;
-        left: -20rem;
+        @media screen and (max-width: 1320px) {
+          scale: 0.75;
+          bottom: 2rem;
+          left: -10rem;
+        }
+        @media screen and (max-width: 810px) {
+          scale: 0.45;
+          top: -5rem;
+          left: -20rem;
+        }
       }
     }
     .description {
       font-size: 1.8rem;
       font-weight: 800;
       margin-bottom: 2.4rem;
-      @media screen and (max-width: 810px) {
+      @media screen and (max-width: 1320px) {
         font-size: 1.6rem;
         margin: 1.8rem 0 2rem;
       }
@@ -347,7 +436,7 @@
       .paw1 {
         top: -20%;
         right: -23%;
-        @media screen and (max-width: 810px) {
+        @media screen and (max-width: 1320px) {
           right: -52rem;
           top: -12%;
         }
@@ -355,7 +444,7 @@
       .paw2 {
         bottom: 7%;
         left: -14%;
-        @media screen and (max-width: 810px) {
+        @media screen and (max-width: 1320px) {
           left: -36rem;
           bottom: 18%;
         }
@@ -363,6 +452,10 @@
       .bone1 {
         top: -15%;
         left: 8%;
+        @media screen and (max-width: 1320px) {
+          top: -11%;
+          left: -38%;
+        }
         @media screen and (max-width: 810px) {
           display: none;
         }
@@ -370,6 +463,11 @@
       .bone2 {
         bottom: -13%;
         right: -11%;
+        @media screen and (max-width: 1320px) {
+          top: unset;
+          right: -70%;
+          bottom: 10%;
+        }
         @media screen and (max-width: 810px) {
           display: none;
         }
@@ -377,12 +475,20 @@
     }
     &.shiabun {
       .spring1 {
-        top: -11%;
-        left: -60%;
+        top: -14%;
+        left: 0%;
+        @media screen and (max-width: 1320px) {
+          top: -11%;
+          left: -45%;
+        }
       }
       .spring2 {
         bottom: -32%;
         right: 0%;
+        @media screen and (max-width: 1320px) {
+          bottom: 4%;
+          right: -45%;
+        }
         @media screen and (max-width: 810px) {
           display: none;
         }
@@ -390,19 +496,31 @@
       .bunny1 {
         top: -5%;
         right: 2%;
+        @media screen and (max-width: 1320px) {
+          top: -4%;
+          right: -44%;
+        }
         @media screen and (max-width: 810px) {
           display: none;
         }
       }
       .bunny2 {
-        bottom: 24%;
-        left: -44%;
+        bottom: -24%;
+        left: 5%;
+        @media screen and (max-width: 1320px) {
+          bottom: 8%;
+          left: -35%;
+        }
       }
     }
     &.aicandii {
       .flask1 {
         top: 8%;
         left: 35%;
+        @media screen and (max-width: 1320px) {
+          top: 6%;
+          left: 26%;
+        }
         @media screen and (max-width: 810px) {
           top: 10%;
           left: unset;
@@ -412,6 +530,10 @@
       .flask2 {
         bottom: -9%;
         right: 19%;
+        @media screen and (max-width: 1320px) {
+          bottom: 10%;
+          right: -20%;
+        }
         @media screen and (max-width: 810px) {
           display: none;
         }
@@ -419,6 +541,10 @@
       .flask3 {
         bottom: -20%;
         left: 1%;
+        @media screen and (max-width: 1320px) {
+          bottom: 8%;
+          left: -25%;
+        }
         @media screen and (max-width: 810px) {
           display: none;
         }
@@ -426,6 +552,10 @@
       .card1 {
         top: 10%;
         left: -12%;
+        @media screen and (max-width: 1320px) {
+          top: 8%;
+          left: -49%;
+        }
         @media screen and (max-width: 810px) {
           top: 7%;
           left: -110%;
@@ -434,6 +564,10 @@
       .card2 {
         top: 14%;
         right: -9%;
+        @media screen and (max-width: 1320px) {
+          top: 10%;
+          right: -40%;
+        }
         @media screen and (max-width: 810px) {
           display: none;
         }
@@ -443,6 +577,9 @@
       .pencil1 {
         top: -5%;
         left: 0%;
+        @media screen and (max-width: 1320px) {
+          left: -10%;
+        }
         @media screen and (max-width: 810px) {
           top: -3%;
           left: -25%;
@@ -451,6 +588,10 @@
       .pencil2 {
         top: 13%;
         right: 14%;
+        @media screen and (max-width: 1320px) {
+          top: 10%;
+          right: -2%;
+        }
         @media screen and (max-width: 810px) {
           top: 9%;
           right: -62%;
@@ -459,13 +600,16 @@
       .thingy {
         top: 18%;
         right: 43%;
-        @media screen and (max-width: 810px) {
+        @media screen and (max-width: 1320px) {
           display: none;
         }
       }
       .icecream1 {
         bottom: -20%;
         left: -11%;
+        @media screen and (max-width: 1320px) {
+          bottom: -10%;
+        }
         @media screen and (max-width: 810px) {
           bottom: -15%;
           left: 30%;
@@ -476,6 +620,9 @@
       .icecream2 {
         bottom: -18%;
         right: -16%;
+        @media screen and (max-width: 1320px) {
+          bottom: -10%;
+        }
         @media screen and (max-width: 810px) {
           display: none;
         }
