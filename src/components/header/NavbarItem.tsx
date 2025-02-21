@@ -22,13 +22,17 @@ const NavbarItem: FC<NavItem> = ({ content, link }) => {
         <motion.div
           whileHover={{ scale: 1.1 }}
           transition={springTransition}
-          className="hover-motion blue"
+          className="hover-motion item-bg"
         />
 
         <div className="content-wrapper">
           <span className="content">{content}</span>
           {content.includes("family") && (
             <motion.div
+              initial={{
+                top: "0.5rem",
+                right: "1.4rem",
+              }}
               animate={{
                 top: isHover ? "0" : "0.5rem",
                 right: isHover ? "0" : "1.4rem",

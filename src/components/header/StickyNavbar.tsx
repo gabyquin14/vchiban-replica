@@ -5,25 +5,44 @@ import { useInView, motion, AnimatePresence } from "framer-motion";
 import Navbar from "./Navbar";
 import "./StickyNavbar.scss";
 import { springTransition } from "#/helpers/const-animations";
+import { usePathname } from "next/navigation";
 
 const StickyNavbar = () => {
   const navbarRef = useRef(null);
+  const pathname = usePathname();
+  const isInBio = pathname.startsWith("/our-family/");
+
+  // Detecta si la navbar principal está en vista
   const isNavbarInView = useInView(navbarRef, {
     amount: 0,
-    margin: "300px 0px 0px 0px",
+    margin: "400px 0px 0px 0px",
   });
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    setIsScrolled(!isNavbarInView);
+  }, [isNavbarInView]);
+
+  useEffect(() => {
+    if (isInBio) {
+      setIsScrolled(false);
+    }
+  }, [pathname]);
 
   return (
     <>
-      {/* Invisible div que detecta si el navbar original está en vista */}
-      <motion.div
-        ref={navbarRef}
-        className="navbar-placeholder navbar-desktop"
-      ></motion.div>
+      {!isInBio && (
+        <motion.div
+          ref={navbarRef}
+          className="navbar-placeholder navbar-desktop"
+        ></motion.div>
+      )}
 
       <AnimatePresence mode="wait">
-        {!isNavbarInView && (
+        {!isInBio && isScrolled && (
           <motion.div
+            key="sticky-navbar"
             className="navbar-fixed navbar-desktop"
             initial={{ opacity: 0, top: "-6rem", transform: "scale(0.9)" }}
             animate={{ opacity: 1, top: "-3rem", transform: "scale(1)" }}

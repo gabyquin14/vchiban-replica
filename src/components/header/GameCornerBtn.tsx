@@ -48,7 +48,7 @@ const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
           <ExclamationMark3 />
         </motion.div>
         <motion.div
-          className="hover-motion pink"
+          className="hover-motion gc-bg"
           whileHover={{ scale: 1.1 }}
           transition={springTransition}
         />
