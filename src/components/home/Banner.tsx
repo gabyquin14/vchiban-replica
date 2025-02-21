@@ -44,7 +44,11 @@ const floatingIcons = [
   { alt: "rose", icon: <ColoredRoseIcon />, animation: roseAnimation },
 ];
 
-const Banner = () => {
+interface BannerProps {
+  scrollToCreatorCard: () => void;
+}
+
+const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
   // State for mouse position and window dimensions
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [windowDimensions, setWindowDimensions] = useState({
@@ -146,7 +150,7 @@ const Banner = () => {
         </div>
 
         {/* Banner Button */}
-        <div className="see-more-btn-wrapper">
+        <div className="see-more-btn-wrapper" onClick={scrollToCreatorCard}>
           <BannerButton />
         </div>
       </div>
