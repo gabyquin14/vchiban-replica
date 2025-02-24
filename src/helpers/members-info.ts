@@ -38,25 +38,6 @@ export const vchibanStars = [
   },
   {
     image:
-      "https://framerusercontent.com/images/55Qn1oBCqHF6Ru0Fl8j5TolRYYE.png",
-    name: "rosedoodle",
-    twitch: "https://www.twitch.tv/rosedoodle",
-    twitter: "https://x.com/rosedoodles",
-    youtube: "https://www.youtube.com/c/rosedoodle",
-    tiktok: "https://www.tiktok.com/@rosedoodle_",
-    vchibanIcon:
-      "https://framerusercontent.com/images/8HR1brtaB3PFmcM4etpx3bPscK8.svg",
-    backgroundCard:
-      "https://framerusercontent.com/images/mU9z5bHnIYxq5yxEHrxvWGA.svg",
-    loreImg1:
-      "https://framerusercontent.com/images/xzRPLXELOrYiAmYMOlkSFSOin0.png",
-    loreImg2:
-      "https://framerusercontent.com/images/5eaIl6mYSzRWbaAqOpMjJ1iGM.png",
-    loreImg3:
-      "https://framerusercontent.com/images/8venqR7HQJlJ59n86I3HxeoZCc.jpg",
-  },
-  {
-    image:
       "https://framerusercontent.com/images/KdbRYrY97UvrNOAQ9m5UczABWM.png",
     name: "ShiaBun",
     twitch: "https://www.twitch.tv/shiabun",
@@ -73,5 +54,24 @@ export const vchibanStars = [
       "https://framerusercontent.com/images/7sYdT69GJK4nH0gn551JR1iOJAU.png",
     loreImg3:
       "https://framerusercontent.com/images/n2Ze1NzzBk7oIzFEzopxURSF6d4.png",
+  },
+  {
+    image:
+      "https://framerusercontent.com/images/55Qn1oBCqHF6Ru0Fl8j5TolRYYE.png",
+    name: "rosedoodle",
+    twitch: "https://www.twitch.tv/rosedoodle",
+    twitter: "https://x.com/rosedoodles",
+    youtube: "https://www.youtube.com/c/rosedoodle",
+    tiktok: "https://www.tiktok.com/@rosedoodle_",
+    vchibanIcon:
+      "https://framerusercontent.com/images/8HR1brtaB3PFmcM4etpx3bPscK8.svg",
+    backgroundCard:
+      "https://framerusercontent.com/images/mU9z5bHnIYxq5yxEHrxvWGA.svg",
+    loreImg1:
+      "https://framerusercontent.com/images/xzRPLXELOrYiAmYMOlkSFSOin0.png",
+    loreImg2:
+      "https://framerusercontent.com/images/5eaIl6mYSzRWbaAqOpMjJ1iGM.png",
+    loreImg3:
+      "https://framerusercontent.com/images/8venqR7HQJlJ59n86I3HxeoZCc.jpg",
   },
 ];
