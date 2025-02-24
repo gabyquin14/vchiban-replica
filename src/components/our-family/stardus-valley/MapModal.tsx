@@ -4,7 +4,6 @@ import Image from "next/image";
 import { ModalInfoInterface } from "#/helpers/lore-modal-info";
 import Exit from "#/assets/svg/exit";
 import { motion } from "framer-motion";
-import { springTransition } from "#/helpers/const-animations";
 
 interface ModalProps {
   info: ModalInfoInterface;
