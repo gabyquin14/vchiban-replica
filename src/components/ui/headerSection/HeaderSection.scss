@@ -94,14 +94,13 @@
         scale: 0.8;
         top: -4.5rem;
         left: unset;
-        right: 0;
-        transform: translateX(15%);
+        right: unset;
+        transform: translateX(-16%);
       }
       @media screen and (max-width: 810px) {
+        scale: 0.5;
         top: -7rem;
-        left: unset;
-        right: 0;
-        transform: translateX(26%) scale(0.5);
+        transform: translateX(-54%);
       }
     }
   }

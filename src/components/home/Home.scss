@@ -78,7 +78,7 @@
     .buffpup {
       top: 0;
       left: -33%;
-      transform: rotate(-6deg);
+      rotate: -6deg;
       @media screen and (max-width: 1320px) {
         top: 16rem;
         left: -5%;
@@ -103,7 +103,8 @@
     .shiabun {
       top: -2rem;
       right: -5%;
-      transform: scale(1.1) rotate(2deg);
+      scale: 1.1;
+      rotate: 2deg;
       @media screen and (max-width: 1320px) {
         top: 16rem;
         right: 14rem;
@@ -116,7 +117,8 @@
     .rosedoodle {
       top: -2rem;
       right: -38%;
-      transform: scale(1.05) rotate(8deg);
+      scale: 1.05;
+      rotate: 8deg;
       z-index: 3;
       @media screen and (max-width: 1320px) {
         top: 16rem;

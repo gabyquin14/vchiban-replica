@@ -1,13 +1,7 @@
 "use client";
 
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-  useTransform,
-  Variant,
-} from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import React from "react";
 import Image from "next/image";
 
 // Assets & Icons
@@ -15,19 +9,12 @@ import Sparkles from "#/assets/svg/sparkles/sparkles";
 import House from "#/assets/svg/house";
 import BlueExclMark1 from "#/assets/svg/home/blue-excl-1";
 import BlueExclMark2 from "#/assets/svg/home/blue-excl-2";
-import ColoredBuffIcon from "#/assets/svg/colored-buff-icon";
-import ColoredCandiIcon from "#/assets/svg/colored-candi-icon";
-import ColoredShiaIcon from "#/assets/svg/colored-shia-icon";
-import ColoredRoseIcon from "#/assets/svg/colored-rose-icon";
 
-// Helpers & Data
-import {
-  buffAnimation,
-  candiAnimation,
-  roseAnimation,
-  shiaAnimation,
-} from "#/helpers/const-animations";
+// Helpers
+import { floatingIcons } from "#/helpers/home-banner";
+import { useMouseParallax } from "#/hooks/useMouseParallax";
 import { vchibanStars } from "#/helpers/members-info";
+import useAnimationDelay from "#/hooks/useAnimationDelay";
 
 // Components
 import HeaderSection from "../ui/headerSection/HeaderSection";
@@ -37,78 +24,15 @@ import DraggableSticker from "../ui/draggableSticker/DraggableSticker";
 // Styles
 import "./Home.scss";
 
-const floatingIcons = [
-  { alt: "buff", icon: <ColoredBuffIcon />, animation: buffAnimation },
-  { alt: "candi", icon: <ColoredCandiIcon />, animation: candiAnimation },
-  { alt: "shia", icon: <ColoredShiaIcon />, animation: shiaAnimation },
-  { alt: "rose", icon: <ColoredRoseIcon />, animation: roseAnimation },
-];
-
 interface BannerProps {
   scrollToCreatorCard: () => void;
 }
 
 const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
-  // State for mouse position and window dimensions
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [windowDimensions, setWindowDimensions] = useState({
-    width: 0,
-    height: 0,
-  });
+  const { handleMouseMove, houseX, houseY, exclMarkX, exclMarkY } =
+    useMouseParallax();
 
-  // Motion values for animations
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const smoothX = useSpring(x, { stiffness: 100, damping: 14 });
-  const smoothY = useSpring(y, { stiffness: 100, damping: 14 });
-  const houseSmoothX = useSpring(x, { stiffness: 100, damping: 40 });
-  const houseSmoothY = useSpring(y, { stiffness: 100, damping: 40 });
-
-  // Handle window resize
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () =>
-        setWindowDimensions({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      handleResize();
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }
-  }, []);
-
-  // Parallax transformations
-  const houseX = useTransform(
-    houseSmoothX,
-    [0, windowDimensions.width],
-    [-15, 15]
-  );
-  const houseY = useTransform(
-    houseSmoothY,
-    [0, windowDimensions.height],
-    [-15, 15]
-  );
-  const exclMarkX = useTransform(
-    smoothX,
-    [0, windowDimensions.width],
-    [-10, 10]
-  );
-  const exclMarkY = useTransform(
-    smoothY,
-    [0, windowDimensions.height],
-    [-10, 10]
-  );
-
-  // Mouse movement handler
-  const handleMouseMove = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    const { clientX, clientY } = event;
-    setMousePos({ x: clientX, y: clientY });
-    x.set(clientX);
-    y.set(clientY);
-  };
+  const animate = useAnimationDelay(0);
 
   return (
     <section
@@ -117,7 +41,6 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
       onMouseMove={handleMouseMove}
     >
       <div className="banner-wrapper">
-        {/* Header Section */}
         <HeaderSection
           as="header"
           title="FOUND FAMILY <br />INDIE GROUP."
@@ -125,15 +48,40 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
           customStyles="banner"
         />
 
-        {/* Team Members */}
         <div className="team-members">
           <div className="members-wrapper">
-            <ul className="stars-list" role="list" aria-label="Team members">
-              {vchibanStars.map(({ name, image }) => (
-                <li
+            <motion.ul
+              className="stars-list"
+              role="list"
+              aria-label="Team members"
+              initial="hidden"
+              animate={animate ? "visible" : "hidden"}
+              variants={{
+                hidden: {
+                  opacity: 0,
+                },
+                visible: {
+                  opacity: 1,
+                  transition: {
+                    staggerChildren: 0.1,
+                  },
+                },
+              }}
+            >
+              {vchibanStars.map(({ name, image }, index) => (
+                <motion.li
                   key={name}
                   className={`star-portrait ${name.toLowerCase()}`}
                   aria-label={`Portrait of ${name}`}
+                  initial={{ opacity: 0, y: 300 }}
+                  animate={
+                    animate ? { opacity: 1, y: 0 } : { opacity: 0, y: 300 }
+                  }
+                  transition={{
+                    duration: 0.8,
+                    delay: index * 0.1,
+                    ease: [0, 0.71, 0.2, 1.01],
+                  }}
                 >
                   <Image
                     src={image}
@@ -143,19 +91,17 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
                     width={791}
                     height={1274}
                   />
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
           </div>
         </div>
 
-        {/* Banner Button */}
         <div className="see-more-btn-wrapper" onClick={scrollToCreatorCard}>
           <BannerButton />
         </div>
       </div>
 
-      {/* Background Graphics */}
       <div className="bg-wrapper">
         <div className="bg-svgs">
           <motion.div className="house" style={{ x: houseX, y: houseY }}>
@@ -171,18 +117,35 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
         </div>
       </div>
 
-      {/* Floating Icons */}
-      <div className="floating-icons">
-        {floatingIcons.map(({ alt, icon, animation }) => (
-          <DraggableSticker
+      <motion.div
+        className="floating-icons"
+        initial={{ opacity: 0 }}
+        animate={animate ? { opacity: 1 } : { opacity: 0 }}
+        transition={{
+          duration: 0.5,
+          delay: 0.5,
+        }}
+      >
+        {floatingIcons.map(({ alt, icon, animation }, index) => (
+          <motion.div
             key={alt}
-            alt={alt}
-            floatAnimation={animation as Variant}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={
+              animate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
+            }
+            transition={{
+              duration: 0.3,
+              delay: index * 0.1 + 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            className={alt}
           >
-            {icon}
-          </DraggableSticker>
+            <DraggableSticker alt={alt} floatAnimation={animation}>
+              {icon}
+            </DraggableSticker>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
