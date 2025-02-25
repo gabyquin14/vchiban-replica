@@ -12,11 +12,11 @@ import {
   shiaAnimation,
 } from "#/helpers/const-animations";
 
-export const floatingIcons: {
+export const floatingIcons: Array<{
   alt: string;
   icon: JSX.Element;
   animation: Variant;
-}[] = [
+}> = [
   {
     alt: "buff",
     icon: <ColoredBuffIcon />,
