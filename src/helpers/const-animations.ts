@@ -1,5 +1,3 @@
-import { Variant } from "framer-motion";
-
 export const springTransition = {
   type: "spring",
   stiffness: 400,
@@ -65,7 +63,7 @@ export const excl3 = {
 };
 
 //Banner members stickers animations
-export const buffAnimation: Variant = {
+export const buffAnimation = {
   x: [0, 20, 0],
   y: [0, -20, 0],
   rotate: [0, -5, 0],
@@ -76,7 +74,7 @@ export const buffAnimation: Variant = {
   },
 };
 
-export const candiAnimation: Variant = {
+export const candiAnimation = {
   x: [0, -25, 0],
   y: [0, -10, 0],
   rotate: [0, 15, 0],
@@ -87,7 +85,7 @@ export const candiAnimation: Variant = {
   },
 };
 
-export const shiaAnimation: Variant = {
+export const shiaAnimation = {
   x: [0, 20, 0],
   y: [0, -20, 0],
   rotate: [0, 15, 0],
@@ -98,7 +96,7 @@ export const shiaAnimation: Variant = {
   },
 };
 
-export const roseAnimation: Variant = {
+export const roseAnimation = {
   x: [0, -20, 0],
   y: [0, -20, 0],
   rotate: [0, -5, 0],
