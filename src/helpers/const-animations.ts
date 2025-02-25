@@ -70,7 +70,7 @@ export const buffAnimation = {
   transition: {
     duration: 8,
     repeat: Infinity,
-    repeatType: "mirror" as "mirror",
+    repeatType: "mirror",
   },
 };
 
@@ -81,7 +81,7 @@ export const candiAnimation = {
   transition: {
     duration: 8,
     repeat: Infinity,
-    repeatType: "mirror" as "mirror",
+    repeatType: "mirror",
   },
 };
 
@@ -92,7 +92,7 @@ export const shiaAnimation = {
   transition: {
     duration: 4,
     repeat: Infinity,
-    repeatType: "mirror" as "mirror",
+    repeatType: "mirror",
   },
 };
 
@@ -103,6 +103,6 @@ export const roseAnimation = {
   transition: {
     duration: 6,
     repeat: Infinity,
-    repeatType: "mirror" as "mirror",
+    repeatType: "mirror",
   },
 };
