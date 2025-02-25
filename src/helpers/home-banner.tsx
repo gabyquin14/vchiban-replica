@@ -12,13 +12,29 @@ import {
   shiaAnimation,
 } from "#/helpers/const-animations";
 
-export const floatingIcons: {
+export const floatingIcons: Array<{
   alt: string;
   icon: JSX.Element;
   animation: Variant;
-}[] = [
-  { alt: "buff", icon: <ColoredBuffIcon />, animation: buffAnimation },
-  { alt: "candi", icon: <ColoredCandiIcon />, animation: candiAnimation },
-  { alt: "shia", icon: <ColoredShiaIcon />, animation: shiaAnimation },
-  { alt: "rose", icon: <ColoredRoseIcon />, animation: roseAnimation },
+}> = [
+  {
+    alt: "buff",
+    icon: <ColoredBuffIcon />,
+    animation: buffAnimation as Variant,
+  },
+  {
+    alt: "candi",
+    icon: <ColoredCandiIcon />,
+    animation: candiAnimation as Variant,
+  },
+  {
+    alt: "shia",
+    icon: <ColoredShiaIcon />,
+    animation: shiaAnimation as Variant,
+  },
+  {
+    alt: "rose",
+    icon: <ColoredRoseIcon />,
+    animation: roseAnimation as Variant,
+  },
 ];

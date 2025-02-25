@@ -1,3 +1,4 @@
+"use client";
 import "./Animations.scss";
 import SparklesAnimation from "#/assets/svg/sparkles/sparkles-animation";
 import VideoCard from "../../components/animations/VideoCard";
