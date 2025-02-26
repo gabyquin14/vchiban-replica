@@ -237,7 +237,7 @@
       width: 520px;
       height: 468px;
       z-index: 0;
-      transform: rotate(-3deg);
+      rotate: -3deg;
       border-radius: 1.6rem;
 
       @media screen and (max-width: 1080px) {
@@ -281,7 +281,7 @@
       width: 513px;
       height: 460px;
       z-index: 0;
-      transform: rotate(2deg);
+      rotate: 2deg;
       border-radius: 1.6rem;
 
       @media screen and (max-width: 1080px) {

@@ -8,8 +8,11 @@ import CineStrip2 from "#/assets/svg/animations/cine-strip-2";
 import CineStrip3 from "#/assets/svg/animations/cine-strip-3";
 import CineStrip4 from "#/assets/svg/animations/cine-strip-4";
 import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
+import { motion } from "framer-motion";
+import useAnimationDelay from "#/hooks/useAnimationDelay";
 
 const Animations = () => {
+  const animate = useAnimationDelay(0);
   const animationsLinks = [
     {
       title: "Buffpup's First Cover Song",
@@ -75,9 +78,21 @@ const Animations = () => {
 
       <section className="videos-list">
         {animationsLinks.map((link) => (
-          <article key={link.title}>
+          <motion.article
+            key={link.title}
+            className="video-wrapper"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={
+              animate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+            }
+            transition={{
+              duration: 0.8,
+              delay: 0.1,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
             <VideoCard key={link.videoId} link={link} />
-          </article>
+          </motion.article>
         ))}
         <CineStrip4 className="strip4" />
       </section>
