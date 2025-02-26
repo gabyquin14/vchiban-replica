@@ -17,7 +17,7 @@ const CreatorCard: FC = () => {
   const animate = useAnimationDelay(0);
 
   return (
-    <section style={{ position: "relative" }}>
+    <section className="creator-card__container">
       <motion.div
         className="creator-card"
         initial={{ opacity: 0 }}

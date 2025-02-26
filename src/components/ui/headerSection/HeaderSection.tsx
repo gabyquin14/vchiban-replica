@@ -58,7 +58,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            delay: delay / 0.6,
+            delay: delay + 0.3,
             type: "spring",
             stiffness: 180,
             damping: 30,
@@ -74,7 +74,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            delay: delay / 0.5,
+            delay: delay + 0.4,
             type: "spring",
             stiffness: 180,
             damping: 30,

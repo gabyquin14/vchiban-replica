@@ -174,10 +174,9 @@
 
     .home-vchiban {
       width: 100%;
+      max-width: 95rem;
       height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      margin: 0 auto;
       padding: 2rem;
       @media screen and (max-width: 810px) {
         padding: 0 2rem;

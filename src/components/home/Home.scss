@@ -247,5 +247,25 @@
     svg {
       filter: drop-shadow(rgba(10, 5, 73, 0.24) 0px 8px 24px);
     }
+    .buff {
+      position: absolute;
+      top: 30%;
+      left: 4%;
+    }
+    .candi {
+      position: absolute;
+      top: 18%;
+      left: 15%;
+    }
+    .shia {
+      position: absolute;
+      top: 24%;
+      right: 12%;
+    }
+    .rose {
+      position: absolute;
+      top: 42%;
+      right: 4%;
+    }
   }
 }

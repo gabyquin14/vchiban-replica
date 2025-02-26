@@ -9,7 +9,7 @@ import { loreModalInfo } from "#/helpers/lore-modal-info";
 import LoreBtnMap from "./LoreBtnMap";
 import MapModal from "./MapModal";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const StardustValley = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -27,7 +27,16 @@ const StardustValley = () => {
   return (
     <div className="stardust-valley">
       <StardustBg className="swirly-bg" />
-      <div className="map-wrapper">
+      <motion.div
+        className="map-wrapper"
+        initial={{ opacity: 0, scale: 0.8, y: 20, rotate: -4 }}
+        animate={{ opacity: 1, scale: 1, y: 0, rotate: 0 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.2,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
         <Image
           alt="stardust valley map"
           src="https://framerusercontent.com/images/p0JPnRnLDU3UWOIzaNKSLU288c.png"
@@ -54,7 +63,7 @@ const StardustValley = () => {
 
         <BigStamp className="big-stamp" />
         <SmallStamp className="small-stamp" />
-      </div>
+      </motion.div>
     </div>
   );
 };

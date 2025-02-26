@@ -29,10 +29,12 @@ export const useMouseParallax = () => {
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
-  const smoothX = useSpring(x, { stiffness: 100, damping: 14 });
-  const smoothY = useSpring(y, { stiffness: 100, damping: 14 });
+  const smoothX = useSpring(x, { stiffness: 100, damping: 40 });
+  const smoothY = useSpring(y, { stiffness: 100, damping: 40 });
   const houseSmoothX = useSpring(x, { stiffness: 100, damping: 40 });
   const houseSmoothY = useSpring(y, { stiffness: 100, damping: 40 });
+  const membersSmoothX = useSpring(x, { stiffness: 300, damping: 80 });
+  const membersSmoothY = useSpring(y, { stiffness: 300, damping: 80 });
 
   const houseX = useTransform(
     houseSmoothX,
@@ -43,6 +45,16 @@ export const useMouseParallax = () => {
     houseSmoothY,
     [0, windowDimensions.height],
     [-15, 15]
+  );
+  const membersX = useTransform(
+    membersSmoothX,
+    [0, windowDimensions.width],
+    [-50, 50]
+  );
+  const membersY = useTransform(
+    membersSmoothY,
+    [0, windowDimensions.height],
+    [-20, 20]
   );
   const exclMarkX = useTransform(
     smoothX,
@@ -63,5 +75,13 @@ export const useMouseParallax = () => {
     y.set(clientY);
   };
 
-  return { handleMouseMove, houseX, houseY, exclMarkX, exclMarkY };
+  return {
+    handleMouseMove,
+    houseX,
+    houseY,
+    exclMarkX,
+    exclMarkY,
+    membersX,
+    membersY,
+  };
 };
