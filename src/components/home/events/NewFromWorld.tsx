@@ -30,19 +30,40 @@ const NewFromWorldVchiban: FC = () => {
         }
         customStyles="new-projects"
         headingLevel="h2"
+        delay={0}
       />
 
       <div className="event-list">
-        <EventCard
-          imageSrc="https://framerusercontent.com/images/SBHjYQFNnH5D1U2nNJF8bBR8uSY.png"
-          altText="VchiBanter Podcast!"
-          title="VchiBanter Podcast Out Now!"
-        />
-        <EventCard
-          imageSrc="https://framerusercontent.com/images/dBfSWjP3Lgv1jH9QGez6azCAmos.jpg"
-          altText="Gooba Ball"
-          title="Play Gooba Ball"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.3,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
+          <EventCard
+            imageSrc="https://framerusercontent.com/images/SBHjYQFNnH5D1U2nNJF8bBR8uSY.png"
+            altText="VchiBanter Podcast!"
+            title="VchiBanter Podcast Out Now!"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
+          <EventCard
+            imageSrc="https://framerusercontent.com/images/dBfSWjP3Lgv1jH9QGez6azCAmos.jpg"
+            altText="Gooba Ball"
+            title="Play Gooba Ball"
+          />
+        </motion.div>
       </div>
 
       <Spring1 className="spring-1" />
