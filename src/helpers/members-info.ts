@@ -75,3 +75,24 @@ export const vchibanStars = [
       "https://framerusercontent.com/images/8venqR7HQJlJ59n86I3HxeoZCc.jpg",
   },
 ];
+
+export const endeavors = [
+  {
+    title: "Games",
+    img: "https://framerusercontent.com/images/tZn0Ml3CD1UtGfNJgC5xXrk01pE.jpg",
+    btnText: "play now",
+    icon: "https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg",
+  },
+  {
+    title: "Merch",
+    img: "https://framerusercontent.com/images/nyHiTFwhvV1BwUOwDuBUrOZTA.png",
+    btnText: "view merch",
+    icon: "https://framerusercontent.com/images/cx8wHmlKBcVwCZSMFNRz7ZE.svg",
+  },
+  {
+    title: "Events",
+    img: "https://framerusercontent.com/images/Oniq6Ilkfg3uldP14tnYY1KWso.png",
+    btnText: "see events",
+    icon: "https://framerusercontent.com/images/57YdWeGgVZbcT0ajkrGCZOXFeA.svg",
+  },
+];

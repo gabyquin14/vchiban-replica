@@ -13,6 +13,7 @@ interface HeaderSectionProps {
   SparklesComponent?: React.ElementType;
   customStyles?: string;
   children?: JSX.Element | JSX.Element[];
+  delay?: number;
 }
 
 const HeaderSection: React.FC<HeaderSectionProps> = ({
@@ -24,6 +25,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
   SparklesComponent,
   customStyles = "",
   children,
+  delay = 0.5,
 }) => {
   const animate = useAnimationDelay(0);
 
@@ -36,7 +38,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
           animate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
         }
         transition={{
-          delay: 0.5,
+          delay: delay,
           type: "spring",
           stiffness: 180,
           damping: 30,
@@ -56,7 +58,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            delay: 0.7,
+            delay: delay + 0.3,
             type: "spring",
             stiffness: 180,
             damping: 30,
@@ -72,7 +74,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            delay: 1,
+            delay: delay + 0.4,
             type: "spring",
             stiffness: 180,
             damping: 30,

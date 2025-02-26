@@ -18,9 +18,14 @@ import TogetherExcl1 from "#/assets/svg/our-family/together-excl-1";
 import TogetherExcl2 from "#/assets/svg/our-family/together-excl-2";
 import TogetherExcl3 from "#/assets/svg/our-family/together-excl-3";
 import OurFamilyBanner from "#/components/our-family/banner/OurFamilyBanner";
+import { motion } from "framer-motion";
+import useAnimationDelay from "#/hooks/useAnimationDelay";
+import { endeavors } from "#/helpers/members-info";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const OurFamily = () => {
+  const animate = useAnimationDelay(0);
+
   return (
     <div className="family">
       <OurFamilyBanner />
@@ -31,6 +36,7 @@ const OurFamily = () => {
             title="STARDUST VALLEY."
             SparklesComponent={SparklesStardustValley}
             customStyles="stardust-valley"
+            delay={0}
           />
           <StardustValley />
         </div>
@@ -42,7 +48,16 @@ const OurFamily = () => {
           VchiBan COFFEE, and found themselves faced with a new reality.
         </p>
 
-        <div className="home-vchiban">
+        <motion.div
+          className="home-vchiban"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.2,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <ReactPlayer
             url={`https://www.youtube.com/embed/4CxlS6IYnFM&t?autoplay=1&rel=0&modestbranding=1&playsinline=1&color=white`}
             controls={true}
@@ -50,7 +65,7 @@ const OurFamily = () => {
             height="100%"
             className="video"
           />
-        </div>
+        </motion.div>
 
         <div className="description">
           <p>
@@ -79,15 +94,39 @@ const OurFamily = () => {
         <h2 className="became-family-title">
           They became a family; they became <span>VchiBan.</span>
         </h2>
-        <div className="rainbow-showcase">
+        <motion.div
+          className="rainbow-showcase"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 1,
+            delay: 0.4,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <MembersRaibow />
           <BuffpupIcon className="buff" />
           <AicandiiIcon className="candii" />
           <RoseIcon className="rose" />
           <ShiabunIcon className="shia" />
-        </div>
+        </motion.div>
       </div>
-      <div className="endeavors">
+      <motion.div
+        className="endeavors"
+        initial="hidden"
+        animate={animate ? "visible" : "hidden"}
+        variants={{
+          hidden: {
+            opacity: 0,
+          },
+          visible: {
+            opacity: 1,
+            transition: {
+              staggerChildren: 0.5,
+            },
+          },
+        }}
+      >
         <HeaderSection
           as="div"
           title="BETTER TOGETHER, <br/> NOW AND FOREVER."
@@ -100,75 +139,55 @@ const OurFamily = () => {
           }
           SparklesComponent={SparklesBetterTogether}
           customStyles="better-together"
+          delay={0}
         />
-        <div className="endeavors__list">
-          <div className="container">
-            <div className="image-wrapper">
-              <Image
-                alt="games"
-                src="https://framerusercontent.com/images/tZn0Ml3CD1UtGfNJgC5xXrk01pE.jpg"
-                width={676}
-                height={136}
-                className="bg-img"
-              />
-            </div>
-            <div className="type-of-endeavor">
-              <h3>Games</h3>
-              <SpringButton
-                firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
-                SecondIcon={ChevronRight}
-                isTransitionBouncy={true}
-                text="play now"
-              />
-            </div>
-          </div>
-          <div className="container">
-            <div className="image-wrapper">
-              <Image
-                alt="games"
-                src="https://framerusercontent.com/images/nyHiTFwhvV1BwUOwDuBUrOZTA.png"
-                width={676}
-                height={136}
-                className="bg-img"
-              />
-            </div>
-            <div className="type-of-endeavor">
-              <h3>Merch</h3>
-
-              <SpringButton
-                firstIcon="https://framerusercontent.com/images/cx8wHmlKBcVwCZSMFNRz7ZE.svg"
-                SecondIcon={ChevronRight}
-                isTransitionBouncy={true}
-                text="view merch"
-              />
-            </div>
-          </div>
-          <div className="container">
-            <div className="image-wrapper">
-              <Image
-                alt="games"
-                src="https://framerusercontent.com/images/Oniq6Ilkfg3uldP14tnYY1KWso.png"
-                width={676}
-                height={136}
-                className="bg-img"
-              />
-            </div>
-            <div className="type-of-endeavor">
-              <h3>Events</h3>
-
-              <SpringButton
-                firstIcon="https://framerusercontent.com/images/57YdWeGgVZbcT0ajkrGCZOXFeA.svg"
-                SecondIcon={ChevronRight}
-                isTransitionBouncy={true}
-                text="see events"
-              />
-            </div>
-          </div>
-        </div>
+        <motion.div
+          className="endeavors__list"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            delay: 0.4,
+            ease: "easeOut",
+          }}
+        >
+          {endeavors.map(({ title, img, btnText, icon }, index) => (
+            <motion.div
+              className="container"
+              key={index}
+              initial={{ opacity: 0, scale: 0.7 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.6,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+            >
+              <div className="image-wrapper">
+                <Image
+                  alt={title}
+                  src={img}
+                  width={676}
+                  height={136}
+                  className="bg-img"
+                />
+              </div>
+              <div className="type-of-endeavor">
+                <h3>{title}</h3>
+                <SpringButton
+                  firstIcon={icon}
+                  SecondIcon={ChevronRight}
+                  isTransitionBouncy
+                  text={btnText}
+                />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
         <TogetherExcl1 className="excl-1" />
         <TogetherExcl2 className="excl-2" />
         <TogetherExcl3 className="excl-3" />
-      </div>
+      </motion.div>
       <FooterSeparator />
     </div>
   );

@@ -19,9 +19,19 @@ const NewInGamerCorner = () => {
         SparklesComponent={SparklesNewInGameCorner}
         customStyles="new-game-corner"
         headingLevel="h2"
+        delay={0}
       />
 
-      <div className="game-wrapper">
+      <motion.div
+        className="game-wrapper"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.5,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+      >
         <div className="gooba-ball-main-img">
           <Image
             alt="gooba-ball"
@@ -86,7 +96,7 @@ const NewInGamerCorner = () => {
             height={153}
           />
         </motion.div>
-      </div>
+      </motion.div>
 
       <GameExcl1 className="excl-1" />
       <GameExcl2 className="excl-2" />

@@ -9,92 +9,45 @@ import ShiabunSilhouette from "#/assets/svg/our-family/shiabun-silhouette";
 import SparklesOurFamily from "#/assets/svg/sparkles/sparkles-our-family";
 import HeaderSection from "#/components/ui/headerSection/HeaderSection";
 import { springTransition } from "#/helpers/const-animations";
-import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { useMouseParallax } from "#/hooks/useMouseParallax";
 
 const OurFamilyBanner = () => {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [windowDimensions, setWindowDimensions] = useState({
-    width: 0,
-    height: 0,
-  });
+  const {
+    handleMouseMove,
+    houseX,
+    houseY,
+    exclMarkX,
+    exclMarkY,
+    membersX,
+    membersY,
+  } = useMouseParallax();
 
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const smoothX = useSpring(x, { stiffness: 100, damping: 14 });
-  const smoothY = useSpring(y, { stiffness: 100, damping: 14 });
-  const smoothMembersX = useSpring(x, { stiffness: 300, damping: 30 });
-  const smoothMembersY = useSpring(y, { stiffness: 300, damping: 30 });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () => {
-        setWindowDimensions({
-          width: window.innerWidth,
-          height: window.innerHeight,
-        });
-      };
-
-      handleResize();
-      window.addEventListener("resize", handleResize);
-
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
-
-  const houseX = useTransform(smoothX, [0, windowDimensions?.width], [-5, 5]);
-  const houseY = useTransform(smoothY, [0, windowDimensions?.height], [-5, 5]);
-  const membersX = useTransform(
-    smoothMembersX,
-    [0, windowDimensions?.width],
-    [-15, 15]
-  );
-  const membersY = useTransform(
-    smoothMembersY,
-    [0, windowDimensions?.height],
-    [-15, 15]
-  );
-
-  const exclMarkX = useTransform(
-    smoothX,
-    [0, windowDimensions?.width],
-    [-5, 5]
-  );
-  const exclMarkY = useTransform(
-    smoothY,
-    [0, windowDimensions?.height],
-    [-5, 5]
-  );
-
-  const handleMouse = (event: React.MouseEvent) => {
-    const { clientX, clientY } = event;
-    setMousePos({ x: clientX, y: clientY });
-    x.set(clientX);
-    y.set(clientY);
-  };
-
-  const familyDescription = () => {
-    return (
-      <>
-        <span>Wait, but really.</span>
-        <span className="stars">
-          <span>Buffpup</span>, <span>AiCandii</span>, <span>rosedoodle</span>,
-          and <span>ShiaBun</span> — each came from a very different part of
-          Stardust Valley, some even hailing from outside the city proper. But
-          while each had their responsibilities, their hopes, and their goals…
-          Something was missing.
-        </span>
-      </>
-    );
-  };
+  const silhouettes = [
+    { Component: ShiabunSilhouette, className: "shia" },
+    { Component: RoseSilhouette, className: "rose" },
+    { Component: AicandiiSilhouette, className: "candii" },
+    { Component: BuffpupSilhouette, className: "buff" },
+  ];
 
   const [isHover, setIsHover] = useState(false);
 
+  const familyDescription = () => (
+    <>
+      <span>Wait, but really.</span>
+      <span className="stars">
+        <span>Buffpup</span>, <span>AiCandii</span>, <span>rosedoodle</span>,
+        and <span>ShiaBun</span> — each came from a very different part of
+        Stardust Valley, some even hailing from outside the city proper. But
+        while each had their responsibilities, their hopes, and their goals…
+        Something was missing.
+      </span>
+    </>
+  );
+
   return (
-    <div className="family__banner" onMouseMove={handleMouse}>
+    <div className="family__banner" onMouseMove={handleMouseMove}>
       <HeaderSection
         as="header"
         title="OUR FAMILY."
@@ -104,17 +57,39 @@ const OurFamilyBanner = () => {
         customStyles="our-family"
       />
 
-      {/* Background images tracking mouse movement */}
       <motion.div className="excl-marks" style={{ x: exclMarkX, y: exclMarkY }}>
         <BannerExcl1 className="excl-1" />
         <BannerExcl2 className="excl-2" />
       </motion.div>
 
-      <motion.div className="members" style={{ x: membersX, y: membersY }}>
-        <ShiabunSilhouette className="shia" />
-        <RoseSilhouette className="rose" />
-        <AicandiiSilhouette className="candii" />
-        <BuffpupSilhouette className="buff" />
+      <motion.div
+        className="members"
+        initial="hidden"
+        animate="visible"
+        style={{ x: membersX, y: membersY }}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.1 },
+          },
+        }}
+      >
+        {silhouettes.map(({ Component, className }, index) => (
+          <motion.div
+            key={className}
+            className={className}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: index * 0.1,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
+            <Component />
+          </motion.div>
+        ))}
       </motion.div>
 
       <motion.div className="house" style={{ x: houseX, y: houseY }}>
