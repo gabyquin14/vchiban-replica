@@ -85,3 +85,22 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--navy-blue-main);
 }
+
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  /* Nueva propiedad: clip-path */
+  clip-path: circle(0% at 50% 50%);
+  animation: reveal 0.5s ease-in-out forwards;
+}
+
+@keyframes reveal {
+  to {
+    /* Expandir el círculo al 100% */
+    clip-path: circle(100% at 50% 50%);
+  }
+}
