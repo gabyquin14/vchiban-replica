@@ -137,13 +137,13 @@
 
   .bg-wrapper {
     width: 100%;
-    height: fit-content;
+    height: 100%;
     position: absolute;
     z-index: -1;
 
     .bg-svgs {
       position: relative;
-      height: calc(100vh + 32rem);
+      height: 100%;
     }
 
     .house {
