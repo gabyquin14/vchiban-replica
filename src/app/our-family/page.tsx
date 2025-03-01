@@ -21,6 +21,7 @@ import OurFamilyBanner from "#/components/our-family/banner/OurFamilyBanner";
 import { motion } from "framer-motion";
 import useAnimationDelay from "#/hooks/useAnimationDelay";
 import { endeavors } from "#/helpers/members-info";
+import { useEffect } from "react";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const OurFamily = () => {
