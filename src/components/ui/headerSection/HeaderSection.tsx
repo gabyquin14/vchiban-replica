@@ -33,9 +33,9 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
     <Component className={`header-section ${customStyles}`}>
       <motion.div
         className="title-wrapper"
-        initial={{ opacity: 0, scale: 0.5 }}
+        initial={{ opacity: 0, scale: 0.8 }}
         animate={
-          animate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
+          animate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
         }
         transition={{
           delay: delay,

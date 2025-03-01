@@ -1,15 +1,14 @@
-import { FC, ReactNode, useState } from "react";
-import { motion, spring } from "framer-motion";
-import { bouncyTransition, springTransition } from "#/helpers/const-animations";
+import { FC, useState } from "react";
+import { motion } from "framer-motion";
+import { springTransition } from "#/helpers/const-animations";
 import "../../ui/springBtn/SpringButton.scss";
-import "./BannerButton.scss";
 import ChevronDown from "#/assets/svg/chevron-down";
 import Sparkle1 from "#/assets/svg/banner-btn/sparkle-1";
 import Sparkle2 from "#/assets/svg/banner-btn/sparkle-2";
 import Sparkle3 from "#/assets/svg/banner-btn/sparkle-3";
 import ExclMark from "#/assets/svg/banner-btn/excl-mark";
 
-const BannerButton = () => {
+const BannerButton: FC = () => {
   const [isHover, setIsHover] = useState(false);
 
   return (

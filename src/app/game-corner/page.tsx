@@ -15,11 +15,12 @@ import Excl1 from "#/assets/svg/game-corner/excl-1";
 import Excl2 from "#/assets/svg/game-corner/excl-2";
 import Excl3 from "#/assets/svg/game-corner/excl-3";
 import { motion } from "framer-motion";
-import { bouncyTransition } from "#/helpers/const-animations";
+import useAnimationDelay from "#/hooks/useAnimationDelay";
 
 const GameCorner = () => {
   const [showGame, setShowGame] = useState(true);
   const [showOshi, setShowOshi] = useState(true);
+  const animate = useAnimationDelay(0);
 
   return (
     <main className="game-corner">
@@ -40,9 +41,30 @@ const GameCorner = () => {
           }
           SparklesComponent={SparklesGameCorner}
           customStyles="game-cornerr"
+          delay={0}
         >
-          <SanjisEyebrow className="sanjis-eyebrow" />
-          <SanjisEyebrow className="sanjis-eyebrow" />
+          <motion.div
+            className="sanjis-eyebrow"
+            initial={{ opacity: 0, x: 50 }}
+            animate={animate ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.2,
+            }}
+          >
+            <SanjisEyebrow />
+          </motion.div>
+          <motion.div
+            className="sanjis-eyebrow"
+            initial={{ opacity: 0, x: -50 }}
+            animate={animate ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{
+              duration: 0.2,
+              delay: 0.2,
+            }}
+          >
+            <SanjisEyebrow />
+          </motion.div>
         </HeaderSection>
         <div className="separator">
           <div></div>
@@ -51,7 +73,11 @@ const GameCorner = () => {
 
       <div className="main-content">
         <section>
-          <div className="banner-container">
+          <motion.div
+            className="banner-container"
+            initial={{ opacity: 0 }}
+            animate={animate ? { opacity: 1 } : { opacity: 0 }}
+          >
             <SmallBanner
               text="Gooba Ball"
               bgImg="https://framerusercontent.com/images/hapuFFerT9LbwuSCXDjWdGQq8Vg.png"
@@ -60,10 +86,14 @@ const GameCorner = () => {
               setShowInfo={setShowGame}
               showInfo={showGame}
             />
-          </div>
+          </motion.div>
 
           {showGame && (
-            <article className="game-header">
+            <motion.article
+              className="game-header"
+              initial={{ opacity: 0 }}
+              animate={animate ? { opacity: 1 } : { opacity: 0 }}
+            >
               <Image
                 alt="gooba-ball"
                 src="https://framerusercontent.com/images/Cqv6tM40SCdpqarvtpmrIAu3LZk.png"
@@ -92,12 +122,16 @@ const GameCorner = () => {
                 SecondIcon={ChevronRight}
                 isTransitionBouncy
               />
-            </article>
+            </motion.article>
           )}
         </section>
 
         <section>
-          <div className="banner-container">
+          <motion.div
+            className="banner-container"
+            initial={{ opacity: 0 }}
+            animate={animate ? { opacity: 1 } : { opacity: 0 }}
+          >
             <SmallBanner
               text="Meet your Oshi"
               bgImg="https://framerusercontent.com/images/8dxIOb4LGrRzzQjsIo5ho083KPM.png"
@@ -106,10 +140,14 @@ const GameCorner = () => {
               setShowInfo={setShowOshi}
               showInfo={showOshi}
             />
-          </div>
+          </motion.div>
 
           {showOshi && (
-            <article className="game-header">
+            <motion.article
+              className="game-header"
+              initial={{ opacity: 0 }}
+              animate={animate ? { opacity: 1 } : { opacity: 0 }}
+            >
               <Image
                 alt="meet-your-oshi"
                 src="https://framerusercontent.com/images/qOBJWjYo8gdkIw19hhKAKo1W13s.png"
@@ -151,7 +189,7 @@ const GameCorner = () => {
                 SecondIcon={ChevronRight}
                 isTransitionBouncy
               />
-            </article>
+            </motion.article>
           )}
         </section>
       </div>
