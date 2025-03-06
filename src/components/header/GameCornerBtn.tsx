@@ -8,6 +8,7 @@ import ExclamationMark1 from "#/assets/svg/excl-mark-1";
 import ExclamationMark2 from "#/assets/svg/excl-mark-2";
 import ExclamationMark3 from "#/assets/svg/excl-mark-3";
 import { excl1, excl2, excl3 } from "#/helpers/const-animations";
+import TransitionLink from "../TransitionPages";
 
 interface NavItem {
   content?: string;
@@ -22,7 +23,7 @@ const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
       onMouseEnter={() => setisHover(true)}
       onMouseLeave={() => setisHover(false)}
     >
-      <Link href="/game-corner" className="nav-link gamer-btn">
+      <TransitionLink href="/game-corner" className="nav-link gamer-btn">
         <motion.div
           className="excl-mark mark-1"
           initial="hidden"
@@ -53,7 +54,7 @@ const GameCornerBtn: FC<NavItem> = ({ content = "game corner" }) => {
           transition={springTransition}
         />
         <span className="content-wrapper">{content}</span>
-      </Link>
+      </TransitionLink>
     </li>
   );
 };

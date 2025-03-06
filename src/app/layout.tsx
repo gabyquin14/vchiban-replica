@@ -50,7 +50,7 @@ export default function RootLayout({
         <StickyNavbar />
         <Navbar />
 
-        <>{children}</>
+        <div className="current-page-child">{children}</div>
 
         <Footer />
       </body>
