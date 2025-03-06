@@ -19,11 +19,15 @@ const StickyNavbar = () => {
   });
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const [hasChecked, setHasChecked] = useState(false);
 
   useEffect(() => {
-    setIsScrolled(!isNavbarInView);
-  }, [isNavbarInView]);
-
+    if (hasChecked) {
+      setIsScrolled(!isNavbarInView);
+    } else {
+      setHasChecked(true);
+    }
+  }, [isNavbarInView, hasChecked]);
   useEffect(() => {
     if (isInBio) {
       setIsScrolled(false);

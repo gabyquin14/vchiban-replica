@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Banner from "../components/home/Banner";
 import NewInGamerCorner from "../components/home/new-games/NewInGameCorner";
 import NewFromWorldVchiban from "../components/home/events/NewFromWorld";

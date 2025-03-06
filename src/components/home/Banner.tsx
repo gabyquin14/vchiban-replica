@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 // Assets & Icons
@@ -32,8 +32,6 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
   const { handleMouseMove, houseX, houseY, exclMarkX, exclMarkY } =
     useMouseParallax();
 
-  const animate = useAnimationDelay(0);
-
   return (
     <section
       className="home-section"
@@ -46,27 +44,15 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
           title="FOUND FAMILY <br />INDIE GROUP."
           SparklesComponent={Sparkles}
           customStyles="banner"
+          delay={0.5}
         />
-
         <div className="team-members">
           <div className="members-wrapper">
             <motion.ul
               className="stars-list"
               role="list"
               aria-label="Team members"
-              initial="hidden"
-              animate={animate ? "visible" : "hidden"}
-              variants={{
-                hidden: {
-                  opacity: 0,
-                },
-                visible: {
-                  opacity: 1,
-                  transition: {
-                    staggerChildren: 0.1,
-                  },
-                },
-              }}
+              animate={{ opacity: 1 }}
             >
               {vchibanStars.map(({ name, image }, index) => (
                 <motion.li
@@ -74,9 +60,7 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
                   className={`star-portrait ${name.toLowerCase()}`}
                   aria-label={`Portrait of ${name}`}
                   initial={{ opacity: 0, y: 300 }}
-                  animate={
-                    animate ? { opacity: 1, y: 0 } : { opacity: 0, y: 300 }
-                  }
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{
                     duration: 0.8,
                     delay: index * 0.1,
@@ -96,7 +80,6 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
             </motion.ul>
           </div>
         </div>
-
         <div className="see-more-btn-wrapper" onClick={scrollToCreatorCard}>
           <BannerButton />
         </div>
@@ -119,20 +102,14 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
 
       <motion.div
         className="floating-icons"
-        initial={{ opacity: 0 }}
-        animate={animate ? { opacity: 1 } : { opacity: 0 }}
-        transition={{
-          duration: 0.5,
-          delay: 0.5,
-        }}
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
       >
         {floatingIcons.map(({ alt, icon, animation }, index) => (
           <motion.div
             key={alt}
             initial={{ opacity: 0, scale: 0.5 }}
-            animate={
-              animate ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
-            }
+            animate={{ opacity: 1, scale: 1 }}
             transition={{
               duration: 0.3,
               delay: index * 0.1 + 0.5,

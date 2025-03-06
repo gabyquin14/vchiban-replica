@@ -1,5 +1,5 @@
 "use client";
-import { FC } from "react";
+import { FC, useCallback } from "react";
 import "./CreatorCard.scss";
 import { vchibanStars } from "#/helpers/members-info";
 import TalentExclMark1 from "#/assets/svg/home/talent-excl-1";
@@ -11,10 +11,14 @@ import useAnimationDelay from "#/hooks/useAnimationDelay";
 
 const CreatorCard: FC = () => {
   const router = useRouter();
-  const redirectToPersonalPage = (name: string) => {
-    router.push(`/our-family/${name.toLocaleLowerCase()}`);
-  };
   const animate = useAnimationDelay(0);
+
+  const redirectToPersonalPage = useCallback(
+    (name: string) => {
+      router.push(`/our-family/${name.toLowerCase()}`);
+    },
+    [router]
+  );
 
   return (
     <section className="creator-card__container">
@@ -22,10 +26,7 @@ const CreatorCard: FC = () => {
         className="creator-card"
         initial={{ opacity: 0 }}
         animate={animate ? { opacity: 1 } : { opacity: 0 }}
-        transition={{
-          duration: 0.5,
-          delay: 0.5,
-        }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         {vchibanStars.map((star, index) => (
           <motion.div
