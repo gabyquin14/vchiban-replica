@@ -1,11 +1,12 @@
 "use client";
 import Link, { LinkProps } from "next/link";
 import React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 interface TransitionLinkProps extends LinkProps {
   children: React.ReactNode;
   href: string;
+  className?: string;
 }
 
 function sleep(ms: number): Promise<void> {
@@ -18,11 +19,14 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
   ...props
 }) => {
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleTransition = async (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
+    if (pathname === href) return;
     e.preventDefault();
+
     const body = document.querySelector("body");
     const element = body?.getElementsByClassName(
       "current-page-child"
