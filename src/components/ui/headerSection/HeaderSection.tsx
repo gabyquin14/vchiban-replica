@@ -25,7 +25,7 @@ const HeaderSection: React.FC<HeaderSectionProps> = ({
   SparklesComponent,
   customStyles = "",
   children,
-  delay = 0.5,
+  delay = 0,
 }) => {
   const animate = useAnimationDelay(0);
 

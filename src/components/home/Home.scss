@@ -54,7 +54,7 @@
       .star-portrait {
         position: absolute;
         width: 79rem;
-        height: 12.7rem;
+        height: 100%;
 
         @media screen and (max-width: 1320px) {
           width: 60rem;
@@ -71,6 +71,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: top;
       }
     }
 
