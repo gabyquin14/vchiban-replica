@@ -4,12 +4,18 @@ import { vchibanStars } from "#/helpers/members-info";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import MemberCard from "./MemberCard";
+import Link from "next/link";
 
 const MembersRaibow: FC = () => {
   return (
     <section className="members-card">
       {vchibanStars.map((star) => (
-        <MemberCard star={star} key={star.name} />
+        <Link
+          href={`/our-family/${star.name.toLocaleLowerCase()}`}
+          key={star.name}
+        >
+          <MemberCard star={star} />
+        </Link>
       ))}
     </section>
   );

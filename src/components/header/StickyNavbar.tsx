@@ -15,7 +15,7 @@ const StickyNavbar = () => {
   // Detecta si la navbar principal está en vista
   const isNavbarInView = useInView(navbarRef, {
     amount: 0,
-    margin: "400px 0px 0px 0px",
+    margin: "500px 0px 0px 0px",
   });
 
   const [isScrolled, setIsScrolled] = useState(false);
