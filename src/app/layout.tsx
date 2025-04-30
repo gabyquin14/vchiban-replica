@@ -6,6 +6,7 @@ import Navbar from "../components/header/Navbar";
 import Footer from "../components/footer/Footer";
 import MobileNavbar from "#/components/header/MobileNavbar";
 import StickyNavbar from "#/components/header/StickyNavbar";
+// import PageTransition from "#/components/PageTransition";
 
 const gilboys = localFont({
   src: "../fonts/jt_gilboys/Jt Gilboys.otf",
@@ -50,8 +51,8 @@ export default function RootLayout({
         <StickyNavbar />
         <Navbar />
 
+        {/* <PageTransition>{children}</PageTransition> */}
         <div className="current-page-child">{children}</div>
-
         <Footer />
       </body>
     </html>
