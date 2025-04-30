@@ -28,9 +28,9 @@ const MobileNavbar: FC = () => {
         animate={{ opacity: !openMenu ? 1 : 0 }}
         transition={{ ...springTransition, duration: 0.2 }}
       >
-        <div className="logo">
+        <Link href="/" className="logo">
           <VchibanLogo />
-        </div>
+        </Link>
         <button className="close-btn" onClick={() => toogleOpenMenu(true)}>
           <MenuIcon />
         </button>
@@ -48,9 +48,9 @@ const MobileNavbar: FC = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="nav-header">
-              <div className="logo-dark">
+              <Link href="/" className="logo-dark">
                 <VchibanLogoDark />
-              </div>
+              </Link>
               <button
                 className="close-btn"
                 onClick={() => toogleOpenMenu(false)}
@@ -94,9 +94,10 @@ const MobileNavbar: FC = () => {
               </li>
             </motion.ul>
             <motion.div
-              initial={{ x: "100%", y: 100, opacity: 0 }}
-              animate={{ x: 0, y: 100, opacity: 1 }}
-              exit={{ x: "100%", y: 100, opacity: 0 }}
+              className="exclamation-marks"
+              initial={{ right: "-50%", opacity: 0 }}
+              animate={{ right: 0, opacity: 1 }}
+              exit={{ right: "-50%", opacity: 0 }}
               transition={{
                 duration: 0.9,
                 delay: 0.2,
