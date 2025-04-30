@@ -8,10 +8,6 @@ interface TransitionLinkProps extends LinkProps {
   className?: string;
 }
 
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
 const TransitionLink: React.FC<TransitionLinkProps> = ({
   children,
   href,
@@ -19,26 +15,21 @@ const TransitionLink: React.FC<TransitionLinkProps> = ({
 }) => {
   const router = useRouter();
   const pathname = usePathname();
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleTransition = async (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
-    if (pathname === href) return;
+    if (pathname === href || isTransitioning) return;
     e.preventDefault();
+    setIsTransitioning(true);
 
-    router.push(href);
+    document.body.classList.add("page-transitioning");
 
-    const body = document.querySelector("body");
-    const element = body?.getElementsByClassName(
-      "current-page-child"
-    )[0] as HTMLElement;
-
-    element?.classList.add("page-transition");
-    if (element) element.style.position = "unset";
-
-    await sleep(1000);
-
-    element?.classList.remove("page-transition");
+    setTimeout(() => {
+      router.push(href);
+      setIsTransitioning(false);
+    }, 800); // Mismo tiempo que la animación en layout.tsx
   };
 
   return (

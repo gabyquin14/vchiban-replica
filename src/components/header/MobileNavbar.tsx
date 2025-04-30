@@ -26,7 +26,7 @@ const MobileNavbar: FC = () => {
         style={{ zIndex: openMenu ? 1 : 10 }}
         initial={{ opacity: 1 }}
         animate={{ opacity: !openMenu ? 1 : 0 }}
-        transition={{ duration: 0.2 }}
+        transition={{ ...springTransition, duration: 0.2 }}
       >
         <div className="logo">
           <VchibanLogo />
@@ -97,7 +97,12 @@ const MobileNavbar: FC = () => {
               initial={{ x: "100%", y: 100, opacity: 0 }}
               animate={{ x: 0, y: 100, opacity: 1 }}
               exit={{ x: "100%", y: 100, opacity: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.2,
+                ease: [0.2, 0.8, 0.2, 1],
+                type: "tween",
+              }}
             >
               <Excl1 className="excl1" />
               <Excl2 className="excl2" />
