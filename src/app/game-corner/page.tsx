@@ -22,6 +22,10 @@ const GameCorner = () => {
   const [showOshi, setShowOshi] = useState(true);
   const animate = useAnimationDelay(0);
 
+  const openInNewTab = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <main className="game-corner">
       <SearchLight className="searchlight-1" />
@@ -121,6 +125,9 @@ const GameCorner = () => {
                 firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
                 SecondIcon={ChevronRight}
                 isTransitionBouncy
+                onClick={() =>
+                  openInNewTab("https://store.steampowered.com/app/2878140/")
+                }
               />
             </motion.article>
           )}
@@ -188,6 +195,11 @@ const GameCorner = () => {
                 firstIcon="https://framerusercontent.com/images/XpGvthSNzunUXiPh7ihK39s3I.svg"
                 SecondIcon={ChevronRight}
                 isTransitionBouncy
+                onClick={() =>
+                  openInNewTab(
+                    "https://store.steampowered.com/app/2715280/Meet_Your_Oshi/"
+                  )
+                }
               />
             </motion.article>
           )}

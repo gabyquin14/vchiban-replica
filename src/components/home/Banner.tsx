@@ -72,8 +72,8 @@ const Banner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
                     alt={`Portrait of ${name}`}
                     priority
                     layout="responsive"
-                    width={791}
-                    height={1274}
+                    width={264}
+                    height={426}
                   />
                 </motion.li>
               ))}

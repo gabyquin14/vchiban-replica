@@ -13,7 +13,11 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { useMouseParallax } from "#/hooks/useMouseParallax";
 
-const OurFamilyBanner = () => {
+interface BannerProps {
+  scrollToCreatorCard: () => void;
+}
+
+const OurFamilyBanner: React.FC<BannerProps> = ({ scrollToCreatorCard }) => {
   const {
     handleMouseMove,
     houseX,
@@ -96,7 +100,7 @@ const OurFamilyBanner = () => {
         <House />
       </motion.div>
 
-      <button className="lore-btn">
+      <button className="lore-btn" onClick={scrollToCreatorCard}>
         <motion.div
           className="more-lore"
           onHoverStart={() => setIsHover(true)}

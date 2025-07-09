@@ -21,17 +21,24 @@ import OurFamilyBanner from "#/components/our-family/banner/OurFamilyBanner";
 import { motion } from "framer-motion";
 import useAnimationDelay from "#/hooks/useAnimationDelay";
 import { endeavors } from "#/helpers/members-info";
-import { useEffect } from "react";
+import { useRef } from "react";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const OurFamily = () => {
   const animate = useAnimationDelay(0);
+  const scrollToStardustMap = useRef<HTMLDivElement>(null);
+
+  const scrollToCreatorCard = () => {
+    if (scrollToStardustMap.current) {
+      scrollToStardustMap.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="family">
-      <OurFamilyBanner />
+      <OurFamilyBanner scrollToCreatorCard={scrollToCreatorCard} />
       <div className="family__stardust-map">
-        <div className="header-and-map">
+        <div className="header-and-map" ref={scrollToStardustMap}>
           <HeaderSection
             as="header"
             title="STARDUST VALLEY."
