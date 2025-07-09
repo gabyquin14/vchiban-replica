@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { motion } from "framer-motion";
-import { springTransition } from "#/helpers/const-animations";
-import "../../ui/springBtn/SpringButton.scss";
+import { springTransition } from "#/helpers/Animations";
+import "../../ui/spring-btn/SpringButton.scss";
 import ChevronDown from "#/assets/svg/chevron-down";
 import Sparkle1 from "#/assets/svg/banner-btn/sparkle-1";
 import Sparkle2 from "#/assets/svg/banner-btn/sparkle-2";

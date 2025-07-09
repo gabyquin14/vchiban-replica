@@ -11,15 +11,15 @@ import BlueExclMark1 from "#/assets/svg/home/blue-excl-1";
 import BlueExclMark2 from "#/assets/svg/home/blue-excl-2";
 
 // Helpers
-import { floatingIcons } from "#/helpers/home-banner";
+import { floatingIcons } from "#/helpers/FloatingStickers";
 import { useMouseParallax } from "#/hooks/useMouseParallax";
-import { vchibanStars } from "#/helpers/members-info";
+import { vchibanStars } from "#/helpers/MembersData";
 import useAnimationDelay from "#/hooks/useAnimationDelay";
 
 // Components
-import HeaderSection from "../ui/headerSection/HeaderSection";
+import HeaderSection from "../ui/header-section/HeaderSection";
 import BannerButton from "./banner-btn/BannerButton";
-import DraggableSticker from "../ui/draggableSticker/DraggableSticker";
+import DraggableSticker from "../ui/draggable-sticker/DraggableSticker";
 
 // Styles
 import "./Home.scss";

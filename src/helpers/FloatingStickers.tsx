@@ -10,7 +10,7 @@ import {
   candiAnimation,
   roseAnimation,
   shiaAnimation,
-} from "#/helpers/const-animations";
+} from "#/helpers/Animations";
 
 export const floatingIcons: Array<{
   alt: string;

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FC, useState } from "react";
 import Image from "next/image";
-import { springTransition } from "#/helpers/const-animations";
+import { springTransition } from "#/helpers/Animations";
 
 interface Star {
   star: {

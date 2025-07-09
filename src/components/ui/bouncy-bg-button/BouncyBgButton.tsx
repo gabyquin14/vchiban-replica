@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "./BouncyBgButton.scss";
 import { motion, MotionProps } from "framer-motion";
-import { springTransition } from "#/helpers/const-animations";
+import { springTransition } from "#/helpers/Animations";
 import Link from "next/link";
 
 interface Props {

@@ -2,7 +2,7 @@
 
 import { FC, ReactNode, useState } from "react";
 import { motion } from "framer-motion";
-import { springTransition, bouncyTransition } from "#/helpers/const-animations";
+import { springTransition, bouncyTransition } from "#/helpers/Animations";
 import "./SpringButton.scss";
 import Image from "next/image";
 import BtnExclMark1 from "#/assets/svg/spring-btn/excl-1";

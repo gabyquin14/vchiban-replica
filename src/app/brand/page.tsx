@@ -1,4 +1,4 @@
-import HeaderSection from "#/components/ui/headerSection/HeaderSection";
+import HeaderSection from "#/components/ui/header-section/HeaderSection";
 import LegalExclMark1 from "../../assets/svg/legal-excl-mark1";
 import LegalExclMark2 from "../../assets/svg/legal-excl-mark2";
 import "./Brand.scss";

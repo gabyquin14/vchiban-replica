@@ -2,7 +2,7 @@
 import { FC, useState } from "react";
 import "./Navbar.scss";
 import { motion } from "framer-motion";
-import { springTransition } from "#/helpers/const-animations";
+import { springTransition } from "#/helpers/Animations";
 import TransitionLink from "../TransitionPages";
 
 interface NavItem {

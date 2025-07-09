@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
 import "./StardustValley.scss";
-import { ModalInfoInterface } from "#/helpers/lore-modal-info";
+import { ModalInfoInterface } from "#/helpers/LoreModalInfo";
 import BigStamp from "#/assets/svg/our-family/big-stamp";
 import SmallStamp from "#/assets/svg/our-family/small-stamp";
 import StardustBg from "#/assets/svg/stardust-bg";
-import { loreModalInfo } from "#/helpers/lore-modal-info";
+import { loreModalInfo } from "#/helpers/LoreModalInfo";
 import LoreBtnMap from "./LoreBtnMap";
 import MapModal from "./MapModal";
 import { useState } from "react";

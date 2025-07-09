@@ -4,14 +4,14 @@ import "./NewFromWorld.scss";
 import SparklesNewWorld from "#/assets/svg/sparkles/sparkles-new-world";
 import Image from "next/image";
 import ChevronRight from "#/assets/svg/chevron-right";
-import HeaderSection from "#/components/ui/headerSection/HeaderSection";
-import SpringButton from "#/components/ui/springBtn/SpringButton";
+import HeaderSection from "#/components/ui/header-section/HeaderSection";
+import SpringButton from "#/components/ui/spring-btn/SpringButton";
 import Spring1 from "#/assets/svg/home/spring-1";
 import Spring2 from "#/assets/svg/home/spring-2";
 import BigStar from "#/assets/svg/home/big-star";
 import SmallStar from "#/assets/svg/home/small-star";
 import { motion } from "framer-motion";
-import { bouncyTransition } from "#/helpers/const-animations";
+import { bouncyTransition } from "#/helpers/Animations";
 
 const NewFromWorldVchiban: FC = () => {
   return (

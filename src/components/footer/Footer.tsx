@@ -15,7 +15,7 @@ import Exclamation3 from "#/assets/svg/footer/excl-3";
 import Exclamation4 from "#/assets/svg/footer/excl-4";
 import Exclamation5 from "#/assets/svg/footer/excl-5";
 import Discord from "#/assets/svg/socials/discord";
-import { bouncyTransition } from "#/helpers/const-animations";
+import { bouncyTransition } from "#/helpers/Animations";
 import { motion } from "framer-motion";
 import BouncyBgButton from "../ui/bouncy-bg-button/BouncyBgButton";
 

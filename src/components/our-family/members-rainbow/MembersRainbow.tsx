@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import "./MembersRainbow.scss";
-import { vchibanStars } from "#/helpers/members-info";
+import { vchibanStars } from "#/helpers/MembersData";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import MemberCard from "./MemberCard";

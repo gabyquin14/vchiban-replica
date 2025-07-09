@@ -1,14 +1,14 @@
 "use client";
 import "./OurFamily.scss";
 import dynamic from "next/dynamic";
-import HeaderSection from "#/components/ui/headerSection/HeaderSection";
+import HeaderSection from "#/components/ui/header-section/HeaderSection";
 import SparklesStardustValley from "#/assets/svg/sparkles/sparkles-stardust-valley";
 import StardustValley from "#/components/our-family/stardus-valley/StardustValley";
 import SparklesBetterTogether from "#/assets/svg/sparkles/sparkles-better-together";
 import Image from "next/image";
-import SpringButton from "#/components/ui/springBtn/SpringButton";
+import SpringButton from "#/components/ui/spring-btn/SpringButton";
 import ChevronRight from "#/assets/svg/chevron-right";
-import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
+import FooterSeparator from "#/components/ui/footer-separator/FooterSeparator";
 import MembersRaibow from "#/components/our-family/members-rainbow/MembersRainbow";
 import BuffpupIcon from "#/assets/svg/our-family/buffpup-icon";
 import AicandiiIcon from "#/assets/svg/our-family/aicandii-icon";
@@ -20,7 +20,7 @@ import TogetherExcl3 from "#/assets/svg/our-family/together-excl-3";
 import OurFamilyBanner from "#/components/our-family/banner/OurFamilyBanner";
 import { motion } from "framer-motion";
 import useAnimationDelay from "#/hooks/useAnimationDelay";
-import { endeavors } from "#/helpers/members-info";
+import { endeavors } from "#/helpers/MembersData";
 import { useRef } from "react";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
