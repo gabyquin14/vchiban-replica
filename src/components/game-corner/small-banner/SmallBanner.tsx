@@ -3,10 +3,10 @@ import React, { Dispatch, SetStateAction, useState } from "react";
 import "./SmallBanner.scss";
 import Image from "next/image";
 import ChevronDown from "#/assets/svg/chevron-down";
-import SpringButton from "../../ui/springBtn/SpringButton";
+import SpringButton from "../../ui/spring-btn/SpringButton";
 import { motion } from "framer-motion";
 import ChevronRight from "#/assets/svg/chevron-right";
-import { bouncyTransition, springTransition } from "#/helpers/const-animations";
+import { bouncyTransition, springTransition } from "#/helpers/Animations";
 import BouncyBgButton from "#/components/ui/bouncy-bg-button/BouncyBgButton";
 
 interface SmallBannerProps {

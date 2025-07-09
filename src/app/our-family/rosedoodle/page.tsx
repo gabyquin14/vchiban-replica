@@ -1,6 +1,6 @@
 "use client";
 
-import { vchibanStars } from "#/helpers/members-info";
+import { vchibanStars } from "#/helpers/MembersData";
 import TwitchIcon from "#/assets/svg/socials/twitch";
 import TwitterIcon from "#/assets/svg/socials/twitter";
 import YoutubeIcon from "#/assets/svg/socials/youtube";

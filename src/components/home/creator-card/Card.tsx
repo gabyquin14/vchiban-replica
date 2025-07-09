@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import Twitch from "#/assets/svg/socials/twitch";
 import Twitter from "#/assets/svg/socials/twitter";
 import Youtube from "#/assets/svg/socials/youtube";
-import DraggableSticker from "#/components/ui/draggableSticker/DraggableSticker";
+import DraggableSticker from "#/components/ui/draggable-sticker/DraggableSticker";
 
 import "./CreatorCard.scss";
 import BouncyBgButton from "#/components/ui/bouncy-bg-button/BouncyBgButton";

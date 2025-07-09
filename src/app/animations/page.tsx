@@ -2,12 +2,12 @@
 import "./Animations.scss";
 import SparklesAnimation from "#/assets/svg/sparkles/sparkles-animation";
 import VideoCard from "../../components/animations/VideoCard";
-import HeaderSection from "#/components/ui/headerSection/HeaderSection";
+import HeaderSection from "#/components/ui/header-section/HeaderSection";
 import CineStrip1 from "#/assets/svg/animations/cine-strip-1";
 import CineStrip2 from "#/assets/svg/animations/cine-strip-2";
 import CineStrip3 from "#/assets/svg/animations/cine-strip-3";
 import CineStrip4 from "#/assets/svg/animations/cine-strip-4";
-import FooterSeparator from "#/components/ui/footerSeparator/FooterSeparator";
+import FooterSeparator from "#/components/ui/footer-separator/FooterSeparator";
 import { motion } from "framer-motion";
 import useAnimationDelay from "#/hooks/useAnimationDelay";
 

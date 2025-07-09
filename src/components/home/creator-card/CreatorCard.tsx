@@ -1,7 +1,7 @@
 "use client";
 import { FC, useCallback } from "react";
 import "./CreatorCard.scss";
-import { vchibanStars } from "#/helpers/members-info";
+import { vchibanStars } from "#/helpers/MembersData";
 import TalentExclMark1 from "#/assets/svg/home/talent-excl-1";
 import TalentExclMark2 from "#/assets/svg/home/talent-exl-2";
 import Card from "./Card";

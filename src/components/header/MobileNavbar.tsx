@@ -3,7 +3,7 @@ import { FC, useState } from "react";
 import Link from "next/link";
 import "./MobileNavbar.scss";
 import { AnimatePresence, motion } from "framer-motion";
-import { springTransition } from "#/helpers/const-animations";
+import { springTransition } from "#/helpers/Animations";
 import VchibanLogo from "#/assets/svg/vchiban-logo";
 import Excl1 from "#/assets/svg/header/excl-1";
 import Excl2 from "#/assets/svg/header/excl-2";

@@ -3,11 +3,11 @@ import { FC, useState } from "react";
 import "./Navbar.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { springTransition } from "#/helpers/const-animations";
+import { springTransition } from "#/helpers/Animations";
 import ExclamationMark1 from "#/assets/svg/excl-mark-1";
 import ExclamationMark2 from "#/assets/svg/excl-mark-2";
 import ExclamationMark3 from "#/assets/svg/excl-mark-3";
-import { excl1, excl2, excl3 } from "#/helpers/const-animations";
+import { excl1, excl2, excl3 } from "#/helpers/Animations";
 import TransitionLink from "../TransitionPages";
 
 interface NavItem {

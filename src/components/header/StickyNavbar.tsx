@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { useInView, motion, AnimatePresence } from "framer-motion";
 import Navbar from "./Navbar";
 import "./StickyNavbar.scss";
-import { springTransition } from "#/helpers/const-animations";
+import { springTransition } from "#/helpers/Animations";
 import { usePathname } from "next/navigation";
 
 const StickyNavbar = () => {

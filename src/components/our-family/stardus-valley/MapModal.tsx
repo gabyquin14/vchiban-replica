@@ -1,7 +1,7 @@
 "use client";
 import "./MapModal.scss";
 import Image from "next/image";
-import { ModalInfoInterface } from "#/helpers/lore-modal-info";
+import { ModalInfoInterface } from "#/helpers/LoreModalInfo";
 import Exit from "#/assets/svg/exit";
 import { motion } from "framer-motion";
 

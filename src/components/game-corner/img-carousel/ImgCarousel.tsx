@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./ImgCarousel.scss";
 import { motion } from "framer-motion";
-import { bouncyTransition, springTransition } from "#/helpers/const-animations";
+import { bouncyTransition, springTransition } from "#/helpers/Animations";
 
 interface SpringButtonProps {
   firstImg: string;
