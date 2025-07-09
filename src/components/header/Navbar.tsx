@@ -28,10 +28,6 @@ const Navbar: FC<NavbarProp> = ({ bgColor }) => {
         <NavbarItem content="home" link="/" />
         <NavbarItem content="our family" link="/our-family" />
         <NavbarItem content="events" link="/events" />
-        <NavbarItem
-          content="podcast"
-          link="https://www.vchiban.com/podcast/latest-episode"
-        />
       </ul>
 
       <div className="vchiban-logo-container">

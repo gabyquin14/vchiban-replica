@@ -19,14 +19,14 @@ const LoreModalMap: React.FC<InfoBtnProps> = ({ customStyles }) => {
         animate={{
           scale: isHover ? 3.5 : 1,
         }}
-        transition={{ type: "spring", stiffness: 100, damping: 10 }}
+        transition={{ type: "spring", stiffness: 150, damping: 14 }}
       >
         <motion.div
           className="info-icon"
           animate={{
             scale: isHover ? 0.35 : 0,
           }}
-          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          transition={{ type: "spring", stiffness: 150, damping: 14 }}
         >
           <Info />
         </motion.div>
